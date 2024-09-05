@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const PDF = () => {
   return (
-    <div className="p-5 sm:px-10 md:px-15 lg:px-20 font-bold">
+    <div className="font-bold ">
       {/* Contributions */}
       <div className="my-5">
         <h1 className="text-[20px]">Contribution of CNRS as Partner</h1>
@@ -102,9 +102,9 @@ const PDF = () => {
         </div>
       </div>
       {/* Communication Materials */}
-      <div className="my-5">
+      <div className="my-5 truncate">
         <h1 className="text-[20px]">Communication Materials</h1>
-        <div className="ml-6">
+        <div>
           <Link
             className="hover:text-green-700"
             to="https://cnrs.org.bd/reports/communication_materials/Brief_Nutrition_Overview.pdf"
@@ -169,7 +169,7 @@ const PDF = () => {
             className="hover:text-green-700"
             to="https://cnrs.org.bd/reports/communication_materials/Updates_Courtyard_session_topic_poster_Updates.pdf"
           >
-            <li className="list-disc">
+            <li className="list-disc ">
               Updates_Courtyard_session_topic_poster_Updates
             </li>
           </Link>
@@ -178,10 +178,10 @@ const PDF = () => {
 
       {/* PDF */}
       <div className="py-10">
-        <div className="flex justify-center items-center h-screen">
+        <div className="flex justify-center items-center h-[500px]">
           <iframe
             src="/assets/cnrs-branding-and-marking-guideline-2024.pdf"
-            className="w-full h-full md:w-3/4 md:h-3/4 border-2 border-gray-300"
+            className="w-full h-full border-2 border-gray-300"
             title="PDF Viewer"
           ></iframe>
         </div>

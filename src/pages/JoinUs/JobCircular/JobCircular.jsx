@@ -20,7 +20,7 @@ const JobCircular = () => {
   ];
   return (
     <div className="my-20">
-      <h1 className="font-yeseva font-bold text-3xl my-5 text-center">
+      <h1 className="uppercase font-yeseva font-bold text-xl md:text-3xl my-5 text-center">
         We are currently looking for
       </h1>
       <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 p-5">

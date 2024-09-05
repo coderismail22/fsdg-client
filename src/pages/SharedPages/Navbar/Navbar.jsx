@@ -7,13 +7,13 @@ import { TbLayoutSidebarLeftCollapse } from "react-icons/tb";
 const navitems = [
   { title: "Home", path: "/" },
   { title: "About", path: "/about" },
-  { title: "What We Do", path: "/what-we-do" },
-  { title: "Our Services", path: "/services" },
+  { title: "Work", path: "/what-we-do" }, // 'What We Do' replaced with 'Work'
+  { title: "Services", path: "/services" }, // 'Our Services' replaced with 'Services'
   { title: "Projects", path: "/projects" },
   { title: "Stories", path: "/stories" },
-  { title: "Publications", path: "/publications" },
+  // { title: "Publications", path: "/publications" },
   { title: "Contact", path: "/contact" },
-  { title: "Join Us", path: "/join-us" },
+  { title: "Join", path: "/join-us" }, // 'Join Us' replaced with 'Join'
 ];
 
 const Navbar = () => {
@@ -21,26 +21,23 @@ const Navbar = () => {
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
-    if (!isSidebarOpen) {
-      document.body.classList.add("overflow-hidden");
-    } else {
-      document.body.classList.remove("overflow-hidden");
-    }
+    document.body.classList.toggle("overflow-hidden", !isSidebarOpen);
   };
 
   const closeSidebarWithDelay = () => {
     setTimeout(() => {
-      toggleSidebar();
-    }, 2000); // Adjust the delay time as needed (300ms is a good starting point)
+      setIsSidebarOpen(false);
+      document.body.classList.remove("overflow-hidden");
+    }, 200); // Adjust delay as needed
   };
 
   return (
-    <main className="h-[100px] shadow-lg flex flex-col justify-between p-5 z-[9999]">
-      <nav className="flex justify-between items-center px-5">
-        <div className="flex items-center justify-between w-[1000px] lg:w-[100px]">
+    <main className="w-full lg:w-10/12 mx-auto h-[80px] flex flex-col justify-between z-[9999] py-5 px-5 md:px-5">
+      <nav className="flex justify-between items-center">
+        <div className="flex items-center justify-between w-full">
           <Link to="/" className="w-[50px]">
             {/* LOGO */}
-            <img src="/assets/cnrs.png" width="80px" />
+            <img src="/assets/fsdg.jpg" width="80px" />
           </Link>
 
           <section className="w-[50px]">
@@ -54,13 +51,13 @@ const Navbar = () => {
           </section>
         </div>
 
-        <section className="flex items-center gap-10 xl:gap-16 2xl:gap-20">
+        <section className="flex items-center justify-center flex-nowrap gap-2 md:gap-4 lg:gap-6 xl:gap-8 2xl:gap-10">
           {/* Navbar For Larger Displays */}
           {navitems.map((item, index) => (
             <Link
               key={index}
               to={item.path}
-              className="min-w-[30px] hover:text-[#456C2F] hidden lg:block font-montserrat font-bold text-center"
+              className="hover:text-[#456C2F] hidden lg:inline-block font-montserrat font-bold text-center text-sm md:text-base"
             >
               {item.title}
             </Link>

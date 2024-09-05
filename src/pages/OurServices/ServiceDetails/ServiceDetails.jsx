@@ -7,10 +7,10 @@ const ServiceDetails = () => {
           2.1 Livelihood Analysis and Development
         </h1>
         <p className="text-[#687279]">
-          CNRS encourages opportunities for sustaining livelihoods of poor
+          FSDG encourages opportunities for sustaining livelihoods of poor
           people involved in harvesting common pool resources. In reality, such
           families employ complex strategies in order to ensure their
-          livelihoods. CNRS therefore has used to employ Livelihood Framework
+          livelihoods. FSDG therefore has used to employ Livelihood Framework
           Analysis advanced by DFID to better understand the resource
           utilization, economic strategies and unmet opportunities within the
           project areas. This information is being used to develop more
@@ -22,9 +22,9 @@ const ServiceDetails = () => {
       <div className="mb-[20px]">
         <h1 className="font-bold mb-[20px]">2.2 Community Based Management</h1>
         <p className="text-[#687279]">
-          CNRS has been working to develop and sustain livelihood of poorer
+          FSDG has been working to develop and sustain livelihood of poorer
           communities. It requires applying locally suitable and appropriate
-          methods reaching community consensus on interventions packages. CNRS
+          methods reaching community consensus on interventions packages. FSDG
           adopts community-based approach where the local user communities and
           related stakeholders have a major part in designing and planning the
           management options and interventions for their specific livelihood
@@ -37,7 +37,7 @@ const ServiceDetails = () => {
       <div className="mb-[20px]">
         <h1 className="font-bold mb-[20px]">2.3 Institutional Development</h1>
         <p className="text-[#687279]">
-          CNRS accomplishes a three level management structure of local
+          FSDG accomplishes a three level management structure of local
           institutions which are being constituted under different projects. The
           First Tier consists of Groups and Village Committees. The Village
           Committees are being turned in to Community Based Organizations (CBOs)
@@ -91,29 +91,29 @@ const ServiceDetails = () => {
           and services require the PPPs model. It is a networking approach in
           infrastructure and other services where the private sector and the
           general people along with the government work for the country’s
-          development and progress. CNRS, under the PPP model, supplied
+          development and progress. FSDG, under the PPP model, supplied
           materials, engaged in various activities at a time such as financing,
           designing, community mobilization, construction, ownership,
-          maintenance, and management in different projects. CNRS used the
+          maintenance, and management in different projects. FSDG used the
           latest and cost effective means and technologies in order to complete
           the project allocated which enabled the best source of value for money
           gain.
         </p>
         <div className="p-10">
           <h1 className="mb-5 font-bold text-[#687279]">
-            Public Private Partnership: few facilitation experiences of CNRS
+            Public Private Partnership: few facilitation experiences of FSDG
           </h1>
           <ol className="list-decimal">
             {/* 1 */}
             <li className="font-bold mb-4">
-              Partnership of CNRS with IFC (the World Bank group) and multiple
+              Partnership of FSDG with IFC (the World Bank group) and multiple
               business entities for promoting Solar System like Solar Home
               System, Solar Lantern System, Solar Charger System, Solar Street
               Light System in 2014-15.
             </li>
             {/* 2 */}
             <li className="font-bold mb-4">
-              CNRS developed a business model of mini grid solar system in the
+              FSDG developed a business model of mini grid solar system in the
               remote 3 Haor areas villages in Fenarbak UP under Jamalganj
               Upazila of Sunamgnj district with the consensual agreement among
               Local Government, Community Institutes and Rahimafrooz Renewable
@@ -121,28 +121,28 @@ const ServiceDetails = () => {
             </li>
             {/* 3 */}
             <li className="font-bold mb-4">
-              CNRS facilitated solar irrigation system as a business model
+              FSDG facilitated solar irrigation system as a business model
               including buried pipeline with the consensual agreement between
               Department of Environment, Village Conservation Group (VCGs under
               ECA Rule) and Rahimafrooz Renewable Energy Ltd during 2012-13.
             </li>
             {/* 4 */}
             <li className="font-bold mb-4">
-              CNRS facilitated partnership arrangements between Tour Operators
+              FSDG facilitated partnership arrangements between Tour Operators
               and Forest Departments for promoting sustainable tourism
               facilities in Khadim Nagar National Park and Lawachara National
               Park under USAID’s CREL during 2014-2017.
             </li>
             {/* 5 */}
             <li className="font-bold mb-4">
-              CNRS facilitated partnership arrangements between Tour Operators,
+              FSDG facilitated partnership arrangements between Tour Operators,
               Boat Operators, Community Institutes and Local Government for
               promoting sustainable tourism facilities in Tangua Haor during
               2019-202021.
             </li>
             {/* 6 */}
             <li className="font-bold mb-4 ">
-              CNRS facilitated agricultural input support e.g. fish seed, crop
+              FSDG facilitated agricultural input support e.g. fish seed, crop
               seed, fertilizer, pesticide facilities ensuring quality and
               sustainability in all UPs under all upazilas of Moulvibazar
               district with the consensual understanding among community
@@ -152,7 +152,7 @@ const ServiceDetails = () => {
             </li>
             {/* 7 */}
             <li className="font-bold">
-              CNRS Facilitates partnerships between community groups and
+              FSDG Facilitates partnerships between community groups and
               export-oriented business entities such as wood technology (e.g.
               Hatil), Pebble (Hatey Bunano), crotchet cap, safe dry fish &
               vegetable, etc. from 2011 till to date.
@@ -175,7 +175,7 @@ const ServiceDetails = () => {
           monitoring, institutional aspects, benefit distribution mechanism, and
           other related issues and aspects. PAPD (Participatory Action Plan
           Development) method had been developed and tested in Bangladesh by
-          CNRS and Newcastle University, UK in 1996. Since then, CNRS has been
+          FSDG and Newcastle University, UK in 1996. Since then, FSDG has been
           applying PAPD in various project sites (MACH, SEMP, CBFM-2, etc) and
           found it to be a very effective tool for participatory planning.
           Activities under PAPD are as follows: Problem Census, Cause-effect
@@ -191,16 +191,16 @@ const ServiceDetails = () => {
         </h1>
         <p className="text-[#687279]">
           Considering the need and management complexity of environment and
-          natural resources, CNRS established its GIS Unit in 1998 for providing
+          natural resources, FSDG established its GIS Unit in 1998 for providing
           different spatial related support for better decision-making
           processes. Initially it was thought that the GIS unit would support
-          the need of CNRS internal projects. However, over time, the Unit has
+          the need of FSDG internal projects. However, over time, the Unit has
           been developed to a stage that also started satisfying the need of the
           external clients on contract basis viz. LGED, SDC, ECFC
           project-FAO/DoF and others.
         </p>
         <h1 className="mt-5 font-bold text-[#687279] ">
-          CNRS is capable to provide GIS support in below field:
+          FSDG is capable to provide GIS support in below field:
         </h1>
         <ol className="px-10 my-5 list-decimal text-[#687279]">
           <li>
@@ -238,9 +238,9 @@ const ServiceDetails = () => {
         </h1>
         <p className="text-[#687279]">
           Participatory monitoring is considered as an important aspect to build
-          capacity of CBOs. CNRS relies on qualitative tools of monitoring
+          capacity of CBOs. FSDG relies on qualitative tools of monitoring
           beside various quantitative tools. Report Card and Diary methods are
-          thus frequently used in CNRS as qualitative tools of monitoring. Diary
+          thus frequently used in FSDG as qualitative tools of monitoring. Diary
           method has been using for monitoring of projects to the “most
           significant changes (MSC” advanced by Dr. Rick Davies). On the other
           hand, report card has been using as participatory monitoring tool
@@ -260,11 +260,11 @@ const ServiceDetails = () => {
         <h1 className="font-bold mb-[20px]">2.8 Community Mobilization</h1>
         <p className="text-[#687279]">
           As experienced, before going in to the activities related to community
-          mobilization, CNRS undertakes certain activities to have better
+          mobilization, FSDG undertakes certain activities to have better
           understanding of the biophysical, socioeconomic and cultural on texts
           of the communities and sites. This provides the team inputs for
           developing a clear road map for the rest of the works to be
-          accomplished for community mobilization. CNRS undertakes following
+          accomplished for community mobilization. FSDG undertakes following
           activities under community mobilization:
         </p>
         <p className="text-[#687279] mt-5">
@@ -292,12 +292,12 @@ const ServiceDetails = () => {
         </h1>
         <p className="text-[#687279]">
           Empowerment of community is very much linked with the level of
-          capacity of community. Thus CNRS considers capacity building
+          capacity of community. Thus FSDG considers capacity building
           activities as an important activity for the sustainability of
           development of community. There is no alternative of training for
-          enhancing capacity of community. Keep this in mind CNRS developed a
+          enhancing capacity of community. Keep this in mind FSDG developed a
           strong training team along with the required facilities through which
-          CNRS has been conducting series of capacity building and skills
+          FSDG has been conducting series of capacity building and skills
           development training.
         </p>
       </div>
@@ -307,21 +307,21 @@ const ServiceDetails = () => {
           2.10 Private-public Linkage Development
         </h1>
         <p className="text-[#687279]">
-          CNRS considers this as a very important activity towards
+          FSDG considers this as a very important activity towards
           sustainability of the development process initiated by organized poor.
           Development is a continuous process and cannot be achieved within a
           particular project period. It needs a regular public support to tap
           resources and establish rights of poor people. Local level governance
           may contribute a lot to keep the pace of development in this regard.
-          Keeping this in mind, CNRS has been testing various model of
-          Public-Private linkage development. Under CBFM-2 project, CNRS has
+          Keeping this in mind, FSDG has been testing various model of
+          Public-Private linkage development. Under CBFM-2 project, FSDG has
           been undertaking 3-level linkage development workshops in each and
           every year at grass root, upazila and regional level. Under MACH
           project, representative of project formed CBOs take participation in
           the UZ and UP level meetings as an observer. There are project
           committees constituted with the representative of local government
           bodies, local administration and CBOs at the upazila level. An upazila
-          level workshop has been taken place under SEMP project. CNRS has very
+          level workshop has been taken place under SEMP project. FSDG has very
           interesting experiences and results of those initiatives.
         </p>
       </div>
@@ -329,15 +329,15 @@ const ServiceDetails = () => {
       <div className="mb-[20px]">
         <h1 className="font-bold mb-[20px]">2.11 Governance</h1>
         <p className="text-[#687279]">
-          CNRS has been facilitating for establishing sound local level
-          governance. CNRS follows community-based approach for enhancement,
-          development and improvement of livelihood of the poor. CNRS
-          facilitated committees with the poor community members. Moreover, CNRS
+          FSDG has been facilitating for establishing sound local level
+          governance. FSDG follows community-based approach for enhancement,
+          development and improvement of livelihood of the poor. FSDG
+          facilitated committees with the poor community members. Moreover, FSDG
           helps develop their relationship with local UPs as well as upazila
-          level service providers. CNRS always encourages running their business
+          level service providers. FSDG always encourages running their business
           democratically with equal participation of all members, facilitates
           promotional of institutional linkages and also encourage promotion of
-          gender perspectives. CNRS creates local pressure groups by forming
+          gender perspectives. FSDG creates local pressure groups by forming
           local network of CBOs and organizes demonstration on various local
           issues.
         </p>
@@ -346,32 +346,32 @@ const ServiceDetails = () => {
       <div className="mb-[20px]">
         <h1 className="font-bold mb-[20px]">2.12 Right Based Activities</h1>
         <p className="text-[#687279]">
-          CNRS mission envisages conservation and protection of natural
+          FSDG mission envisages conservation and protection of natural
           resources of haor and flood plain areas of Sylhet, Kishoregonj,
           Gazipur, Sherpur, Magura through community management. It on the
           identification of khas land and resources of those areas and has been
           trying to ensure the access of the poor particularly the poor fishers
           to those resources. The target groups are motivated to move for their
           rights from the resource base to upazila levels through an organized
-          process of advocacy facilitated by CNRS with the financial assistance
+          process of advocacy facilitated by FSDG with the financial assistance
           of DEFID, UNDP, AAB. There is an instance that the villagers of
           Matargaon of Jamalgonj upazila under Sunamgonj district have
-          re-established their rights over khas lands. CNRS follows a systematic
+          re-established their rights over khas lands. FSDG follows a systematic
           method in this regard.
         </p>
       </div>
       {/* 2.13 */}
       <div className="mb-[20px]">
         <h1 className="font-bold mb-[20px]">
-          2.13 CNRS Linkage with Civil Society
+          2.13 FSDG Linkage with Civil Society
         </h1>
         <p className="text-[#687279]">
-          CNRS has a good linkage with the community, local elected bodies,
+          FSDG has a good linkage with the community, local elected bodies,
           local professionals, civil society members and local administration
           for which mobilization of staff and community leaders have been
-          easier. In its advocacy program, CNRS has involved some members of the
+          easier. In its advocacy program, FSDG has involved some members of the
           civil society like lawyers, teachers, media and pressmen for which
-          movement for right issues has become easier. CNRS recently with
+          movement for right issues has become easier. FSDG recently with
           funding from Oxfam Hong Kong is running ‘Development of Haor Advocacy
           Platform’. Goal of the platform is to reduce community vulnerability
           of the poor and marginalized haor communities by improving governance
@@ -380,7 +380,7 @@ const ServiceDetails = () => {
           ensuring better support and services in the Haor area by influencing
           government, non-government and private sector actors/stakeholders
           through greater collaboration, coordination and community
-          mobilization. CNRS organized Civil Society Body has been performing
+          mobilization. FSDG organized Civil Society Body has been performing
           civil auditing of some government activities (e.g. repairing of
           embankment by BWDB) in a regular basis which could able to establish
           transparency of government work in some areas.
@@ -392,9 +392,9 @@ const ServiceDetails = () => {
           2.14 Community Risk Reduction (CRA)
         </h1>
         <p className="text-[#687279]">
-          CNRS has been conducting CRA and Risk Reduction Action Plan (RRAP) in
+          FSDG has been conducting CRA and Risk Reduction Action Plan (RRAP) in
           the Haor areas of Sunamgonj District. The community has identified
-          their needs and CNRS is implementing some of those interventions in
+          their needs and FSDG is implementing some of those interventions in
           Tahirpur under LDRRF project.
         </p>
       </div>
@@ -402,7 +402,7 @@ const ServiceDetails = () => {
       <div className="mb-[20px]">
         <h1 className="font-bold mb-[20px]">2. 15 Disaster risk reduction</h1>
         <p className="text-[#687279]">
-          CNRS is now working on knowledge banking of disaster preparedness
+          FSDG is now working on knowledge banking of disaster preparedness
           experiences. The activities and potential of international, national
           and local NGOs are being recorded in a database that has a web portal.
         </p>

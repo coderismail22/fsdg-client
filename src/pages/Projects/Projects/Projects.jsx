@@ -1,4 +1,4 @@
-import ProjectsCards from "../ProjectCards/Projects";
+import ProjectsCards from "../ProjectCards/ProjectsCards";
 import PageTitleWithImage from "../../../components/PageTitleWithImage/PageTitleWithImage";
 
 const Projects = () => {
@@ -6,9 +6,11 @@ const Projects = () => {
     <div>
       <PageTitleWithImage
         pageName={"Projects"}
-        bgImage={"/assets/hero-img.jpg"}
+        bgImage={"/assets/projects-bg.jpg"}
       />
-      <ProjectsCards />
+      <div className=" md:w-[95%] mx-auto px-2 ">
+        <ProjectsCards />
+      </div>
     </div>
   );
 };

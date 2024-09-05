@@ -17,12 +17,12 @@ const PageTitleWithImage = ({ bgImage, pageName }) => {
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 text-white">
           {pageName}
         </h1>
-        <div className="flex items-center justify-center gap-2 font-palanquin  text-center text-xl md:text-3xl lg:text-4xl font-bold leading-tight ">
+        <div className=" text-white flex items-center justify-center gap-2 font-palanquin  text-center text-sm lg:text-xl font-bold leading-tight ">
           <Link to="/" className="text-white-400 opacity-50 hover:opacity-100">
             Home
           </Link>
-          <FaChevronRight className="text-white" />
-          <p className="text-white">{pageName}</p>
+          <FaChevronRight />
+          <p>{pageName}</p>
         </div>
       </div>
     </section>

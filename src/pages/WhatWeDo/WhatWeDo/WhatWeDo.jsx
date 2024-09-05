@@ -4,13 +4,15 @@ import WhatWeDoDescriptionSection from "../WhatWeDoDescriptionSection/WhatWeDoDe
 
 const WhatWeDo = () => {
   return (
-    <div className="bg-[#113418] ">
+    <div>
       <PageTitleWithImage
         pageName={"What We Do"}
-        bgImage={"/assets/hero-img.jpg"}
+        bgImage={"/assets/whatwedo-bg.jpg"}
       />
-      <WhatWeDoDescriptionSection />
-      <WhatWeDoCards />;
+      <div className="bg-[#113418]">
+        <WhatWeDoDescriptionSection />
+        <WhatWeDoCards />
+      </div>
     </div>
   );
 };

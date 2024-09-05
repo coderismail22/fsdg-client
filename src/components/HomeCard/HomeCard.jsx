@@ -1,5 +1,5 @@
 const HomeCard = ({ card }) => {
-  const { image, title, description, url } = card;
+  const { image, title, description } = card;
   return (
     <div className="grid gap-5 md:grid-cols-2 justify-center items-center  md:flex-row md:col-span-2 p-5">
       {/* Image */}
@@ -7,7 +7,7 @@ const HomeCard = ({ card }) => {
         <img
           src={image}
           alt="birds"
-          className="w-[1000px] h-[500px] object-cover object-center"
+          className="w-[100%] h-[300px] object-cover object-center"
         />
       </div>
 
@@ -19,10 +19,6 @@ const HomeCard = ({ card }) => {
         <p className="font-lato text-[14px] md:text-[15px] text-[#7a7f84] mb-3 md:max-w-96">
           {description}
         </p>
-        <a href={url} className="font-bold hover:underline">
-          Find out more
-        </a>
-        {/* Link: Find Out More */}
       </div>
     </div>
   );

@@ -4,26 +4,26 @@ const Footer = () => {
       <div className="lg:flex gap-10 justify-between">
         <div className="max-w-[1100px] mb-10">
           <h1 className="font-bold text-xl text-[#EDEFF2] mb-[36px]">
-            Center for Natural Resource Studies (CNRS)
+            FSDG | A Non-profit Organisation
           </h1>
           <div>
             <p>
               <img
-                src="/assets/cnrs.png"
-                alt="CNRS Logo"
+                src="/assets/fsdg.jpg"
+                alt="FSDG Logo"
                 className="float-left w-16 h-16 mr-4"
               />
             </p>
             <p className="text-[#687279]">
-              CNRS is one of the most recognized pro-environmental national NGOs
+              FSDG is one of the most recognized pro-environmental national NGOs
               in Bangladesh. It was conceptualized in 1993, from Bangladesh
               Flood Action Plan (FAP16) Environmental Study; and the formal
-              journey started in 1994. Since formation, CNRS has been active in
+              journey started in 1994. Since formation, FSDG has been active in
               this field and has drawn attention of relevant local, national and
               international actors including government and funding agencies
               through demonstrating innovations in its approaches and producing
               tangible learning outcomes. On behalf of its General Committee, an
-              Executive Committee (EC) governs CNRS. CNRS aims to join with
+              Executive Committee (EC) governs FSDG. FSDG aims to join with
               others in influencing the national development strategy towards
               directions that support sustainable environment in Bangladesh.
             </p>
@@ -32,16 +32,14 @@ const Footer = () => {
         <div className="min-w-56 text-[#687279]">
           <h1 className="font-bold">Our Office Address:</h1>
           <p>
-            House 13, Level 4-6, <br />
-            Road 17, Block D, Banani <br />
-            Dhaka 1213, Bangladesh <br />
+            Dhaka, Bangladesh <br />
           </p>
-          <p className="mt-10">Tel: 880-2-222274127-8</p>
+          <p className="mt-10">Tel: +880 1714-006476</p>
         </div>
       </div>
-      <hr className="mt-5"/>
-      <h1 className="flex-1 mt-5 text-[#687279] " >
-        Copyright © 2024 CNRS | Developed by CNRS
+      <hr className="mt-5" />
+      <h1 className="flex-1 mt-5 text-[#687279] ">
+        Copyright © 2024 FSDG | Developed by FSDG
       </h1>
     </div>
   );

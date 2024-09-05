@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 const WhatWeDoCard1 = ({ imageUrl, title, itemLink, borderRight }) => {
   return (
     <div
-      className={`border-${borderRight} w-[400px] sm:w-[500px] md:w-[230px] lg:w-[320px]  h-[550px] md:h-[400px]  p-5  flex flex-col items-center justify-center`}
+      className={`border-${borderRight} w-[100%] sm:w-[500px] md:w-[230px] lg:w-[320px]  h-[550px] md:h-[400px]  p-5  flex flex-col items-center justify-center`}
     >
       <div>
         <img
-          className="w-[600px] md:w-[200px] lg:w-[300px]  h-[400px] md:h-[150px] lg:h-[200px] object-cover object-center"
+          className="w-[500px] md:w-[200px] lg:w-[300px]  h-[400px] md:h-[150px] lg:h-[200px] object-cover object-center"
           src={imageUrl}
           alt="Image"
         />

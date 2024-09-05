@@ -6,7 +6,7 @@ const JoinUsUpperCard = ({ title, description }) => {
   const [imgError, setImgError] = useState(false);
 
   return (
-    <div className="h-full mx-auto w-[400px] xs:w-[500px]  md:w-[550px] lg:w-[750px] flex flex-col items-center justify-between p-10 md:p-5 bg-blue-50 rounded-md">
+    <div className="h-full mx-auto w-[300px] xs:w-[500px]  md:w-[550px] lg:w-[750px] flex flex-col items-center justify-between p-10 md:p-5 bg-blue-50 rounded-md">
       {/* Card Image */}
       <div className="max-h-[300px] lg:max-h-[400px] lg:w-[500px] ">
         {imgError ? (

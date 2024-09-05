@@ -178,7 +178,7 @@ const StoryCards = () => {
     },
   ];
   return (
-    <div className="grid grid-cols-1 items-center justify-center md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 p-10 ">
+    <div className="grid grid-cols-1 items-center justify-center md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 py-10 ">
       {stories.map((story) => (
         <StoryCard key={story.id} story={story} />
       ))}

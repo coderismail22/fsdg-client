@@ -2,8 +2,8 @@ import Button from "../Button/Button";
 
 const YouTubeCard = () => {
   return (
-    <div className="m-3 p-3 bg-slate-100 rounded-md">
-      <h1 className="font-palanquin font-extrabold text-center ">Title</h1>
+    <div className="m-3 p-3 bg-slate-100 rounded-md pointer-events-none">
+      <h1 className="font-palanquin font-extrabold text-center ">Documentary</h1>
 
       <div
         className="relative overflow-hidden my-7"

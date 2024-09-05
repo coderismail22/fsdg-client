@@ -10,7 +10,7 @@ const WhatWeDoCard2 = ({
 }) => {
   return (
     <div
-      className={`border-${borderTop} border-${borderRight} w-[400px] sm:w-[500px] md:w-[160px] lg:w-[240px]  h-[550px] md:h-[400px]  p-5 md:p-2  flex flex-col items-center justify-center`}
+      className={`border-${borderTop} border-${borderRight} w-full sm:w-[500px] md:w-[160px] lg:w-[240px]  h-[550px] md:h-[400px]  p-5 md:p-2  flex flex-col items-center justify-center`}
     >
       <div>
         <img

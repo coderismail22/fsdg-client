@@ -6,7 +6,7 @@ const Membership = () => {
       </h1>
       <div className="font-lato text-xl">
         <p className="my-5">
-          CNRS has partnership and membership with some Forums and Associations.
+          FSDG has partnership and membership with some Forums and Associations.
           Among them the followings are worth mentioning:
         </p>
         <ul className="list-disc p-5">
@@ -24,7 +24,7 @@ const Membership = () => {
           <li>Credit Development Forum (CDF)</li>
           <li>Asian DRR network</li>
           <li>Bangladesh Network for Environmental Governance (BNEG)</li>
-          <li>CNRS runs a CBO network (community institutions)</li>
+          <li>FSDG runs a CBO network (community institutions)</li>
           <li>
             Secretariat of HAP (Haor Advocacy Platform)- a civil society network
           </li>

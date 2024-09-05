@@ -8,7 +8,9 @@ const Publications = () => {
         pageName={"Publications"}
         bgImage={"/assets/hero-img.jpg"}
       />
-      <PDF />
+      <div className=" md:w-9/12 mx-auto">
+        <PDF />
+      </div>
     </div>
   );
 };

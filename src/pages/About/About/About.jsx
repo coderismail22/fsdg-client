@@ -9,12 +9,14 @@ const About = () => {
     <div>
       <PageTitleWithImage
         pageName={"About Us"}
-        bgImage={"/assets/hero-img.jpg"}
+        bgImage={"/assets/about-bg.jpg"}
       />
-      <Profile />
-      <CounterForAboutPage />
-      <Membership />
-      <KeyPartners />
+      <div className="w-9/12 mx-auto">
+        <Profile />
+        <CounterForAboutPage />
+        <Membership />
+        <KeyPartners />
+      </div>
     </div>
   );
 };

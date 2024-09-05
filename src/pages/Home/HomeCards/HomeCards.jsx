@@ -12,7 +12,7 @@ const HomeCards = () => {
     fetchCardData();
   }, []);
   return (
-    <div>
+    <div >
       {cardData.map((card) => (
         <HomeCard key={card.index} card={card}/>
       ))}

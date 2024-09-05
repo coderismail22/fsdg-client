@@ -21,20 +21,15 @@ const WhatWeDoCards = () => {
             title={"Environment and Climate Change"}
             imageUrl={birds}
             borderRight={"r"}
-            itemLink={
-              "https://cnrs.org.bd/natural-resource-management-nrm-environment-and-water/"
-            }
           />
           <WhatWeDoCard1
             title={"Food Security and Livelihood (FSL) "}
             imageUrl={sugarcaneman}
             borderRight={"r"}
-            itemLink={"https://cnrs.org.bd/livelihood-and-job-creation/"}
           />
           <WhatWeDoCard1
             title={"Community Development and Governance"}
             imageUrl={grandma}
-            itemLink={"https://cnrs.org.bd/food-agriculture-and-nutrition/"}
           />
         </div>
         {/* Card Type 2 [4*4] */}
@@ -44,16 +39,12 @@ const WhatWeDoCards = () => {
             imageUrl={disaster}
             borderTop={"t"}
             borderRight={"r"}
-            itemLink={
-              "https://cnrs.org.bd/natural-resource-management-nrm-environment-and-water/"
-            }
           />
           <WhatWeDoCard2
             title={"Food Security and Livelihood (FSL) "}
             imageUrl={health}
             borderTop={"t"}
             borderRight={"r"}
-            itemLink={"https://cnrs.org.bd/livelihood-and-job-creation/"}
           />
 
           <WhatWeDoCard2
@@ -61,13 +52,11 @@ const WhatWeDoCards = () => {
             imageUrl={child}
             borderTop={"t"}
             borderRight={"r"}
-            itemLink={"https://cnrs.org.bd/food-agriculture-and-nutrition/"}
           />
           <WhatWeDoCard2
             title={"Community Development and Governance"}
             imageUrl={institutional}
             borderTop={"t"}
-            itemLink={"https://cnrs.org.bd/food-agriculture-and-nutrition/"}
           />
         </div>
       </div>

@@ -8,7 +8,7 @@ const Contact = () => {
     <div className="flex flex-col justify-center items-center ">
       <PageTitleWithImage
         pageName={"Contact"}
-        bgImage={"/assets/hero-img.jpg"}
+        bgImage={"/assets/contact-bg.jpg"}
       />
       <ContactCards />
       <Map />

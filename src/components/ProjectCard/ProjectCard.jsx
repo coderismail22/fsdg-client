@@ -8,7 +8,7 @@ const ProjectCard = ({ cardData }) => {
   const [imgError, setImgError] = useState(false);
 
   return (
-    <div className="w-full h-full mx-auto max-w-[400px] flex flex-col items-center justify-between p-5 bg-blue-50 ">
+    <div className="w-full h-full mx-auto max-w-[400px] flex flex-col items-center justify-between p-2 bg-blue-50 ">
       {/* Card Image */}
       <div className="h-[200px]">
         {imgError ? (

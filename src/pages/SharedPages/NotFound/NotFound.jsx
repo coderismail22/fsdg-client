@@ -30,11 +30,11 @@ const NotFound = () => {
             <p>The page you&apos;re looking for isn&apos;t available.</p>
             <p>Try searching again or use the Go Back button below.</p>
           </div>
-          <div className="mb-20 md:mb-0 flex items-center justify-center">
+          <div className="flex flex-col items-center justify-center">
             <IoMdArrowRoundBack />
             <Link
               to="/"
-              className="text-lg font-light outline-none focus:outline-none transform transition-all text-yellow-500 hover:text-yellow-600"
+              className="text-lg font-bold outline-none focus:outline-none transform transition-all text-yellow-500 hover:text-yellow-600"
             >
               Go Back
             </Link>

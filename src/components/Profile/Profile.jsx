@@ -1,22 +1,22 @@
 const Profile = () => {
   return (
     <div>
-      <div className="p-5">
+      <div className="md:p-5">
         {/* Title and Description */}
         <div className=" mb-5">
           <h1 className="font-palanquin text-[30px] font-bold text-center my-3">
             Profile
           </h1>
           <p className="font-lato text-[17px] text-justify  ">
-            CNRS is one of the most recognized pro-environmental national NGOs
+            FSDG is one of the most recognized pro-environmental national NGOs
             in Bangladesh. It was conceptualized in 1993, from Bangladesh Flood
             Action Plan (FAP16) Environmental Study; and the formal journey
-            started in 1994. Since formation, CNRS has been active in this field
+            started in 1994. Since formation, FSDG has been active in this field
             and has drawn attention of relevant local, national and
             international actors including government and funding agencies
             through demonstrating innovations in its approaches and producing
             tangible learning outcomes. On behalf of its General Committee, an
-            Executive Committee (EC) governs CNRS. CNRS aims to join with others
+            Executive Committee (EC) governs FSDG. FSDG aims to join with others
             in influencing the national development strategy towards directions
             that support sustainable environment in Bangladesh.{" "}
           </p>
@@ -30,7 +30,7 @@ const Profile = () => {
               Vision
             </p>
             <p className="col-span-2 font-lato">
-              CNRS dreams that people and nature live in harmony in a world free
+              FSDG dreams that people and nature live in harmony in a world free
               from exploitation and exclusion.
             </p>
             {/* 2 */}
@@ -57,15 +57,15 @@ const Profile = () => {
               Legal entity
             </p>
             <p className="col-span-2 font-lato">
-              CNRS is registered with NGO Affairs Bureau, Joint Stock/Societies
+              FSDG is registered with NGO Affairs Bureau, Joint Stock/Societies
               Act, Social Welfare as well as Micro-Credit Regulatory Authority.
             </p>
             {/* 2 */}
             <p className="col-span-1 font-yeseva font-bold md:text-right text-[#001848]">
-              CNRS Governance systems
+              FSDG Governance systems
             </p>
             <p className="col-span-2 font-lato text-[#001848] mb-3">
-              The organizational aspects of CNRS is managed and governed as per
+              The organizational aspects of FSDG is managed and governed as per
               the rules set forth in the constitution and is administered by two
               sets of bodies, viz. The General Board (GB) comprising of 21
               (twenty-one) members and an Executive Committee (EC) of 7 (seven)
@@ -90,16 +90,16 @@ const Profile = () => {
               </span>
               A seven-member senior management team (SMT) is formed headed by
               the Executive Director (ED) to facilitate day-to-day functions of
-              CNRS.
+              FSDG.
             </p>
             {/* 2 */}
             <p className="col-span-1 font-yeseva font-bold md:text-right"></p>
             <p className="col-span-2 font-lato">
               <span className="block font-bold ">Audit committee</span>
-              In order to strengthen internal control mechanism, CNRS has
+              In order to strengthen internal control mechanism, FSDG has
               adopted an “Audit Committee (AC)” constituted with 3 staff members
               to monitor and take necessary actions to comply with the standard
-              procedures and policies of CNRS.
+              procedures and policies of FSDG.
             </p>
             {/* 3 */}
             <p className="col-span-1 font-yeseva font-bold md:text-right"></p>
@@ -115,7 +115,7 @@ const Profile = () => {
             <p className="col-span-1 font-yeseva font-bold md:text-right"></p>
             <p className="col-span-2 font-lato">
               <span className="block font-bold ">Gender forum</span>A
-              five-member gender forum (GF) aimed at making CNRS a gender
+              five-member gender forum (GF) aimed at making FSDG a gender
               sensitive organization by facilitating space for women staff
               members to express their views, establishing gender equality,
               women’s rights and gender friendly environment.
@@ -126,7 +126,7 @@ const Profile = () => {
               <span className="block font-bold ">
                 Independent Reviewers of procurement
               </span>
-              CNRS assigns a mid-level staff member to undertake the
+              FSDG assigns a mid-level staff member to undertake the
               responsibility as Independent Reviewer (IR) of procurement of
               goods and services on a random basis to ensure compliance of
               standard procedures.

@@ -9,16 +9,22 @@ import MiniCaseStoryCards from "../../../components/MiniCaseStoryCards/MiniCaseS
 
 const Home = () => {
   return (
-    <div>
+    <>
       <HeroSection />
-      <HomeCards />
-      <Documentaries />
-      <Counter />
-      <Articles />
-      <BottomCards />
       <ExecutiveDirector />
-      <MiniCaseStoryCards />
-    </div>
+      <div className="w-[90%] xs:w-[100%] md:9/12 mx-auto">
+        <HomeCards />
+        <Documentaries />
+      </div>
+      <div>
+        <Counter />
+        <Articles />
+      </div>
+      <div className="w-[90%] mx-auto">
+        <BottomCards />
+        <MiniCaseStoryCards />
+      </div>
+    </>
   );
 };
 

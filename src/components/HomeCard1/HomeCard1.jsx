@@ -15,10 +15,10 @@ const HomeCard1 = () => {
           <div className="w-full  p-5">
             {/* Text */}
             <h1 className="font-yeseva font-extrabold text-black text-4xl  mb-5">
-              CNRS-WFP DRR
+              FSDG-WFP DRR
             </h1>
             <p className="font-lato text-[20px] text-grey-800  mb-8">
-              As per the agreement with WFP-DRR-FFA project, CNRS has completed
+              As per the agreement with WFP-DRR-FFA project, FSDG has completed
               all the assigned 11 DRR schemes in three camps (camp-17, camp
               20-extension and camp 22) during the project period of three
               months (1 December 2018 to 28 February 2019).
