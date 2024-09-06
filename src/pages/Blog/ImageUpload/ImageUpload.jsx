@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import { RotatingLines } from 'react-loader-spinner';
 
 const ImageUpload = ({ setUploadedImageUrl }) => {
     const [selectedFile, setSelectedFile] = useState(null);
@@ -56,7 +57,17 @@ const ImageUpload = ({ setUploadedImageUrl }) => {
                     onClick={handleUpload}
                     disabled={isLoading}
                 >
-                    {isLoading ? 'Uploading...' : 'Upload Image'}
+                    {isLoading ? <p className=''> <RotatingLines
+                        visible={true}
+                        height="46"
+                        width="46"
+                        color="grey"
+                        strokeWidth="5"
+                        animationDuration="0.75"
+                        ariaLabel="rotating-lines-loading"
+                        wrapperStyle={{}}
+                        wrapperClass=""
+                    /></p> : 'Upload Image'}
                 </button>
             )}
         </div>

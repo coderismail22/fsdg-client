@@ -2,23 +2,53 @@ import axios from "axios";
 import { MdDeleteOutline, MdEdit } from "react-icons/md";
 import { useState, useEffect } from "react";
 import Swal from "sweetalert2";
+import { RotatingLines } from "react-loader-spinner";
 
 const Blogs = () => {
     const [blogs, setBlogs] = useState([]);
+    const [loading, setLoading] = useState(true); // State for loading
+    const [error, setError] = useState(null);
 
     // Fetch blogs
     const fetchBlogs = async () => {
+        setLoading(true); // Set loading to true before fetching data
         try {
             const { data } = await axios.get("http://localhost:5000/");
             setBlogs(data);
         } catch (error) {
             console.error("Error fetching blogs:", error);
+            setError("Something went wrong while fetching the blogs.");
+        } finally {
+            setLoading(false); // Set loading to false after data fetch
         }
     };
 
+    useEffect(() => {
+        fetchBlogs();
+    }, []);
+
+    if (loading) {
+        return (
+            <div className="h-screen flex items-center justify-center">
+                <RotatingLines
+                    visible={true}
+                    height="46"
+                    width="46"
+                    color="grey"
+                    strokeWidth="5"
+                    animationDuration="0.75"
+                    ariaLabel="rotating-lines-loading"
+                />
+            </div>
+        ); // Show spinner while loading
+    }
+
+    if (error) {
+        return <p>{error}</p>; // Display error message if there was an error
+    }
+
     // Delete a blog
     const deleteBlog = async (id) => {
-        console.log("delete blog clicked");
         try {
             const result = await Swal.fire({
                 title: "Are you sure?",
@@ -43,14 +73,13 @@ const Blogs = () => {
 
     // Edit a blog
     const editBlog = async (id) => {
-        console.log("edit blog clicked");
         const { value: formValues } = await Swal.fire({
             title: "Edit Blog Post",
             html:
                 '<input id="title" class="swal2-input" placeholder="Blog Title">' +
                 '<textarea id="content" class="swal2-textarea" placeholder="Blog Content"></textarea>',
             focusConfirm: false,
-            showCancelButton: true, // Add cancel button for confirmation
+            showCancelButton: true,
             confirmButtonText: "Save Changes",
             cancelButtonText: "Cancel",
             preConfirm: () => {
@@ -70,10 +99,6 @@ const Blogs = () => {
             }
         }
     };
-    // Fetch blogs on component mount
-    useEffect(() => {
-        fetchBlogs();
-    }, []);
 
     return (
         <div className="container mx-auto px-4 py-8">
@@ -114,7 +139,6 @@ const Blogs = () => {
                             />
                         </div>
                     </div>
-
                 ))}
             </div>
         </div>

@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom'; // Import useParams to access the dynamic ID
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { RotatingLines } from 'react-loader-spinner';
 
 const BlogDetail = () => {
     const { id } = useParams(); // Get the blog ID from the URL
@@ -23,7 +24,17 @@ const BlogDetail = () => {
     useEffect(() => { fetchBlogDetail(); }, [id]); // Fetch the blog when component mounts
 
     if (loading) {
-        return <p>Loading blog...</p>;
+        return <p className='h-screen flex items-center justify-center mx-auto'> <RotatingLines
+            visible={true}
+            height="46"
+            width="46"
+            color="grey"
+            strokeWidth="5"
+            animationDuration="0.75"
+            ariaLabel="rotating-lines-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+        /></p>;
     }
 
     if (error) {

@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { RotatingLines } from "react-loader-spinner";
 import { Link } from "react-router-dom";
 
 const Blogs = () => {
@@ -24,7 +25,17 @@ const Blogs = () => {
     useEffect(() => { fetchBlogs() }, [])
 
     if (loading) {
-        return <p>Loading blogs...</p>; // Display loading text
+        return <p className='h-screen flex items-center justify-center mx-auto'> <RotatingLines
+            visible={true}
+            height="46"
+            width="46"
+            color="grey"
+            strokeWidth="5"
+            animationDuration="0.75"
+            ariaLabel="rotating-lines-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+        /></p>; // Display loading text
     }
 
     if (error) {
