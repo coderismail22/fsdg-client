@@ -12,6 +12,11 @@ import NotFound from "../pages/SharedPages/NotFound/NotFound";
 // import Projects from "../pages/Projects/Projects/Projects";
 import BlogEditor from "../pages/Blog/BlogEditor/BlogEditor";
 import Blogs from "../pages/Blog/Blogs/Blogs";
+import Login from "../pages/SharedPages/Login/Login";
+import AdminDashboard from "../pages/AdminDashboard/AdminDashboard/AdminDashboard";
+import AdminProfile from "../pages/AdminDashboard/AdminProfile/AdminProfile";
+import AdminBlogList from "../pages/AdminDashboard/AdminBlogList/AdminBlogList";
+import BlogDetail from "../pages/Blog/BlogDetails/BlogDetails";
 
 export const router = createBrowserRouter([
   {
@@ -39,8 +44,12 @@ export const router = createBrowserRouter([
         element: <BlogEditor />,
       },
       {
-        path: "/blogs",
+        path: "/viewer-blogs",
         element: <Blogs />,
+      },
+      {
+        path: "blogs/:id",
+        element: <BlogDetail />
       },
       // {
       //   path: "/projects",
@@ -63,9 +72,36 @@ export const router = createBrowserRouter([
         element: <JoinUs />,
       },
       {
-        path: "*",
-        element: <NotFound />, // Render NotFound component within MainLayout
+        path: "/login",
+        element: <Login />,
       },
     ],
+  },
+  {
+    path: "dashboard/admin",
+    element: <AdminDashboard />,
+    children: [
+      {
+        path: "admin-profile",
+        element: <AdminProfile />
+      },
+      {
+        path: "admin-blog-editor",
+        element: <BlogEditor />
+      },
+      {
+        path: "admin-blog-list",
+        element: <AdminBlogList />
+      },
+      // {
+      //   path: "admin-declined-applications",
+      //   element: <DeclinedApplications />
+      // },
+    ]
+  },
+  ,
+  {
+    path: "*",
+    element: <NotFound />, // Render NotFound component within MainLayout
   },
 ]);

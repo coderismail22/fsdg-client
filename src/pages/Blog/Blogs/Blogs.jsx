@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Blogs = () => {
     // State to store fetched blogs
@@ -40,6 +41,8 @@ const Blogs = () => {
                         <p className="text-gray-700">{blog.content.substring(0, 100)}...</p>
                         <img src={blog.imgUrl} alt={blog.title} className="w-full h-40 object-cover mt-4" />
                         <p className="text-gray-500 text-sm mt-2">Author: {blog.author}</p>
+                        <Link to={`/blogs/${blog._id}`} className="text-blue-500 mt-4 inline-block">View More</Link> {/* View More Button */}
+
                     </div>
                 ))}
             </div>

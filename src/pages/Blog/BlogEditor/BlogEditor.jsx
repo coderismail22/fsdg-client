@@ -29,7 +29,6 @@ const BlogEditor = () => {
                 setContent('');
                 setUploadedImageUrl(''); // Clear image after success
             }
-            // navigate('/')
         } catch (error) {
             Swal.fire('Error', 'Error creating blog post', 'error');
         }

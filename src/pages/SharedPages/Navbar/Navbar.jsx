@@ -10,12 +10,13 @@ const navitems = [
   { title: "Work", path: "/what-we-do" }, // 'What We Do' replaced with 'Work'
   { title: "Services", path: "/services" }, // 'Our Services' replaced with 'Services'
   // { title: "Projects", path: "/projects" },
-  { title: "Blogs", path: "/blogs" },
-  { title: "Blog Editor", path: "/blog" },
-  { title: "Stories", path: "/stories" },
+  { title: "Blogs", path: "/viewer-blogs" },
+  // { title: "Blog Editor", path: "/blog" },
+  // { title: "Stories", path: "/stories" },
   // { title: "Publications", path: "/publications" },
   { title: "Contact", path: "/contact" },
   { title: "Join", path: "/join-us" }, // 'Join Us' replaced with 'Join'
+  { title: "Login", path: '/login' },
 ];
 
 const Navbar = () => {
