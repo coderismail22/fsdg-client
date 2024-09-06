@@ -4,7 +4,7 @@ const Articles = () => {
   const articles = [
     {
       id: 1,
-      title: "Waste Management",
+      title: "Waste Management Project",
       description:
         "In the reporting period, FSDG started a new waste management project at Kanchan-1 Drilling Site, Maheshkhali, Cox&apos;s Bazar, with the support of Sinopec International Petroleum Service Corporation.",
       imgUrl: "/assets/article_1.jpg",

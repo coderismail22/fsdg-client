@@ -4,12 +4,14 @@ import Home from "../pages/Home/Home/Home";
 import About from "../pages/About/About/About";
 import WhatWeDo from "../pages/WhatWeDo/WhatWeDo/WhatWeDo";
 import OurServices from "../pages/OurServices/OurServices/OurServices";
-import Publications from "../pages/Publications/Publications/Publications";
+// import Publications from "../pages/Publications/Publications/Publications";
 import Contact from "../pages/Contact/Contact/Contact";
 import JoinUs from "../pages/JoinUs/JoinUs/JoinUs";
 import Stories from "../pages/Stories/Stories/Stories";
 import NotFound from "../pages/SharedPages/NotFound/NotFound";
-import Projects from "../pages/Projects/Projects/Projects";
+// import Projects from "../pages/Projects/Projects/Projects";
+import BlogEditor from "../pages/Blog/BlogEditor/BlogEditor";
+import Blogs from "../pages/Blog/Blogs/Blogs";
 
 export const router = createBrowserRouter([
   {
@@ -33,9 +35,17 @@ export const router = createBrowserRouter([
         element: <OurServices />,
       },
       {
-        path: "/projects",
-        element: <Projects />,
+        path: "/blog",
+        element: <BlogEditor />,
       },
+      {
+        path: "/blogs",
+        element: <Blogs />,
+      },
+      // {
+      //   path: "/projects",
+      //   element: <Projects />,
+      // },
       {
         path: "/stories",
         element: <Stories />,

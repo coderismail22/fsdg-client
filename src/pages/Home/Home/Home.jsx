@@ -1,6 +1,6 @@
 import HeroSection from "../HeroSection/HeroSection";
 import HomeCards from "../HomeCards/HomeCards";
-import Documentaries from "../Documentaries/Documentaries";
+// import Documentaries from "../Documentaries/Documentaries";
 import Counter from "../../../components/Counter/Counter";
 import Articles from "../Articles/Articles";
 import BottomCards from "../BottomCards/BottomCards";
@@ -14,7 +14,7 @@ const Home = () => {
       <ExecutiveDirector />
       <div className="w-[90%] xs:w-[100%] md:9/12 mx-auto">
         <HomeCards />
-        <Documentaries />
+        {/* <Documentaries /> */}
       </div>
       <div>
         <Counter />
