@@ -20,6 +20,7 @@ import BlogDetail from "../pages/Blog/BlogDetails/BlogDetails";
 import RichTextEditor from "../pages/Blog/RichTextEditor/RichTextEditor";
 import PublishNewPost from "../pages/Blog/PublishNewPost/PublishNewPost";
 import AdminDashboardNavbar from "../components/AdminDashboardNavbar/AdminDashboardNavbar";
+import Projects from "../pages/Projects/Projects/Projects";
 // import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute";
 
 export const router = createBrowserRouter([
@@ -56,10 +57,10 @@ export const router = createBrowserRouter([
         path: "blogs/:id",
         element: <BlogDetail />
       },
-      // {
-      //   path: "/projects",
-      //   element: <Projects />,
-      // },
+      {
+        path: "/projects",
+        element: <Projects />,
+      },
       {
         path: "/stories",
         element: <Stories />,

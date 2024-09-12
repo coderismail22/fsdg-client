@@ -7,7 +7,7 @@ const HomeCards = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [visibleBlogs, setVisibleBlogs] = useState(2);
+  const [visiblePosts, setVisiblePosts] = useState(2);
   // Initial 2 visible blogs
   // use "setVisibleBlogs" if you want to implement "More Posts" button handler
 
@@ -55,12 +55,9 @@ const HomeCards = () => {
 
   return (
     <div >
-      {/* {posts.map((post) => (
-        <HomeCard key={post.index} post={post} />
-      ))} */}
       {
         posts.length === 0 ? (<p className="text-center text-red-600 text-xl font-semibold mt-6 border p-10 mx-2">There&apos;s nothing to show</p>
-        ) : <div>{posts.slice(0, visibleBlogs).map((post) => (
+        ) : <div>{posts.slice(0, visiblePosts).map((post) => (
           <HomeCard key={post.index} post={post} />
         ))}</div >
       }

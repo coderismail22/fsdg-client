@@ -2,13 +2,13 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaImage } from "react-icons/fa6";
 
-const ProjectCard = ({ cardData }) => {
-  const { imgUrl, title, clientDonorInfo, budget, mainFocus } = cardData;
-  console.log(imgUrl, title, clientDonorInfo, budget, mainFocus);
+const ProjectCard = ({ post }) => {
+  const { _id, imgUrl, title } = post;
+  // console.log(imgUrl, title, clientDonorInfo, budget, mainFocus);
   const [imgError, setImgError] = useState(false);
 
   return (
-    <div className="w-full h-full mx-auto max-w-[400px] flex flex-col items-center justify-between p-2 bg-blue-50 ">
+    <div className="w-full h-full mx-auto max-w-[400px] flex flex-col items-center justify-between p-3 bg-blue-50 overflow-hidden rounded rounded-md">
       {/* Card Image */}
       <div className="h-[200px]">
         {imgError ? (
@@ -35,27 +35,29 @@ const ProjectCard = ({ cardData }) => {
         </h1>
       </div>
       {/* Description */}
-      <div className="text-center my-3 text-[#687279] text-sm w-full">
-        <p>
+      <div
+      // className="text-center my-3 text-[#687279] text-sm w-full"
+      >
+        {/* <p>
           <span className="text-[#687279] font-bold">Client/Donor: </span>
           {clientDonorInfo}
-        </p>
-        <p>
+        </p> */}
+        {/* <p>
           <span className="text-[#687279] font-bold">Budget: </span>
           {budget}
-        </p>
-        <p className="mt-5 text-center">
+        </p> */}
+        {/* <p className="mt-5 text-center">
           <span className="text-[#687279] font-bold ">
             Main Focus of The Project:
           </span>
           {mainFocus}
-        </p>
+        </p> */}
       </div>
       <Link
-        to="/contact"
+        to={`/blogs/${_id}`}
         className="font-montserrat  flex gap-5 items-center justify-center text-xl bg-[#FFCD05]  w-[300px] h-[50px] p-2 mt-5"
       >
-        Contact for more
+        Details
       </Link>
     </div>
   );
