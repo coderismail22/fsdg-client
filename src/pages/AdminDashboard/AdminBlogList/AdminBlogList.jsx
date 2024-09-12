@@ -131,9 +131,11 @@ const AdminBlogList = () => {
                                 />
                             )}
                             {/* Author */}
-                            <p className="text-gray-500 text-sm">Author: {blog.author}</p>
+                            <p className="text-gray-500 text-sm mt-2">
+                                <span className="font-bold">Author:</span> {blog.author}
+                            </p>
                             {/* Date */}
-                            <p className="text-gray-500 text-sm">Published: {moment(blog.createdAt).format('YYYY-MM-DD')}</p>
+                            <p className="text-gray-500 text-sm"><span className="font-bold">Published:</span> {moment(blog.createdAt).format('YYYY-MM-DD')}</p>
                             <hr className="my-4" />
                             {/* Edit and Delete Button */}
                             <div className="flex justify-center space-x-5">

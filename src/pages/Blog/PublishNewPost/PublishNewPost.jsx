@@ -31,9 +31,9 @@ const PublishNewPost = () => {
     };
 
     return (
-        <div className="mx-10 my-8">
+        <div className="mx-10 my-8 ">
             <h1 className="text-2xl font-semibold mb-6">Publish New Post</h1>
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 border p-2">
                 <div>
                     <label className="block font-medium">Title</label>
                     <input
@@ -83,6 +83,7 @@ const PublishNewPost = () => {
                 <div className="mt-8">
                     <h2 className="text-xl font-semibold mb-4">Preview Content</h2>
                     <div className="border border-gray-300 p-10 rounded">
+                        {uploadedImageUrl ? <img src={uploadedImageUrl} /> : null}
                         <div dangerouslySetInnerHTML={{ __html: content }} />
                     </div>
                 </div>
