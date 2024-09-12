@@ -3,6 +3,8 @@ import ImageUpload from '../ImageUpload/ImageUpload'; // Import the ImageUpload 
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
+import { IoCloudUploadOutline } from 'react-icons/io5';
+import RichTextEditor from '../RichTextEditor/RichTextEditor';
 
 const BlogEditor = () => {
     const [title, setTitle] = useState('');
@@ -22,7 +24,7 @@ const BlogEditor = () => {
         };
 
         try {
-            const response = await axios.post("http://localhost:5000", blogData);
+            const response = await axios.post("https://fsdg-blog-login-server.vercel.app/api/blogs", blogData);
             if (response.data) {
                 Swal.fire('Success', 'Blog post created successfully!', 'success');
                 setTitle('');
@@ -55,7 +57,7 @@ const BlogEditor = () => {
                         required
                     />
                 </div>
-                <div className="mb-4">
+                {/* <div className="mb-4">
                     <label htmlFor="content" className="text-gray-700 font-medium block mb-2">
                         Content:
                     </label>
@@ -69,13 +71,19 @@ const BlogEditor = () => {
                         rows="10"
                         required
                     ></textarea>
-                </div>
+                </div> */}
+                {/* Jodit Content */}
+                <RichTextEditor />
+                {/* Jodit Content */}
+
                 <div className="mb-4">
                     <ImageUpload setUploadedImageUrl={setUploadedImageUrl} />
                 </div>
                 {isFormValid && (
-                    <button type="submit" className="bg-blue-500 text-white font-bold py-2 px-4 rounded-md hover:bg-blue-700">
-                        Submit Blog Post
+                    <button type="submit" className="flex items-center justify-center gap-2 bg-blue-500 text-white font-bold py-2 px-4 rounded-md hover:bg-blue-700">
+                        Post The Blog
+                        <IoCloudUploadOutline />
+
                     </button>
                 )}
             </form>

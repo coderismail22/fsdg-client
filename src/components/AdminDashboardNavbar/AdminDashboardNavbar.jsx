@@ -5,21 +5,13 @@ import { FaBars } from "react-icons/fa";
 import { TbLayoutSidebarLeftCollapse } from "react-icons/tb";
 
 const navitems = [
-  { title: "Home", path: "/" },
-  { title: "About", path: "/about" },
-  { title: "Work", path: "/what-we-do" }, // 'What We Do' replaced with 'Work'
-  { title: "Services", path: "/services" }, // 'Our Services' replaced with 'Services'
-  // { title: "Projects", path: "/projects" },
-  { title: "Blogs", path: "/viewer-blogs" },
-  // { title: "Blog Editor", path: "/blog" },
-  // { title: "Stories", path: "/stories" },
-  // { title: "Publications", path: "/publications" },
-  { title: "Contact", path: "/contact" },
-  // { title: "Join", path: "/join-us" }, // 'Join Us' replaced with 'Join'
-  { title: "Login", path: '/login' },
+  { title: "Profile", path: "admin-profile" },
+  { title: "Editor", path: "admin-rich-text-editor" },
+  { title: "Posts", path: "admin-blog-list" },
+  { title: "Go to Home", path: "/" }
 ];
 
-const Navbar = () => {
+const AdminDashboardNavbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -60,7 +52,7 @@ const Navbar = () => {
             <Link
               key={index}
               to={item.path}
-              className="hover:text-[#456C2F] hidden lg:inline-block font-montserrat font-bold text-center text-sm md:text-base"
+              className="hover:text-[#456C2F] hidden lg:inline-block font-montserrat font-bold text-center text-sm md:text-base w-[100px]"
             >
               {item.title}
             </Link>
@@ -105,4 +97,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default AdminDashboardNavbar;

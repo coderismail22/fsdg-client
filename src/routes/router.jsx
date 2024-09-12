@@ -17,6 +17,10 @@ import AdminDashboard from "../pages/AdminDashboard/AdminDashboard/AdminDashboar
 import AdminProfile from "../pages/AdminDashboard/AdminProfile/AdminProfile";
 import AdminBlogList from "../pages/AdminDashboard/AdminBlogList/AdminBlogList";
 import BlogDetail from "../pages/Blog/BlogDetails/BlogDetails";
+import RichTextEditor from "../pages/Blog/RichTextEditor/RichTextEditor";
+import PublishNewPost from "../pages/Blog/PublishNewPost/PublishNewPost";
+import AdminDashboardNavbar from "../components/AdminDashboardNavbar/AdminDashboardNavbar";
+// import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute";
 
 export const router = createBrowserRouter([
   {
@@ -83,23 +87,18 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "admin-profile",
-        element: <AdminProfile />
+        element: <AdminProfile /> // Wrap each admin route with ProtectedRoute
       },
       {
-        path: "admin-blog-editor",
-        element: <BlogEditor />
+        path: "admin-rich-text-editor",
+        element: <PublishNewPost />
       },
       {
         path: "admin-blog-list",
         element: <AdminBlogList />
       },
-      // {
-      //   path: "admin-declined-applications",
-      //   element: <DeclinedApplications />
-      // },
     ]
   },
-  ,
   {
     path: "*",
     element: <NotFound />, // Render NotFound component within MainLayout

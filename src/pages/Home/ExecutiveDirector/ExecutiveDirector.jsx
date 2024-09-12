@@ -2,7 +2,7 @@ const ExecutiveDirector = () => {
   return (
     <div className="p-5 md:p-24">
       <h1 className="font-redhat font-extrabold text-[50px] leading-tight text-center my-10 md:my-16">
-        Words from our <br /> Executive Director
+        Words from our <br /> Chairperson
       </h1>
       <div className="grid gap-5  grid-cols-1 md:grid-cols-2 justify-center items-center">
         <div>
@@ -25,7 +25,7 @@ const ExecutiveDirector = () => {
             mission.
           </p>
           <p className="font-montserrat font-extrabold text-[15px]">
-            Firoj Alam <br /> Executive Director, FSDG
+            Firoj Alam <br /> Chairperson, FSDG
           </p>
         </div>
       </div>

@@ -7,3 +7,13 @@ html {
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&display=swap");
+
+.jodit-wysiwyg ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.jodit-wysiwyg ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+}

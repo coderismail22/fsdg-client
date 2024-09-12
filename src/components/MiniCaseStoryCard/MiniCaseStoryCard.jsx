@@ -19,7 +19,7 @@ const MiniCaseStoryCard = ({ story }) => {
 
   return (
     <motion.div
-      className="flex items-center bg-white shadow-lg rounded-lg overflow-hidden w-80 h-32 md:w-72 md:h-36"
+      className="pointer-events-none flex items-center bg-white shadow-lg rounded-lg overflow-hidden w-80 h-32 md:w-72 md:h-36"
       variants={cardVariants}
       initial="hidden"
       whileInView="visible"
@@ -27,22 +27,28 @@ const MiniCaseStoryCard = ({ story }) => {
       viewport={{ once: true }}
     >
       {/* Image */}
-      <Link to={postUrl} className="flex-shrink-0 w-1/3 h-full">
-        <img src={imgUrl} alt="Sample" className="w-full h-full object-cover" />
+      <Link
+      //  to={postUrl}
+        className="flex-shrink-0 w-1/3 h-full">
+        <img 
+        src={imgUrl}
+         alt="Sample" className="w-full h-full object-cover" />
       </Link>
 
       {/* Content */}
       <div className="flex flex-col justify-between p-4 w-2/3">
         {/* Button */}
         <Link
-          to={postUrl}
+          // to={postUrl}
           className="truncate uppercase bg-[#F7B500] hover:bg-[#B88E19] p-2 rounded-md text-[10px] text-center font-bold font-montserrat"
         >
           <p>{highlightedBar}</p>
         </Link>
 
         {/* Title */}
-        <Link to={postUrl} className="text-[12px] font-bold mt-2 text-center">
+        <Link
+        //  to={postUrl} 
+        className="text-[12px] font-bold mt-2 text-center">
           {title}
         </Link>
       </div>

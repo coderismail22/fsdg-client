@@ -13,9 +13,9 @@ const About = () => {
       />
       <div className="w-9/12 mx-auto">
         <Profile />
-        <CounterForAboutPage />
-        <Membership />
-        <KeyPartners />
+        {/* <CounterForAboutPage /> */}
+        {/* <Membership /> */}
+        {/* <KeyPartners /> */}
       </div>
     </div>
   );

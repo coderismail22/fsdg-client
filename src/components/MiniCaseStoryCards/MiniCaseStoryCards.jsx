@@ -10,7 +10,7 @@ const stories = [
     highlightedBar:
       " Life Project | In Partnership With IC-NET | Funded by Jica",
     title:
-      "From Goats to Pigs: Painnocing Chakma's Path to Prosperity with the LIFE Project",
+      "From Goats: Painnocing Chakma's Path to Prosperity with the LIFE Project",
     author: "CNRS",
     postDate: "Published On August 20, 2024",
     imgUrl:
@@ -24,7 +24,7 @@ const stories = [
     id: 2,
     highlightedBar: " Suchana Project",
     title:
-      "From Goats to Pigs: Painnocing Chakma’s Path to Prosperity with the LIFE Project",
+      "From Goats: Painnocing Chakma’s Path to Prosperity with the LIFE Project",
     author: "CNRS",
     postDate: "Published On September 25, 2022",
     imgUrl:
@@ -39,7 +39,7 @@ const stories = [
     highlightedBar:
       " Life Project | In Partnership With IC-NET | Funded by Jica",
     title:
-      "From Goats to Pigs: Painnocing Chakma’s Path to Prosperity with the LIFE Project",
+      "From Goats: Painnocing Chakma’s Path to Prosperity with the LIFE Project",
     author: "CNRS",
     postDate: "Published On August 20, 2024",
     imgUrl:
@@ -53,7 +53,7 @@ const stories = [
     id: 4,
     highlightedBar: " Suchana Project 1",
     title:
-      "From Goats to Pigs: Painnocing Chakma’s Path to Prosperity with the LIFE Project",
+      "From Goats: Painnocing Chakma’s Path to Prosperity with the LIFE Project",
     author: "CNRS",
     postDate: "Published On September 25, 2022",
     imgUrl:
@@ -68,7 +68,7 @@ const stories = [
     highlightedBar:
       " Life Project | In Partnership With IC-NET | Funded by Jica",
     title:
-      "From Goats to Pigs: Painnocing Chakma’s Path to Prosperity with the LIFE Project",
+      "From Goats: Painnocing Chakma’s Path to Prosperity with the LIFE Project",
     author: "CNRS",
     postDate: "Published On August 20, 2024",
     imgUrl:
@@ -82,7 +82,7 @@ const stories = [
     id: 6,
     highlightedBar: " Suchana Project",
     title:
-      "From Goats to Pigs: Painnocing Chakma’s Path to Prosperity with the LIFE Project",
+      "From Goats: Painnocing Chakma’s Path to Prosperity with the LIFE Project",
     author: "CNRS",
     postDate: "Published On September 25, 2022",
     imgUrl:
@@ -97,7 +97,7 @@ const stories = [
     highlightedBar:
       " Life Project | In Partnership With IC-NET | Funded by Jica",
     title:
-      "From Goats to Pigs: Painnocing Chakma’s Path to Prosperity with the LIFE Project",
+      "From Goats: Painnocing Chakma’s Path to Prosperity with the LIFE Project",
     author: "CNRS",
     postDate: "Published On August 20, 2024",
     imgUrl:
@@ -111,7 +111,7 @@ const stories = [
     id: 8,
     highlightedBar: " Suchana Project 2",
     title:
-      "From Goats to Pigs: Painnocing Chakma’s Path to Prosperity with the LIFE Project",
+      "From Goats: Painnocing Chakma’s Path to Prosperity with the LIFE Project",
     author: "CNRS",
     postDate: "Published On September 25, 2022",
     imgUrl:
@@ -126,7 +126,7 @@ const stories = [
     highlightedBar:
       " Life Project | In Partnership With IC-NET | Funded by Jica",
     title:
-      "From Goats to Pigs: Painnocing Chakma’s Path to Prosperity with the LIFE Project",
+      "From Goats: Painnocing Chakma’s Path to Prosperity with the LIFE Project",
     author: "CNRS",
     postDate: "Published On August 20, 2024",
     imgUrl:
@@ -140,7 +140,7 @@ const stories = [
     id: 10,
     highlightedBar: " Suchana Project",
     title:
-      "From Goats to Pigs: Painnocing Chakma’s Path to Prosperity with the LIFE Project",
+      "From Goats: Painnocing Chakma’s Path to Prosperity with the LIFE Project",
     author: "CNRS",
     postDate: "Published On September 25, 2022",
     imgUrl:
@@ -155,7 +155,7 @@ const stories = [
     highlightedBar:
       " Life Project | In Partnership With IC-NET | Funded by Jica",
     title:
-      "From Goats to Pigs: Painnocing Chakma’s Path to Prosperity with the LIFE Project",
+      "From Goats: Painnocing Chakma’s Path to Prosperity with the LIFE Project",
     author: "CNRS",
     postDate: "Published On August 20, 2024",
     imgUrl:
@@ -169,7 +169,7 @@ const stories = [
     id: 12,
     highlightedBar: " Suchana Project 3",
     title:
-      "From Goats to Pigs: Painnocing Chakma’s Path to Prosperity with the LIFE Project",
+      "From Goats: Painnocing Chakma’s Path to Prosperity with the LIFE Project",
     author: "CNRS",
     postDate: "Published On September 25, 2022",
     imgUrl:

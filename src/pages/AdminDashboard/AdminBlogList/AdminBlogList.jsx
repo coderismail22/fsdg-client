@@ -1,25 +1,29 @@
+// Blogs.js
 import axios from "axios";
 import { MdDeleteOutline, MdEdit } from "react-icons/md";
 import { useState, useEffect } from "react";
 import Swal from "sweetalert2";
 import { RotatingLines } from "react-loader-spinner";
+import PostEditModal from "../../Blog/PostEditModal/PostEditModal"; // Import the modal component
 
-const Blogs = () => {
+const AdminBlogList = () => {
     const [blogs, setBlogs] = useState([]);
-    const [loading, setLoading] = useState(true); // State for loading
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [visibleBlogs, setVisibleBlogs] = useState(5); // Initial 5 visible blogs
+    const [selectedPost, setSelectedPost] = useState(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
-    // Fetch blogs
     const fetchBlogs = async () => {
-        setLoading(true); // Set loading to true before fetching data
+        setLoading(true);
         try {
-            const { data } = await axios.get("http://localhost:5000/");
+            const { data } = await axios.get("http://localhost:5000/api/posts");
             setBlogs(data);
         } catch (error) {
             console.error("Error fetching blogs:", error);
             setError("Something went wrong while fetching the blogs.");
         } finally {
-            setLoading(false); // Set loading to false after data fetch
+            setLoading(false);
         }
     };
 
@@ -27,27 +31,12 @@ const Blogs = () => {
         fetchBlogs();
     }, []);
 
-    if (loading) {
-        return (
-            <div className="h-screen flex items-center justify-center">
-                <RotatingLines
-                    visible={true}
-                    height="46"
-                    width="46"
-                    color="grey"
-                    strokeWidth="5"
-                    animationDuration="0.75"
-                    ariaLabel="rotating-lines-loading"
-                />
-            </div>
-        ); // Show spinner while loading
-    }
+    // Load More Button Handler
+    const loadMore = () => {
+        setVisibleBlogs((prevVisibleBlogs) => prevVisibleBlogs + 5); // Load 5 more blogs
+    };
 
-    if (error) {
-        return <p>{error}</p>; // Display error message if there was an error
-    }
-
-    // Delete a blog
+    // Delete Button Handler
     const deleteBlog = async (id) => {
         try {
             const result = await Swal.fire({
@@ -62,61 +51,72 @@ const Blogs = () => {
             });
 
             if (result.isConfirmed) {
-                await axios.delete(`http://localhost:5000/${id}`);
+                await axios.delete(`http://localhost:5000/api/posts/${id}`);
                 Swal.fire("Deleted!", "Your blog post has been deleted.", "success");
-                fetchBlogs(); // Re-fetch blogs after deletion
+                fetchBlogs();
             }
         } catch (error) {
             Swal.fire("Error!", "Failed to delete blog post.", "error");
         }
     };
 
-    // Edit a blog
-    const editBlog = async (id) => {
-        const { value: formValues } = await Swal.fire({
-            title: "Edit Blog Post",
-            html:
-                '<input id="title" class="swal2-input" placeholder="Blog Title">' +
-                '<textarea id="content" class="swal2-textarea" placeholder="Blog Content"></textarea>',
-            focusConfirm: false,
-            showCancelButton: true,
-            confirmButtonText: "Save Changes",
-            cancelButtonText: "Cancel",
-            preConfirm: () => {
-                const title = document.getElementById("title").value;
-                const content = document.getElementById("content").value;
-                return { title, content };
-            },
-        });
-
-        if (formValues) {
-            try {
-                await axios.patch(`http://localhost:5000/${id}`, formValues);
-                Swal.fire("Success!", "Your blog post has been updated.", "success");
-                fetchBlogs(); // Re-fetch blogs after updating
-            } catch (error) {
-                Swal.fire("Error!", "Failed to update blog post.", "error");
-            }
-        }
+    // Open Modal For Updating Post
+    const openEditModal = (post) => {
+        setSelectedPost(post);
+        setIsModalOpen(true);
     };
+
+    // Modal Close Handler
+    const handleModalClose = () => {
+        setIsModalOpen(false);
+        setSelectedPost(null);
+    };
+
+    // Refresh on update
+    const handlePostUpdate = () => {
+        fetchBlogs(); // Refresh the list when a post is updated
+    };
+
+    // Loading Spinner
+    if (loading) {
+        return (
+            <div className="h-screen flex items-center justify-center">
+                <RotatingLines
+                    visible={true}
+                    height="46"
+                    width="46"
+                    color="grey"
+                    strokeWidth="5"
+                    animationDuration="0.75"
+                    ariaLabel="rotating-lines-loading"
+                />
+            </div>
+        );
+    }
+
+    // Error Message
+    if (error) {
+        return <p className="text-red-500 text-xl text-center font-bold py-10  border-2 border-red-500 rounded-md m-5">{error}</p>;
+    }
 
     return (
         <div className="container mx-auto px-4 py-8">
-            <h1 className="text-3xl font-bold text-center mb-4">Blogs</h1>
+            <h1 className="text-3xl font-bold text-center mb-4">Admin Blog List</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {blogs.map((blog) => (
+                {blogs.slice(0, visibleBlogs).map((blog) => (
                     <div
                         key={blog._id}
                         className="p-4 border border-gray-200 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg hover:border-gray-300 bg-white"
                     >
-                        <h2 className="text-lg md:text-xl font-semibold text-gray-800 mb-3">
+                        {/* Title */}
+                        <div className="text-lg md:text-xl font-semibold text-gray-800 mb-3">
                             {blog.title}
-                        </h2>
-                        <p className="text-gray-600 text-sm md:text-base mb-4">
-                            {blog.content.length > 100
-                                ? `${blog.content.substring(0, 100)}...`
-                                : blog.content}
-                        </p>
+                        </div>
+                        {/* Content */}
+                        <div>
+                            <p dangerouslySetInnerHTML={{ __html: blog.content.substring(0, 100) + (blog.content.length > 100 ? '...' : '') }} className="text-gray-600 text-sm md:text-base mb-4"></p>
+                        </div>
+                        {/* Post Cover Image */}
                         {blog.imgUrl && (
                             <img
                                 src={blog.imgUrl}
@@ -124,8 +124,10 @@ const Blogs = () => {
                                 className="w-full h-40 object-cover rounded-md mb-4"
                             />
                         )}
+                        {/* Author */}
                         <p className="text-gray-500 text-sm">Author: {blog.author}</p>
                         <hr className="my-4" />
+                        {/* Edit and Delete Button */}
                         <div className="flex justify-center space-x-5">
                             <MdDeleteOutline
                                 className="text-red-500 hover:text-red-700 text-2xl cursor-pointer transition-all duration-200"
@@ -134,15 +136,35 @@ const Blogs = () => {
                             />
                             <MdEdit
                                 className="text-blue-500 hover:text-blue-700 text-2xl cursor-pointer transition-all duration-200"
-                                onClick={() => editBlog(blog._id)}
+                                onClick={() => openEditModal(blog)}
                                 title="Edit"
                             />
                         </div>
                     </div>
                 ))}
             </div>
+            {/* More Posts Button */}
+            {visibleBlogs < blogs.length && (
+                <div className="flex justify-center mt-6">
+                    <button
+                        onClick={loadMore}
+                        className="bg-blue-500 text-white py-2 px-4 rounded"
+                    >
+                        More Posts
+                    </button>
+                </div>
+            )}
+            {/* Post Update Modal */}
+            {isModalOpen && selectedPost && (
+                <PostEditModal
+                    isOpen={isModalOpen}
+                    onClose={handleModalClose}
+                    post={selectedPost}
+                    onUpdate={handlePostUpdate}
+                />
+            )}
         </div>
     );
 };
 
-export default Blogs;
+export default AdminBlogList;

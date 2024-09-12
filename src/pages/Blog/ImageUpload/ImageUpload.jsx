@@ -9,11 +9,26 @@ const ImageUpload = ({ setUploadedImageUrl }) => {
     const [isLoading, setIsLoading] = useState(false);
     const [uploadSuccess, setUploadSuccess] = useState(false);
 
+    const MAX_SIZE_MB = 1; // Limit the file size to 2MB
+
     const handleFileChange = (e) => {
         const file = e.target.files[0];
-        setSelectedFile(file);
-        setPreviewUrl(URL.createObjectURL(file));
-        setUploadSuccess(false);  // Reset success state when a new file is selected
+
+        if (file && file.type.startsWith('image/')) {  // Ensure the file is an image
+            const fileSizeMB = file.size / 1024 / 1024;  // Convert file size to MB
+
+            if (fileSizeMB > MAX_SIZE_MB) {
+                Swal.fire('File Too Large', `Image size should be less than ${MAX_SIZE_MB}MB.`, 'error');
+                setSelectedFile(null);  // Clear the file
+                setPreviewUrl(null);  // Clear the preview
+            } else {
+                setSelectedFile(file);
+                setPreviewUrl(URL.createObjectURL(file));
+                setUploadSuccess(false);  // Reset success state when a new file is selected
+            }
+        } else {
+            Swal.fire('Invalid File', 'Please select an image file.', 'error');
+        }
     };
 
     const handleUpload = async () => {

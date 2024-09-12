@@ -10,17 +10,17 @@ const ContactCards = () => {
         <ContactCard
           icon={"office"}
           title={"Head Office Address"}
-          description={"Dhaka,  Bangladesh"}
+          description={"2/12 Humayun Road, Mohammadpur, Dhaka-1207 "}
         />
         <ContactCard
           icon={"tree"}
           title={"Work Hours"}
-          description={"Sunday to Thursday: 10am– 7pm Weekend: Operational"}
+          description={""}
         />
         <ContactCard
           icon={"phone"}
-          title={"Phone Numbers"}
-          description={"Tel: +880 1714-006476"}
+          title={"Phone Number"}
+          description={"01845-681371"}
         />
         <ContactCard
           icon={"mail"}

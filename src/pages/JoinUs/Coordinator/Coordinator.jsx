@@ -11,7 +11,7 @@ const Coordinator = () => {
             mission.
           </p>
           <p className="font-montserrat font-extrabold text-[15px] mt-5 md:mt-10">
-           Firoj Alam, Executive Director, FSDG
+           Firoj Alam, Chairperson, FSDG
           </p>
         </div>
         <div>

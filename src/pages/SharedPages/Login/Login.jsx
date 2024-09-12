@@ -4,10 +4,11 @@ import { useForm } from "react-hook-form";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import logo from "/fsdg.jpg";
 import LoginBanner from "../../../components/LoginBanner/LoginBanner";
-
+import Swal from "sweetalert2";  // Import SweetAlert2
+import { RotatingLines } from 'react-loader-spinner';
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
-    const [errorMessage, setErrorMessage] = useState("");
+    const [loading, setLoading] = useState(false);  // State to manage loading
     const navigate = useNavigate();
 
     const { register, handleSubmit, formState: { errors } } = useForm({
@@ -18,8 +19,9 @@ const Login = () => {
     });
 
     const loginHandler = async (formData) => {
+        setLoading(true);  // Start loading spinner
         try {
-            const response = await fetch("http://localhost:5000/api/auth/login", {
+            const response = await fetch("https://fsdg-blog-login-server.vercel.app/api/admin/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -31,29 +33,47 @@ const Login = () => {
 
             if (response.ok) {
                 // Handle success (navigate or show success message)
-                navigate("/dashboard/admin/admin-profile");  // For example
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Login successful',
+                    text: 'Redirecting to dashboard...',
+                    timer: 1500,
+                    timerProgressBar: true,
+                    willClose: () => {
+                        navigate("/dashboard/admin/admin-profile");  // For example
+                    }
+                });
             } else {
-                setErrorMessage(result.message);  // Show error message
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Login failed',
+                    text: result.message || 'Something went wrong. Please try again.',
+                });
             }
         } catch (error) {
             console.error("Login failed:", error);
-            setErrorMessage("Something went wrong. Please try again.");
+            Swal.fire({
+                icon: 'error',
+                title: 'Login failed',
+                text: "Something went wrong. Please try again.",
+            });
+        } finally {
+            setLoading(false);  // Stop loading spinner
         }
     };
 
     // Form submission
     const onSubmit = async (formData) => {
-        setErrorMessage("");  // Reset error message
         await loginHandler(formData);
     };
 
     return (
-        <div className=" min-h-screen w-11/12 mx-auto py-2">
-            <div className="grid grid-cols-2 items-center justify-center">
+        <div className="min-h-screen w-11/12 mx-auto py-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center">
                 <div className="h-full hidden md:block">
                     <LoginBanner />
                 </div>
-                <div className=" p-8 rounded-xl shadow-md">
+                <div className="p-8 rounded-xl shadow-md">
                     <Link to={"/"}>
                         <img className="mx-auto w-[150px] mb-5" src={logo} alt="logo" />
                     </Link>
@@ -64,8 +84,11 @@ const Login = () => {
                         </h1>
                     </div>
 
-                    {errorMessage && (
-                        <p className="text-red-500 text-center">{errorMessage}</p>
+                    {/* Display spinner while loading */}
+                    {loading && (
+                        <div className="flex justify-center">
+                            <RotatingLines width="30" height="30" />
+                        </div>
                     )}
 
                     {/* Login Form */}
@@ -118,7 +141,7 @@ const Login = () => {
                                 <p className="text-red-500">{errors.password.message}</p>
                             )}
                         </div>
-                        <button className="block w-full p-3 text-center rounded bg-primary hover:bg-primary/95 text-white">
+                        <button className="block w-full p-2 text-center rounded bg-primary hover:bg-primary/95 text-white bg-blue-500">
                             Login
                         </button>
                     </form>

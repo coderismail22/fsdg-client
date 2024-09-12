@@ -11,7 +11,7 @@ const BlogDetail = () => {
 
     const fetchBlogDetail = async () => {
         try {
-            const response = await axios.get(`http://localhost:5000/${id}`); // Fetch blog by ID
+            const response = await axios.get(`http://localhost:5000/api/posts/${id}`); // Fetch blog by ID
             setBlog(response.data);
             setLoading(false);
         } catch (error) {
@@ -47,7 +47,7 @@ const BlogDetail = () => {
                 <div className="mx-auto max-w-3xl">
                     <h1 className="text-4xl font-bold mb-4">{blog.title}</h1>
                     <img src={blog.imgUrl} alt={blog.title} className="w-full h-80 object-cover mb-4 rounded-md" />
-                    <p className="text-gray-600 text-lg mb-4">{blog.content}</p>
+                    <p dangerouslySetInnerHTML={{ __html: blog.content }}></p>
                     <p className="text-gray-500 text-sm">Author: {blog.author}</p>
                 </div>
             ) : (
