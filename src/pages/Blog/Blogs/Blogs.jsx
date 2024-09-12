@@ -1,25 +1,31 @@
 import axios from "axios";
-import moment from "moment";
-import { useEffect, useState } from "react";
-import { FaArrowRightLong } from "react-icons/fa6";
+import { useState, useEffect, useCallback } from "react";
 import { RotatingLines } from "react-loader-spinner";
+import moment from 'moment';
+import debounce from "lodash.debounce"; // Debouncing utility
+import DatePicker from "react-datepicker"; // Datepicker for filtering dates
+import "react-datepicker/dist/react-datepicker.css"; // Datepicker styles
 import { Link } from "react-router-dom";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const Blogs = () => {
     const [blogs, setBlogs] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [visibleBlogs, setVisibleBlogs] = useState(5); // Controls how many blogs are visible initially
+    const [visibleBlogs, setVisibleBlogs] = useState(6); // Initial 6 visible blogs
+    const [searchQuery, setSearchQuery] = useState("");
+    const [startDate, setStartDate] = useState(null);
+    const [endDate, setEndDate] = useState(null);
 
-    // Fetch blogs
     const fetchBlogs = async () => {
+        setLoading(true);
         try {
-            const response = await axios.get("http://localhost:5000/api/posts");
-            setBlogs(response.data);
-            setLoading(false);
+            const { data } = await axios.get("http://localhost:5000/api/posts");
+            setBlogs(data);
         } catch (error) {
             console.error("Error fetching blogs:", error);
-            setError("Something went wrong while fetching the blogs !");
+            setError("Something went wrong while fetching the blogs.");
+        } finally {
             setLoading(false);
         }
     };
@@ -28,9 +34,35 @@ const Blogs = () => {
         fetchBlogs();
     }, []);
 
+    // Load More Button Handler
+    const loadMore = () => {
+        setVisibleBlogs((prevVisibleBlogs) => prevVisibleBlogs + 6); // Load 6 more blogs
+    };
+
+    // Debounced Search Handler
+    const debouncedSearch = useCallback(
+        debounce((query) => setSearchQuery(query), 300), // Debouncing search input
+        []
+    );
+
+    const handleSearchChange = (e) => {
+        debouncedSearch(e.target.value);
+    };
+
+    // Filter Blogs Based on Search Query and Date Range
+    const filteredBlogs = blogs.filter((blog) => {
+        const matchesSearch = blog.title.toLowerCase().includes(searchQuery.toLowerCase()) || blog.content.toLowerCase().includes(searchQuery.toLowerCase());
+
+        const blogDate = moment(blog.createdAt);
+        const matchesDateRange = (!startDate || blogDate.isSameOrAfter(moment(startDate))) && (!endDate || blogDate.isSameOrBefore(moment(endDate)));
+
+        return matchesSearch && matchesDateRange;
+    });
+
+    // Loading Spinner
     if (loading) {
         return (
-            <p className="h-screen flex items-center justify-center mx-auto">
+            <div className="h-screen flex items-center justify-center">
                 <RotatingLines
                     visible={true}
                     height="46"
@@ -40,38 +72,70 @@ const Blogs = () => {
                     animationDuration="0.75"
                     ariaLabel="rotating-lines-loading"
                 />
-            </p>
+            </div>
         );
     }
 
+    // Error Message
     if (error) {
-        return <p className="text-red-500 text-xl text-center font-bold py-10  border-2 border-red-500 rounded-md m-5">{error}</p>;
+        return <p className="text-red-500 text-xl text-center font-bold py-10 border-2 border-red-500 rounded-md m-5">{error}</p>;
     }
-
-    // Function to load more blogs
-    const loadMore = () => {
-        setVisibleBlogs((prevVisibleBlogs) => prevVisibleBlogs + 5); // Load 5 more blogs
-    };
 
     return (
         <div className="container mx-auto px-4 py-8">
-            {/* <h1 className="text-3xl font-bold text-center mb-4">Blogs</h1> */}
+            <div className="flex flex-col md:flex-row gap-2 justify-between items-center mb-8">
+                {/* Search Bar */}
+                <input
+                    type="text"
+                    placeholder="Search blogs by title or content..."
+                    className="border px-4 py-2 rounded-lg mb-4 md:mb-0 w-full md:w-1/2"
+                    onChange={handleSearchChange}
+                />
 
-            {blogs.length === 0 ? (
+                {/* Date Filters */}
+                <div className="flex flex-col md:flex-row gap-2 justify-center items-center">
+                    <DatePicker
+                        selected={startDate}
+                        onChange={(date) => setStartDate(date)}
+                        className="border px-4 py-2 rounded-lg"
+                        placeholderText="Start Date"
+                        isClearable
+                    />
+                    <DatePicker
+                        selected={endDate}
+                        onChange={(date) => setEndDate(date)}
+                        className="border px-4 py-2 rounded-lg"
+                        placeholderText="End Date"
+                        isClearable
+                    />
+                </div>
+            </div>
+
+            {filteredBlogs.length === 0 ? (
                 <p className="text-center text-gray-600 text-xl font-semibold mt-6">There&apos;s no post to show</p>
             ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {blogs.slice(0, visibleBlogs).map((blog) => (
-                        <div key={blog._id} className="p-4 border border-gray-200 rounded-md shadow-md">
-                            <h2 className="text-xl font-bold mb-2">{blog.title}</h2>
+                    {filteredBlogs.slice(0, visibleBlogs).map((blog) => (
+                        <div
+                            key={blog._id}
+                            className="p-4 border border-gray-200 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg hover:border-gray-300 bg-white"
+                        >
+                            {/* Title */}
+                            <div className="text-lg md:text-xl font-semibold text-gray-800 mb-3">
+                                {blog.title}
+                            </div>
+                            {/* Content */}
                             <div>
                                 <p dangerouslySetInnerHTML={{ __html: blog.content.substring(0, 100) + (blog.content.length > 100 ? '...' : '') }} className="text-gray-600 text-sm md:text-base mb-4"></p>
                             </div>
-                            <img
-                                src={blog.imgUrl}
-                                alt={blog.title}
-                                className="w-full h-40 object-cover mt-4"
-                            />
+                            {/* Post Cover Image */}
+                            {blog.imgUrl && (
+                                <img
+                                    src={blog.imgUrl}
+                                    alt={blog.title}
+                                    className="w-full h-40 object-cover rounded-md mb-4"
+                                />
+                            )}
                             {/* Author */}
                             <p className="text-gray-500 text-sm mt-2">
                                 <span className="font-bold">Author:</span> {blog.author}
@@ -90,7 +154,8 @@ const Blogs = () => {
                 </div>
             )}
 
-            {visibleBlogs < blogs.length && (
+            {/* More Posts Button */}
+            {visibleBlogs < filteredBlogs.length && (
                 <div className="flex justify-center mt-6">
                     <button
                         onClick={loadMore}

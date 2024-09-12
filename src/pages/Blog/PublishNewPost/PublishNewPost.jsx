@@ -32,7 +32,7 @@ const PublishNewPost = () => {
 
     return (
         <div className="mx-10 my-8 ">
-            <h1 className="text-2xl font-semibold mb-6">Publish New Post</h1>
+            <h1 className="text-2xl font-semibold mb-6 text-center">Publish New Post</h1>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 border p-2">
                 <div>
                     <label className="block font-medium">Title</label>
@@ -65,9 +65,10 @@ const PublishNewPost = () => {
 
                 <div>
                     <label className="block font-medium">Content</label>
-                    <RichTextEditor onChangeContent={handleContentChange} />
+                    <RichTextEditor content={content} onChangeContent={handleContentChange} />
                 </div>
 
+                {/* Make Publish Post Button Conditional */}
                 <div className="flex justify-center">
                     <button
                         type="submit"
@@ -76,6 +77,7 @@ const PublishNewPost = () => {
                         Publish Post
                     </button>
                 </div>
+
             </form>
 
             {/* Preview Section */}
