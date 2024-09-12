@@ -47,10 +47,11 @@ export const router = createBrowserRouter([
         path: "/blog",
         element: <BlogEditor />,
       },
-      {
-        path: "/viewer-blogs",
-        element: <Blogs />,
-      },
+      //TODO: Use it in your own portfolio website.
+      // {
+      //   path: "/viewer-blogs",
+      //   element: <Blogs />,
+      // },
       {
         path: "blogs/:id",
         element: <BlogDetail />
