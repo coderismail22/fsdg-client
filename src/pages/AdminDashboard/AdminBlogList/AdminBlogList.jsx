@@ -101,54 +101,59 @@ const AdminBlogList = () => {
 
     return (
         <div className="container mx-auto px-4 py-8">
-            <h1 className="text-3xl font-bold text-center mb-4">Admin Blog List</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {blogs.slice(0, visibleBlogs).map((blog) => (
-                    <div
-                        key={blog._id}
-                        className="p-4 border border-gray-200 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg hover:border-gray-300 bg-white"
-                    >
-                        {/* Title */}
-                        <div className="text-lg md:text-xl font-semibold text-gray-800 mb-3">
-                            {blog.title}
+            {/* <h1 className="text-3xl font-bold text-center mb-4">Admin Blog List</h1> */}
+
+            {blogs.length === 0 ? (
+                <p className="text-center text-gray-600 text-xl font-semibold mt-6">There&apos;s no post to show</p>
+            ) : (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {blogs.slice(0, visibleBlogs).map((blog) => (
+                        <div
+                            key={blog._id}
+                            className="p-4 border border-gray-200 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg hover:border-gray-300 bg-white"
+                        >
+                            {/* Title */}
+                            <div className="text-lg md:text-xl font-semibold text-gray-800 mb-3">
+                                {blog.title}
+                            </div>
+                            {/* Content */}
+                            <div>
+                                <p dangerouslySetInnerHTML={{ __html: blog.content.substring(0, 100) + (blog.content.length > 100 ? '...' : '') }} className="text-gray-600 text-sm md:text-base mb-4"></p>
+                            </div>
+                            {/* Post Cover Image */}
+                            {blog.imgUrl && (
+                                <img
+                                    src={blog.imgUrl}
+                                    alt={blog.title}
+                                    className="w-full h-40 object-cover rounded-md mb-4"
+                                />
+                            )}
+                            {/* Author */}
+                            <p className="text-gray-500 text-sm">Author: {blog.author}</p>
+                            <hr className="my-4" />
+                            {/* Edit and Delete Button */}
+                            <div className="flex justify-center space-x-5">
+                                <MdDeleteOutline
+                                    className="text-red-500 hover:text-red-700 text-2xl cursor-pointer transition-all duration-200"
+                                    onClick={() => deleteBlog(blog._id)}
+                                    title="Delete"
+                                />
+                                <MdEdit
+                                    className="text-blue-500 hover:text-blue-700 text-2xl cursor-pointer transition-all duration-200"
+                                    onClick={() => openEditModal(blog)}
+                                    title="Edit"
+                                />
+                            </div>
                         </div>
-                        {/* Content */}
-                        <div>
-                            <p dangerouslySetInnerHTML={{ __html: blog.content.substring(0, 100) + (blog.content.length > 100 ? '...' : '') }} className="text-gray-600 text-sm md:text-base mb-4"></p>
-                        </div>
-                        {/* Post Cover Image */}
-                        {blog.imgUrl && (
-                            <img
-                                src={blog.imgUrl}
-                                alt={blog.title}
-                                className="w-full h-40 object-cover rounded-md mb-4"
-                            />
-                        )}
-                        {/* Author */}
-                        <p className="text-gray-500 text-sm">Author: {blog.author}</p>
-                        <hr className="my-4" />
-                        {/* Edit and Delete Button */}
-                        <div className="flex justify-center space-x-5">
-                            <MdDeleteOutline
-                                className="text-red-500 hover:text-red-700 text-2xl cursor-pointer transition-all duration-200"
-                                onClick={() => deleteBlog(blog._id)}
-                                title="Delete"
-                            />
-                            <MdEdit
-                                className="text-blue-500 hover:text-blue-700 text-2xl cursor-pointer transition-all duration-200"
-                                onClick={() => openEditModal(blog)}
-                                title="Edit"
-                            />
-                        </div>
-                    </div>
-                ))}
-            </div>
+                    ))}
+                </div>
+            )}
             {/* More Posts Button */}
             {visibleBlogs < blogs.length && (
                 <div className="flex justify-center mt-6">
                     <button
                         onClick={loadMore}
-                        className="bg-blue-500 text-white py-2 px-4 rounded"
+                        className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-300"
                     >
                         More Posts
                     </button>

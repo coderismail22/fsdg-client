@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import RichTextEditor from "../RichTextEditor/RichTextEditor";
 import ImageUpload from "../ImageUpload/ImageUpload";  // Assuming ImageUpload is in the ImageUpload folder
+import Swal from "sweetalert2";
 
 const PublishNewPost = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
@@ -17,12 +18,14 @@ const PublishNewPost = () => {
         const postData = { ...data, content, imgUrl: uploadedImageUrl }; // Combine form data with content and image URL
         console.log(postData);
         try {
-            const res = await axios.post('http://localhost:5000/api/posts', postData, { headers: { 'Content-Type': 'application/json' } });
+            const res = await axios.post('http://localhost:5000/api/posts/test', postData, { headers: { 'Content-Type': 'application/json' } });
             console.log('Post created:', res.data);
             reset(); // Reset the form after submission
             setContent(''); // Clear the content editor
             setUploadedImageUrl(''); // Clear the uploaded image URL
+            Swal.fire('Success!', 'Posted successfully.', 'success');
         } catch (err) {
+            Swal.fire('Error!', 'Failed to post.', 'error');
             console.error('Error creating post:', err);
         }
     };
