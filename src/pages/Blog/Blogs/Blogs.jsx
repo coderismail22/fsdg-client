@@ -7,6 +7,8 @@ import DatePicker from "react-datepicker"; // Datepicker for filtering dates
 import "react-datepicker/dist/react-datepicker.css"; // Datepicker styles
 import { Link } from "react-router-dom";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { BsCalendar } from "react-icons/bs";
+import { FaSearch } from "react-icons/fa";
 
 const Blogs = () => {
     const [blogs, setBlogs] = useState([]);
@@ -83,31 +85,46 @@ const Blogs = () => {
 
     return (
         <div className="container mx-auto px-4 py-8">
-            <div className="flex flex-col md:flex-row gap-2 justify-between items-center mb-8">
+            <div className="flex flex-col md:flex-row gap-4 justify-between items-center mb-8">
                 {/* Search Bar */}
-                <input
-                    type="text"
-                    placeholder="Search blogs by title or content..."
-                    className="border px-4 py-2 rounded-lg mb-4 md:mb-0 w-full md:w-1/2"
-                    onChange={handleSearchChange}
-                />
+                <div className="relative w-full md:w-1/2">
+                    <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
+                    <input
+                        type="text"
+                        placeholder="Search blogs by title or content..."
+                        className="border px-10 py-2 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        onChange={handleSearchChange}
+                    />
+                </div>
 
                 {/* Date Filters */}
-                <div className="flex flex-col md:flex-row gap-2 justify-center items-center">
-                    <DatePicker
-                        selected={startDate}
-                        onChange={(date) => setStartDate(date)}
-                        className="border px-4 py-2 rounded-lg"
-                        placeholderText="Start Date"
-                        isClearable
-                    />
-                    <DatePicker
-                        selected={endDate}
-                        onChange={(date) => setEndDate(date)}
-                        className="border px-4 py-2 rounded-lg"
-                        placeholderText="End Date"
-                        isClearable
-                    />
+                <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
+                    <div className="relative w-full md:w-auto">
+                        <DatePicker
+                            showIcon
+                            icon={<BsCalendar  />
+                            }
+                            toggleCalendarOnIconClick
+                            selected={startDate}
+                            onChange={(date) => setStartDate(date)}
+                            className="border px-10 py-2 text-center rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-400"
+                            placeholderText="Start Date"
+                            isClearable
+                        />
+                    </div>
+                    <div className="relative w-full md:w-auto">
+                        <DatePicker
+                            showIcon
+                            icon={<BsCalendar />}
+                            toggleCalendarOnIconClick
+
+                            selected={endDate}
+                            onChange={(date) => setEndDate(date)}
+                            className="border text-center px-10 py-2 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-400"
+                            placeholderText="End Date"
+                            isClearable
+                        />
+                    </div>
                 </div>
             </div>
 
