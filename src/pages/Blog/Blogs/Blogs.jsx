@@ -1,4 +1,5 @@
 import axios from "axios";
+import moment from "moment";
 import { useEffect, useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { RotatingLines } from "react-loader-spinner";
@@ -71,9 +72,12 @@ const Blogs = () => {
                                 alt={blog.title}
                                 className="w-full h-40 object-cover mt-4"
                             />
+                            {/* Author */}
                             <p className="text-gray-500 text-sm mt-2">
-                                Author: {blog.author}
+                                <span className="font-bold">Author:</span> {blog.author}
                             </p>
+                            {/* Date */}
+                            <p className="text-gray-500 text-sm"><span className="font-bold">Published:</span> {moment(blog.createdAt).format('YYYY-MM-DD')}</p>
                             <Link
                                 to={`/blogs/${blog._id}`}
                                 className="flex gap-2 items-center justify-center bg-black text-white p-3 mt-4 hover:bg-gray-800 transition-colors duration-300"

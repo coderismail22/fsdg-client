@@ -5,6 +5,8 @@ import { useState, useEffect } from "react";
 import Swal from "sweetalert2";
 import { RotatingLines } from "react-loader-spinner";
 import PostEditModal from "../../Blog/PostEditModal/PostEditModal"; // Import the modal component
+import moment from 'moment';
+
 
 const AdminBlogList = () => {
     const [blogs, setBlogs] = useState([]);
@@ -130,6 +132,8 @@ const AdminBlogList = () => {
                             )}
                             {/* Author */}
                             <p className="text-gray-500 text-sm">Author: {blog.author}</p>
+                            {/* Date */}
+                            <p className="text-gray-500 text-sm">Published: {moment(blog.createdAt).format('YYYY-MM-DD')}</p>
                             <hr className="my-4" />
                             {/* Edit and Delete Button */}
                             <div className="flex justify-center space-x-5">
