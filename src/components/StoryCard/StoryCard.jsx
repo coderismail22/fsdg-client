@@ -2,17 +2,18 @@ import { useEffect, useRef, useState } from "react";
 import { FaImage } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import moment from "moment";
 
-const StoryCard = ({ story }) => {
+const StoryCard = ({ post }) => {
   const {
-    highlightedBar,
+    _id,
+    label,
     title,
     author,
-    postDate,
+    createdAt, // use moment js
     imgUrl,
-    description,
-    postUrl,
-  } = story;
+    content,
+  } = post;
   const cardVariants = {
     hidden: { opacity: 0, y: 40 },
     visible: () => ({
@@ -60,11 +61,11 @@ const StoryCard = ({ story }) => {
       animate={isVisible ? "visible" : "hidden"}
     >
       <div className="uppercase bg-[#F7B500] hover:bg-[#B88E19] p-1 rounded-md text-[11px] md:text-[10px] text-center font-bold font-montserrat">
-        <p>{highlightedBar}</p>
+        <p>{label}</p>
       </div>
       {/* Card Details */}
       <Link
-        to={postUrl}
+        to={`/blogs/${_id}`}
         className="w-full mt-3 flex flex-col items-center hover:text-[#80ba7f]"
       >
         {/* Title */}
@@ -72,12 +73,8 @@ const StoryCard = ({ story }) => {
           {title}
         </h1>
       </Link>
-      {/* Post Author and Date */}
-      <p className="text-[13px] uppercase my-2">
-        By {author} / Published {postDate}
-      </p>
       {/* Card Image */}
-      <Link to={postUrl} className="h-[200px] block ">
+      <Link to={`/blogs/${_id}`} className="h-[200px] block ">
         {imgError ? (
           <div className="w-full h-full flex flex-col items-center justify-center bg-gray-200 border border-dashed border-gray-400 rounded-lg shadow-md">
             <FaImage className="size-20 mt-10" />
@@ -97,7 +94,16 @@ const StoryCard = ({ story }) => {
 
       {/* Description */}
       <div className="my-3 text-[#687279] text-sm w-full text-justify">
-        <p>{description}</p>
+        <p dangerouslySetInnerHTML={{ __html: content }}></p>
+      </div>
+      {/* Post Author and Date */}
+      <div className="text-center text-[13px]">
+        <p className="mb-1">
+          <span className="font-bold">Author:</span> {author}
+        </p>
+        <p>
+          <span className="font-bold">Published:</span> {moment(createdAt).format('MMMM Do YYYY, h:mm A')}
+        </p>
       </div>
     </motion.div>
   );
