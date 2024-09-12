@@ -1,5 +1,5 @@
-const ArticleCard = ({ article }) => {
-  const { title, description, imgUrl } = article;
+const ArticleCard = ({ post }) => {
+  const { title, content, imgUrl } = post;
   return (
     <div
       // href="https://github.com/coderismail22"
@@ -14,7 +14,7 @@ const ArticleCard = ({ article }) => {
         {/* Title */}
         <h1 className="font-serif font-extrabold text-2xl">{title}</h1>
         {/* Description */}
-        <p className="my-5">{description}</p>
+        <p className="my-5" dangerouslySetInnerHTML={{ __html: content }}></p>
       </div>
     </div>
   );
