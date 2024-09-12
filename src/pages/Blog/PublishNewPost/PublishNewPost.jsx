@@ -62,7 +62,7 @@ const PublishNewPost = () => {
 
                 <div>
                     <label className="block font-medium">Content</label>
-                    <RichTextEditor placeholder="Write your post here..." onChangeContent={handleContentChange} />
+                    <RichTextEditor onChangeContent={handleContentChange} />
                 </div>
 
                 <div className="flex justify-center">
