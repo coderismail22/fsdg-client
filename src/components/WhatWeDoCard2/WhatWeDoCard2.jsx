@@ -2,20 +2,20 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const WhatWeDoCard2 = ({
-  imageUrl,
+  id,
+  imgUrl,
   title,
-  itemLink,
   borderTop,
   borderRight,
 }) => {
   return (
     <div
-      className={`border-${borderTop} border-${borderRight} w-full sm:w-[500px] md:w-[160px] lg:w-[240px]  h-[550px] md:h-[400px]  p-5 md:p-2  flex flex-col items-center justify-center`}
+      className={`bg-slate-100 rounded-md border-${borderTop} border-${borderRight} w-full sm:w-[500px] md:w-[160px] lg:w-[240px]  h-[550px] md:h-[400px]  p-5 md:p-2  flex flex-col items-center justify-center`}
     >
       <div>
         <img
           className="border-t w-[600px] md:w-[200px] lg:w-[300px]  h-[400px] md:h-[150px] lg:h-[200px] object-cover object-center"
-          src={imageUrl}
+          src={imgUrl}
           alt="Image"
         />
       </div>
@@ -24,12 +24,10 @@ const WhatWeDoCard2 = ({
           {title}
         </h1>
       </div>
-      <div className="flex gap-2 items-center justify-center bg-[#FFCD05] text-white w-[200px] md:w-[150px] p-2 rounded-lg">
-        <Link to={itemLink} className="font-palanquin text-center">
-          Read More
-        </Link>
+      <Link to={`/blogs/${id}`} className="font-palanquin flex gap-2 items-center justify-center bg-[#FFCD05] hover:bg-[#f5d65b] text-white w-[150px] rounded-lg p-3 ">
+        Read More
         <FaArrowRightLong />
-      </div>
+      </Link>
     </div>
   );
 };

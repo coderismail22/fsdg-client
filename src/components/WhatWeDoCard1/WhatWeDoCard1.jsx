@@ -1,15 +1,15 @@
 import { FaArrowRightLong } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
-const WhatWeDoCard1 = ({ imageUrl, title, itemLink, borderRight }) => {
+const WhatWeDoCard1 = ({ id, imgUrl, title, itemLink, borderRight }) => {
   return (
     <div
-      className={`border-${borderRight} w-[100%] sm:w-[500px] md:w-[230px] lg:w-[320px]  h-[550px] md:h-[400px]  p-5  flex flex-col items-center justify-center`}
+      className={`border-${borderRight} w-[100%] sm:w-[500px] md:w-[230px] lg:w-[320px]  h-[550px] md:h-[400px]  p-5  flex flex-col items-center justify-center bg-slate-100`}
     >
       <div>
         <img
           className="w-[500px] md:w-[200px] lg:w-[300px]  h-[400px] md:h-[150px] lg:h-[200px] object-cover object-center"
-          src={imageUrl}
+          src={imgUrl}
           alt="Image"
         />
       </div>
@@ -18,12 +18,12 @@ const WhatWeDoCard1 = ({ imageUrl, title, itemLink, borderRight }) => {
           {title}
         </h1>
       </div>
-      <div className="flex gap-2 items-center justify-center bg-[#FFCD05] text-white w-[200px] p-3 ">
-        <Link to={itemLink} className="font-palanquin">
-          Read More
-        </Link>
+
+      <Link to={`/blogs/${id}`} className="font-palanquin flex gap-2 items-center justify-center bg-[#FFCD05] hover:bg-[#f5d65b] text-white w-[200px] rounded-lg p-3 ">
+        Read More
         <FaArrowRightLong />
-      </div>
+      </Link>
+
     </div>
   );
 };
