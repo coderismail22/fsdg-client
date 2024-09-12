@@ -6,10 +6,13 @@ import ImageUpload from "../ImageUpload/ImageUpload";  // Assuming ImageUpload i
 import Swal from "sweetalert2";
 
 const PublishNewPost = () => {
-    const { register, handleSubmit, formState: { errors }, reset } = useForm();
+    const { register, handleSubmit, formState: { errors }, reset, watch } = useForm();
+    const title = watch("title", "")
     const [content, setContent] = useState('');
     const [uploadedImageUrl, setUploadedImageUrl] = useState('');
 
+
+    //   Handle content change
     const handleContentChange = (newContent) => {
         setContent(newContent); // Update the state in the parent
     };
@@ -84,12 +87,30 @@ const PublishNewPost = () => {
             {content && (
                 <div className="mt-8">
                     <h2 className="text-xl font-semibold mb-4">Preview Content</h2>
-                    <div className="border border-gray-300 p-10 rounded">
-                        {uploadedImageUrl ? <img src={uploadedImageUrl} /> : null}
-                        <div dangerouslySetInnerHTML={{ __html: content }} />
+                    <div className="border border-gray-300 p-4 md:p-8 rounded w-full max-w-full overflow-hidden">
+                        {title ? (
+                            <h1 className="text-lg md:text-xl font-semibold text-gray-800 mb-3 break-words">
+                                {title}
+                            </h1>
+                        ) : null}
+
+                        {uploadedImageUrl ? (
+                            <img
+                                src={uploadedImageUrl}
+                                alt="Uploaded Preview"
+                                className="w-full max-w-full h-auto object-cover mb-4 rounded"
+                            // className="w-full h-40 object-cover rounded-md mb-4"
+                            />
+                        ) : null}
+
+                        <div
+                            className="text-gray-700 break-words"
+                            dangerouslySetInnerHTML={{ __html: content }}
+                        />
                     </div>
                 </div>
             )}
+
         </div>
     );
 };
