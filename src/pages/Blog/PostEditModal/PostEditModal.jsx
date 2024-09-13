@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 import ImageUpload from '../ImageUpload/ImageUpload';
 import RichTextEditor from '../RichTextEditor/RichTextEditor';
 
-const PostEditModal = ({ isOpen, onClose, post, onUpdate }) => {
+const PostEditModal = ({ isOpen, onClose, post, onPostUpdate }) => {
     const [title, setTitle] = useState(post.title || '');
     const [label, setLabel] = useState(post.label || '');
     const [content, setContent] = useState(post.content || '');
@@ -36,9 +36,11 @@ const PostEditModal = ({ isOpen, onClose, post, onUpdate }) => {
             title, label, content, imgUrl: uploadedImageUrl
         }
         try {
-            await axios.patch(`http://localhost:5000/api/posts/${post._id}`, updatedPost);
+            const response = await axios.patch(`http://localhost:5000/api/posts/${post._id}`, updatedPost);
+            console.log("🚀 ~ handleUpdate ~ response:", response)
+            // await axios.patch(`http://localhost:5000/api/posts/${post._id}`, updatedPost);
             Swal.fire('Success!', 'Post updated successfully.', 'success');
-            onUpdate(); // Refresh the list in the parent component
+            onPostUpdate()
             onClose(); // Close the modal
         } catch (error) {
             Swal.fire('Error!', 'Failed to update post.', 'error');
@@ -83,23 +85,6 @@ const PostEditModal = ({ isOpen, onClose, post, onUpdate }) => {
                 </div>
 
                 {/* Content Editor */}
-                {/* <div className="mb-4">
-                    <label className="block text-sm font-medium mb-1">Content</label>
-                    <JoditEditor
-                        ref={editorRef}
-                        value={content}
-                        onChange={setContent}
-                        config={{
-                            height: 300, // Set a fixed height for the editor
-                            maxHeight: 300, // Maximum height to limit overflow
-                            style: {
-                                overflowY: 'scroll', // Enable scrolling for long content
-                            }
-                        }}
-                    />
-                </div> */}
-
-
                 <div>
                     <label className="block font-medium">Content</label>
                     <RichTextEditor content={content} onChangeContent={handleContentChange} />
