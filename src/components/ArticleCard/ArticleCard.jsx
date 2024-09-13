@@ -9,7 +9,7 @@ const ArticleCard = ({ post }) => {
       <div className="p-5">
         {/* Image */}
         <div>
-          <img src={imgUrl} alt="articleImg" className="my-5 w-full" />
+          <img src={imgUrl} alt="articleImg" className="my-5 w-full h-[px] object-cover" />
         </div>
         {/* Title */}
         <h1 className="font-serif font-extrabold text-2xl">{title}</h1>

@@ -6,7 +6,7 @@ const HomeCard = ({ post }) => {
       <div className="col-span-1">
         <img
           src={imgUrl}
-          alt="birds"
+          alt="Image"
           className="w-[100%] h-[300px] object-cover object-center"
         />
       </div>
