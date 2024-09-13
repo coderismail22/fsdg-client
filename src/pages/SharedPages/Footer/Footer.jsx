@@ -15,17 +15,7 @@ const Footer = () => {
               />
             </p>
             <p className="text-[#687279]">
-              FSDG is one of the most recognized pro-environmental national NGOs
-              in Bangladesh. It was conceptualized in 1993, from Bangladesh
-              Flood Action Plan (FAP16) Environmental Study; and the formal
-              journey started in 1994. Since formation, FSDG has been active in
-              this field and has drawn attention of relevant local, national and
-              international actors including government and funding agencies
-              through demonstrating innovations in its approaches and producing
-              tangible learning outcomes. On behalf of its General Committee, an
-              Executive Committee (EC) governs FSDG. FSDG aims to join with
-              others in influencing the national development strategy towards
-              directions that support sustainable environment in Bangladesh.
+              FSDG (Foundation for Supporting Development Goal) is a Non-government Organization (NGO) registered under Joint Stock Company, Bangladesh in 2016. FSDG has been working to support the most marginalized population in Mymensingh, Barisal, Jhalkati and Panchagarh with safe water, shelter and agriculture.
             </p>
           </div>
         </div>
@@ -39,7 +29,7 @@ const Footer = () => {
       </div>
       <hr className="mt-5" />
       <h1 className="flex-1 mt-5 text-[#687279] ">
-        Copyright © 2024 FSDG | Developed by FSDG
+        Copyright © {new Date().getFullYear()} FSDG | Developed by FSDG
       </h1>
     </div>
   );

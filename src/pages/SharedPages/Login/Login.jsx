@@ -6,6 +6,7 @@ import logo from "/fsdg.jpg";
 import LoginBanner from "../../../components/LoginBanner/LoginBanner";
 import Swal from "sweetalert2";  // Import SweetAlert2
 import { RotatingLines } from 'react-loader-spinner';
+
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [loading, setLoading] = useState(false);  // State to manage loading
@@ -21,18 +22,19 @@ const Login = () => {
     const loginHandler = async (formData) => {
         setLoading(true);  // Start loading spinner
         try {
-            const response = await fetch("https://fsdg-blog-login-server.vercel.app/api/admin/login", {
+            const response = await fetch("http://localhost:5000/api/admin/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
-                body: JSON.stringify(formData)
+                body: JSON.stringify(formData),
+                credentials: 'include',  // Include cookies in the request
             });
 
             const result = await response.json();
-
+            console.log('from loginhandler',result)
             if (response.ok) {
-                // Handle success (navigate or show success message)
+                // Redirect on successful login
                 Swal.fire({
                     icon: 'success',
                     title: 'Login successful',

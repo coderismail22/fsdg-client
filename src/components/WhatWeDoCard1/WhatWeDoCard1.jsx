@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const WhatWeDoCard1 = ({ id, imgUrl, title, itemLink, borderRight }) => {
   return (
     <div
-      className={`border-${borderRight} w-[100%] sm:w-[500px] md:w-[230px] lg:w-[320px]  h-[550px] md:h-[400px]  p-5  flex flex-col items-center justify-center bg-slate-100`}
+      className={`border-${borderRight} w-[100%] sm:w-[500px] md:w-[230px] lg:w-[320px]  h-[550px] md:h-[400px]  p-5  flex flex-col items-center justify-center bg-slate-200`}
     >
       <div>
         <img

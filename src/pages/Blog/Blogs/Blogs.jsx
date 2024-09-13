@@ -102,7 +102,7 @@ const Blogs = () => {
                     <div className="relative w-full md:w-auto">
                         <DatePicker
                             showIcon
-                            icon={<BsCalendar  />
+                            icon={<BsCalendar />
                             }
                             toggleCalendarOnIconClick
                             selected={startDate}

@@ -21,6 +21,7 @@ import RichTextEditor from "../pages/Blog/RichTextEditor/RichTextEditor";
 import PublishNewPost from "../pages/Blog/PublishNewPost/PublishNewPost";
 import AdminDashboardNavbar from "../components/AdminDashboardNavbar/AdminDashboardNavbar";
 import Projects from "../pages/Projects/Projects/Projects";
+import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute";
 // import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute";
 
 export const router = createBrowserRouter([
@@ -85,7 +86,7 @@ export const router = createBrowserRouter([
   },
   {
     path: "dashboard/admin",
-    element: <AdminDashboard />,
+    element: (<ProtectedRoute><AdminDashboard /></ProtectedRoute>),
     children: [
       {
         path: "admin-profile",

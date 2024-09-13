@@ -68,12 +68,12 @@ const WhatWeDoCards = () => {
   }
 
   return (
-    <div className="bg-white mx-2 md:mx-10  rounded-lg ">
+    <div className="bg-white mx-2 md:mx-3 lg:mx-4  rounded-lg py-5 overflow-hidden">
       <div className="flex flex-col justify-center items-center">
         {/* Card Type 1 [3*3]*/}
-        <div className="flex flex-col md:flex-row md:justify-center md:items-center gap-2 mt-2 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:justify-center md:items-center gap-5 mt-2 ">
           {
-            posts.slice(0, 3).map(post => <WhatWeDoCard1 key={post._id}
+            posts.slice(0, 6).map(post => <WhatWeDoCard1 key={post._id}
               title={post.title}
               imgUrl={post.imgUrl}
               id={post._id}
@@ -81,7 +81,7 @@ const WhatWeDoCards = () => {
           }
         </div>
         {/* Card Type 2 [4*4] */}
-        <div className="flex flex-col md:flex-row  justify-center items-center p-10 sm:p-0  gap-3 mt-2 ">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2  justify-center items-center p-10 sm:p-0  gap-3 mt-2 ">
           {
             posts.slice(4, 8).map(post => <WhatWeDoCard2
               key={post._id}
@@ -90,7 +90,7 @@ const WhatWeDoCards = () => {
               imgUrl={post.imgUrl}
             />)
           }
-        </div>
+        </div> */}
       </div>
     </div>
   );
