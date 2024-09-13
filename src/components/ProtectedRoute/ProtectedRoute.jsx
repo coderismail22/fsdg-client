@@ -1,29 +1,43 @@
 import { Navigate } from "react-router-dom";
-import { jwtDecode } from "jwt-decode";
+import { useEffect, useState } from "react";
 
 const ProtectedRoute = ({ children }) => {
-    const token = localStorage.getItem("token");
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [loading, setLoading] = useState(true);
 
-    // Check if the token is present
-    if (!token) {
+    useEffect(() => {
+        const checkAuthStatus = async () => {
+            try {
+                const response = await fetch("http://localhost:5000/api/check-auth", {
+                    method: "GET",
+                    credentials: "include",  // Include cookies with the request
+                });
+
+                if (response.ok) {
+                    setIsAuthenticated(true);
+                } else {
+                    setIsAuthenticated(false);
+                }
+            } catch (error) {
+                console.error("Authentication check failed:", error);
+                setIsAuthenticated(false);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        checkAuthStatus();
+    }, []);
+
+    if (loading) {
+        return <div>Loading...</div>;  // Or a spinner
+    }
+
+    if (!isAuthenticated) {
         return <Navigate to="/login" />;
     }
 
-    try {
-        // Decode token and check expiration (optional)
-        const decodedToken = jwtDecode(token);
-        const currentTime = Date.now() / 1000;  // Current time in seconds
-
-        if (decodedToken.exp < currentTime) {
-            localStorage.removeItem("token");  // Remove expired token
-            return <Navigate to="/login" />;
-        }
-
-        return children;  // Render the protected component
-    } catch (error) {
-        localStorage.removeItem("token");  // Remove invalid token
-        return <Navigate to="/login" />;
-    }
+    return children;
 };
 
 export default ProtectedRoute;
