@@ -8,6 +8,7 @@ import RichTextEditor from '../RichTextEditor/RichTextEditor';
 const PostEditModal = ({ isOpen, onClose, post, onPostUpdate }) => {
     const [title, setTitle] = useState(post.title || '');
     const [label, setLabel] = useState(post.label || '');
+    const [author, setAuthor] = useState(post.author || '');
     const [content, setContent] = useState(post.content || '');
     const [uploadedImageUrl, setUploadedImageUrl] = useState(post.imgUrl || '');
 
@@ -22,6 +23,7 @@ const PostEditModal = ({ isOpen, onClose, post, onPostUpdate }) => {
         setTitle(post.title || '');
         setLabel(post.label || '');
         setContent(post.content || '');
+        setContent(post.author || '');
         // setImgUrl(post.imgUrl || '');
         setUploadedImageUrl(post.imgUrl || '');
     }, [post]);
@@ -29,11 +31,12 @@ const PostEditModal = ({ isOpen, onClose, post, onPostUpdate }) => {
     const handleUpdate = async () => {
         console.log('title', title) // Getting Latest
         console.log('label', label) // Getting Latest
+        console.log('author', author) // Getting Latest
         console.log('content', content) // Getting Latest
         console.log('updated imgUrl', uploadedImageUrl) // Getting Latest
 
         const updatedPost = {
-            title, label, content, imgUrl: uploadedImageUrl
+            author, title, label, content, imgUrl: uploadedImageUrl
         }
         try {
             const response = await axios.patch(`https://fsdg-blog-login-server.vercel.app/api/posts/${post._id}`, updatedPost);
@@ -72,6 +75,16 @@ const PostEditModal = ({ isOpen, onClose, post, onPostUpdate }) => {
                         className="w-full border border-gray-300 rounded p-2"
                         value={label}
                         onChange={(e) => setLabel(e.target.value)}
+                    />
+                </div>
+                {/* Author */}
+                <div className="mb-4">
+                    <label className="block text-sm font-medium mb-1">Author</label>
+                    <input
+                        type="text"
+                        className="w-full border border-gray-300 rounded p-2"
+                        value={author}
+                        onChange={(e) => setAuthor(e.target.value)}
                     />
                 </div>
 

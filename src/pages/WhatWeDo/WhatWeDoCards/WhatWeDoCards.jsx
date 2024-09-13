@@ -1,16 +1,6 @@
 import WhatWeDoCard1 from "../../../components/WhatWeDoCard1/WhatWeDoCard1";
-import WhatWeDoCard2 from "../../../components/WhatWeDoCard2/WhatWeDoCard2";
+// import WhatWeDoCard2 from "../../../components/WhatWeDoCard2/WhatWeDoCard2";
 
-// card-type-1 imports
-import birds from "../../../../public/assets/birds.jpg";
-import sugarcaneman from "../../../../public/assets/sugarcane-man.jpg";
-import grandma from "../../../../public/assets/vegetable-grandma.jpg";
-
-// card-type-2 imports
-import disaster from "../../../../public/assets/whatwedo-disaster.jpg";
-import health from "../../../../public/assets/whatwedo-health.png";
-import child from "../../../../public/assets/whatwedo-child.jpg";
-import institutional from "../../../../public/assets/whatwedo-institution.jpg";
 
 
 import { RotatingLines } from "react-loader-spinner";

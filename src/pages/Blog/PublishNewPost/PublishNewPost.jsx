@@ -6,11 +6,11 @@ import ImageUpload from "../ImageUpload/ImageUpload";  // Assuming ImageUpload i
 import Swal from "sweetalert2";
 
 const PublishNewPost = () => {
+
     const { register, handleSubmit, formState: { errors }, reset, watch } = useForm();
     const title = watch("title", "")
     const [content, setContent] = useState('');
     const [uploadedImageUrl, setUploadedImageUrl] = useState('');
-
 
     //   Handle content change
     const handleContentChange = (newContent) => {
@@ -53,6 +53,15 @@ const PublishNewPost = () => {
                         type="text"
                         className="w-full border border-gray-300 rounded p-2"
                         {...register("label", { required: "Label is required" })}
+                    />
+                    {errors.label && <p className="text-red-500 text-sm">{errors.label.message}</p>}
+                </div>
+                <div>
+                    <label className="block font-medium">Author</label>
+                    <input
+                        type="text"
+                        className="w-full border border-gray-300 rounded p-2"
+                        {...register("author", { required: "Author is required" })}
                     />
                     {errors.label && <p className="text-red-500 text-sm">{errors.label.message}</p>}
                 </div>
