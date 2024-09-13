@@ -211,7 +211,7 @@ const MiniCaseStoryCards = () => {
   const fetchPosts = async () => {
     setLoading(true);
     try {
-      const { data } = await axios.get("http://localhost:5000/api/posts");
+      const { data } = await axios.get("https://fsdg-blog-login-server.vercel.app/api/posts");
       console.log('posts from mini stories', data)
       setPosts(data);
     } catch (error) {

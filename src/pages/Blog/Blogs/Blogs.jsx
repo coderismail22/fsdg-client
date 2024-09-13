@@ -22,7 +22,7 @@ const Blogs = () => {
     const fetchBlogs = async () => {
         setLoading(true);
         try {
-            const { data } = await axios.get("http://localhost:5000/api/posts");
+            const { data } = await axios.get("https://fsdg-blog-login-server.vercel.app/api/posts");
             setBlogs(data);
         } catch (error) {
             console.error("Error fetching blogs:", error);

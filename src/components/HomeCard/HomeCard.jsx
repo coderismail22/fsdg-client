@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
+
 const HomeCard = ({ post }) => {
-  const { imgUrl, title, content } = post;
+  const { _id, imgUrl, title, content } = post;
   return (
     <div className="grid gap-5 md:grid-cols-2 justify-center items-center  md:flex-row md:col-span-2 p-5">
       {/* Image */}
@@ -16,10 +18,11 @@ const HomeCard = ({ post }) => {
         <h1 className="font-oswald font-extrabold text-[#2C5B1A] text-3xl  mb-3">
           {title}
         </h1>
-        <div dangerouslySetInnerHTML={{ __html: content }} className="font-lato text-[14px] md:text-[15px] text-[#7a7f84] mb-3 md:max-w-96">
-        </div>
+        <p dangerouslySetInnerHTML={{ __html: content.substring(0, 300) + (content.length > 100 ? '...' : '') }} className="text-gray-600 text-sm md:text-base mb-4"></p>
+        {/* Button */}
+        <Link to={`/blogs/${_id}`} className="font-serif font-extrabold text-sm">Read more </Link>
       </div>
-    </div>
+    </div >
   );
 };
 

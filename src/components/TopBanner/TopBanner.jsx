@@ -30,7 +30,7 @@ export const TopBanner = () => {
       <div className="font-palanquin text-sm hidden md:flex  gap-5 ">
         <div className="flex gap-2 justify-center items-center">
           <MdOutlineEmail />
-          <p>alam.mdfiroj@gmail.com</p>
+          <p>info@fsdgbd.org</p>
         </div>
         <div className="flex gap-2 justify-center items-center">
           <MdOutlinePhoneInTalk />

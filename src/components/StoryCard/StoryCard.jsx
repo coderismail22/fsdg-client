@@ -94,8 +94,7 @@ const StoryCard = ({ post }) => {
 
       {/* Description */}
       <div className="my-3 text-[#687279] text-sm w-full text-justify">
-        <p dangerouslySetInnerHTML={{ __html: content }}></p>
-      </div>
+        <p dangerouslySetInnerHTML={{ __html: content.substring(0, 100) + (content.length > 100 ? '...' : '') }} className="text-gray-600 text-sm md:text-base mb-4"></p>      </div>
       {/* Post Author and Date */}
       <div className="text-center text-[13px]">
         <p className="mb-1">

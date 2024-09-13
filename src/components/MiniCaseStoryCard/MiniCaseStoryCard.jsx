@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const MiniCaseStoryCard = ({ post, id }) => {
-  const { imgUrl, label, title } = post;
+  const { _id, imgUrl, label, title } = post;
   console.log('id', id)
 
   // Define animation variants
@@ -20,7 +20,7 @@ const MiniCaseStoryCard = ({ post, id }) => {
 
   return (
     <motion.div
-      className="pointer-events-none flex items-center bg-white shadow-lg rounded-lg overflow-hidden w-80 h-32 md:w-72 md:h-36"
+      className="flex items-center bg-white shadow-lg rounded-lg overflow-hidden w-80 h-32 md:w-72 md:h-36"
       variants={cardVariants}
       initial="hidden"
       whileInView="visible"
@@ -29,18 +29,18 @@ const MiniCaseStoryCard = ({ post, id }) => {
     >
       {/* Image */}
       <Link
-        //  to={postUrl}
+        to={`/blogs/${_id}`}
         className="flex-shrink-0 w-1/3 h-full">
         <img
           src={imgUrl}
-          alt="Sample" className="w-full h-full object-cover" />
+          alt="Image" className="w-full h-full object-cover" />
       </Link>
 
       {/* Content */}
       <div className="flex flex-col justify-between p-4 w-2/3">
         {/* Button */}
         <Link
-          // to={postUrl}
+          to={`/blogs/${_id}`}
           className="truncate uppercase bg-[#F7B500] hover:bg-[#B88E19] p-2 rounded-md text-[10px] text-center font-bold font-montserrat"
         >
           <p>{label}</p>
@@ -48,7 +48,7 @@ const MiniCaseStoryCard = ({ post, id }) => {
 
         {/* Title */}
         <Link
-          //  to={postUrl} 
+          to={`/blogs/${_id}`}
           className="text-[12px] font-bold mt-2 text-center">
           {title}
         </Link>

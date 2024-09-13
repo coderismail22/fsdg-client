@@ -15,7 +15,7 @@ const StoryCards = () => {
   const fetchPosts = async () => {
     setLoading(true);
     try {
-      const { data } = await axios.get("http://localhost:5000/api/posts");
+      const { data } = await axios.get("https://fsdg-blog-login-server.vercel.app/api/posts");
       setPosts(data);
     } catch (error) {
       console.error("Error fetching blogs:", error);
@@ -58,7 +58,6 @@ const StoryCards = () => {
   }
 
 
-
   return (
     <div>
       {
@@ -77,7 +76,6 @@ const StoryCards = () => {
           >
             More Posts
           </button>
-
         </div>
       )}
     </div>

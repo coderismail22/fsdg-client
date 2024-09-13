@@ -41,10 +41,10 @@ export const router = createBrowserRouter([
         path: "/what-we-do",
         element: <WhatWeDo />,
       },
-      {
-        path: "/services",
-        element: <OurServices />,
-      },
+      // {
+      //   path: "/services",
+      //   element: <OurServices />,
+      // },
       {
         path: "/blog",
         element: <BlogEditor />,

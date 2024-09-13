@@ -15,7 +15,7 @@ const Articles = () => {
   const fetchPosts = async () => {
     setLoading(true);
     try {
-      const { data } = await axios.get("http://localhost:5000/api/posts");
+      const { data } = await axios.get("https://fsdg-blog-login-server.vercel.app/api/posts");
       setPosts(data);
     } catch (error) {
       console.error("Error fetching blogs:", error);
@@ -55,12 +55,9 @@ const Articles = () => {
 
   return (
     <div >
-      {/* {posts.map((post) => (
-        <HomeCard key={post.index} post={post} />
-      ))} */}
       {
         posts.length === 0 ? (<p className="text-center text-red-600 text-xl font-semibold mt-6 border p-10 mx-2">There&apos;s nothing to show</p>
-        ) : <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center px-16 my-20">{posts.slice(3, visibleBlogs).map((post) => (
+        ) : <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center px-16 my-20 gap-2">{posts.slice(3, visibleBlogs).map((post) => (
           <ArticleCard key={post.index} post={post} />
         ))}</div >
       }

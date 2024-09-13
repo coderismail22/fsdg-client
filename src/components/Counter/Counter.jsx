@@ -3,15 +3,15 @@ import AnimatedNumber from "react-animated-numbers";
 const Counter = () => {
   const transitionTween = (index) => ({
     type: "tween",
-    duration: index + 1,
-    damping: 10,
+    duration: index + 1.5,
+    damping: 5,
     mass: 1,
   });
 
-  const staff = 868;
-  const offices = 78;
-  const projects = 267;
-  const workingDistricts = 19;
+  const staff = 50;
+  const offices = 5;
+  const projects = 60;
+  const workingDistricts = 4;
 
   return (
     <div className="mt-5 relative h-[800px] md:h-[700px]  max-h-[1100px]">

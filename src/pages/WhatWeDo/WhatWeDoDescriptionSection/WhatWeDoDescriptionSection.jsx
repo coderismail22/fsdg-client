@@ -7,7 +7,7 @@ const WhatWeDoDescriptionSection = () => {
         we work to find solutions to most pressing environmental, ecological,
         livelihood and development challenges
       </h1>
-      <p className="font-fira text-center mb-10">
+      {/* <p className="font-fira text-center mb-10">
         FSDG conducts research as well as implements projects on, but not
         limited to: Natural resource management, Climate change adaptation and
         mitigation, Disaster risk reduction and mitigation, Early warning,
@@ -21,7 +21,7 @@ const WhatWeDoDescriptionSection = () => {
         development and societal betterment. In doing so, FSDG brings
         governments, NGOs, the UN, international organizations together to
         develop policies and share best practices.
-      </p>
+      </p> */}
 
       <h1 className="text-center font-palanquin text-[54px] uppercase">
         Our thematic areas

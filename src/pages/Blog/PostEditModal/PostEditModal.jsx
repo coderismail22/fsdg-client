@@ -36,9 +36,9 @@ const PostEditModal = ({ isOpen, onClose, post, onPostUpdate }) => {
             title, label, content, imgUrl: uploadedImageUrl
         }
         try {
-            const response = await axios.patch(`http://localhost:5000/api/posts/${post._id}`, updatedPost);
+            const response = await axios.patch(`https://fsdg-blog-login-server.vercel.app/api/posts/${post._id}`, updatedPost);
             console.log("🚀 ~ handleUpdate ~ response:", response)
-            // await axios.patch(`http://localhost:5000/api/posts/${post._id}`, updatedPost);
+            // await axios.patch(`https://fsdg-blog-login-server.vercel.app/api/posts/${post._id}`, updatedPost);
             Swal.fire('Success!', 'Post updated successfully.', 'success');
             onPostUpdate()
             onClose(); // Close the modal

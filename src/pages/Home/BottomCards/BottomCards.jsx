@@ -5,7 +5,7 @@ const BottomCards = () => {
   return (
     <div>
       <HomeCard1 />
-      <HomeCard2 />
+      {/* <HomeCard2 /> */}
     </div>
   );
 };

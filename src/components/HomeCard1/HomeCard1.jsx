@@ -1,4 +1,5 @@
 import { FaAlignLeft } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const HomeCard1 = () => {
   return (
@@ -15,20 +16,18 @@ const HomeCard1 = () => {
           <div className="w-full  p-5">
             {/* Text */}
             <h1 className="font-yeseva font-extrabold text-black text-4xl  mb-5">
-              FSDG-WFP DRR
+              FSDG
             </h1>
             <p className="font-lato text-[20px] text-grey-800  mb-8">
-              As per the agreement with WFP-DRR-FFA project, FSDG has completed
-              all the assigned 11 DRR schemes in three camps (camp-17, camp
-              20-extension and camp 22) during the project period of three
-              months (1 December 2018 to 28 February 2019).
+
+            FSDG (Foundation for Supporting Development Goal) is a Non-government Organization (NGO) registered under Joint Stock Company, Bangladesh in 2016. FSDG has been working to support the most marginalized population in Mymensingh, Barisal, Jhalkati and Panchagarh with safe water, shelter and agriculture.
             </p>
             {/* Link: Find Out More */}
             <p className="flex gap-5 items-center ">
               <p className="flex justify-center items-center bg-[#FFCD05] rounded-full w-16 h-16">
                 <FaAlignLeft className="size-12 text-white  p-2" />
               </p>
-              <p className="font-extrabold text-xl ">Read More</p>
+              <Link to='/about' className="font-extrabold text-xl ">Read More</Link>
             </p>
           </div>
         </div>

@@ -26,7 +26,7 @@ const AdminBlogList = () => {
     const fetchBlogs = async () => {
         setLoading(true);
         try {
-            const { data } = await axios.get("http://localhost:5000/api/posts");
+            const { data } = await axios.get("https://fsdg-blog-login-server.vercel.app/api/posts");
             setBlogs(data);
         } catch (error) {
             console.error("Error fetching blogs:", error);
@@ -60,7 +60,7 @@ const AdminBlogList = () => {
             });
 
             if (result.isConfirmed) {
-                await axios.delete(`http://localhost:5000/api/posts/${id}`);
+                await axios.delete(`https://fsdg-blog-login-server.vercel.app/api/posts/${id}`);
                 Swal.fire("Deleted!", "Your blog post has been deleted.", "success");
                 fetchBlogs();
             }
