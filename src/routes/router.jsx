@@ -22,6 +22,9 @@ import PublishNewPost from "../pages/Blog/PublishNewPost/PublishNewPost";
 import AdminDashboardNavbar from "../components/AdminDashboardNavbar/AdminDashboardNavbar";
 import Projects from "../pages/Projects/Projects/Projects";
 import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute";
+import WhoAreWe from "../pages/WhoAreWe/WhoAreWe/WhoAreWe";
+import AppealForSupport from "../pages/AppealForSupport/AppealForSupport/AppealForSupport";
+import Donate from "../pages/Donate/Donate/Donate";
 // import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute";
 
 export const router = createBrowserRouter([
@@ -41,6 +44,24 @@ export const router = createBrowserRouter([
         path: "/what-we-do",
         element: <WhatWeDo />,
       },
+      // TODO: Make these functional
+      {
+        path: "/who-are-we",
+        element: <WhoAreWe />,
+      },
+      {
+        path: "/appeal-for-support",
+        element: <AppealForSupport />,
+      },
+      {
+        path: "/get-involved",
+        element: <JoinUs />,
+      },
+      {
+        path: "/donate",
+        element: <Donate />,
+      },
+      // TODO: Make these functional
       // {
       //   path: "/services",
       //   element: <OurServices />,

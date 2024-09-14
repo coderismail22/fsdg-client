@@ -8,6 +8,12 @@ const navitems = [
   { title: "Home", path: "/" },
   { title: "About", path: "/about" },
   { title: "Work", path: "/what-we-do" }, // 'What We Do' replaced with 'Work'
+  // TODO: Make these functional
+  { title: "Who Are We", path: "/who-are-we" }, // 'What We Do' replaced with 'Work'
+  { title: "Appeal For Support", path: "/appeal-for-support" }, // 'What We Do' replaced with 'Work'
+  { title: "Get Involved", path: "/get-involved" }, // 'What We Do' replaced with 'Work'
+  { title: "Donate", path: "/donate" }, // 'What We Do' replaced with 'Work'
+  // TODO: Make these functional
   // { title: "Services", path: "/services" }, // 'Our Services' replaced with 'Services'
   { title: "Projects", path: "/projects" },
   // { title: "Blogs", path: "/viewer-blogs" },
@@ -35,13 +41,16 @@ const Navbar = () => {
   };
 
   return (
-    <main className="w-full lg:w-10/12 mx-auto h-[80px] flex flex-col justify-between z-[9999] py-5 px-5 md:px-5">
+    <main className="w-full lg:w-10/12 mx-auto h-[80px] flex flex-col justify-between z-[9999] p-1 border border-green-500">
       <nav className="flex justify-between items-center">
-        <div className="flex items-center justify-between w-full">
-          <Link to="/" className="w-[50px]">
-            {/* LOGO */}
-            <img src="/assets/fsdg.jpg" width="80px" />
-          </Link>
+        {/* TODO: Fix this div issue */}
+        <div className="flex items-center justify-between w-full border border-green-500">
+          <div>
+            <Link to="/">
+              {/* LOGO */}
+              <img src="/assets/fsdg.jpg" width={"50px"} />
+            </Link>
+          </div>
 
           <section className="w-[50px]">
             {/* MENU for Mobile */}
@@ -54,13 +63,13 @@ const Navbar = () => {
           </section>
         </div>
 
-        <section className="flex items-center justify-center flex-nowrap gap-2 md:gap-4 lg:gap-6 xl:gap-8 2xl:gap-10">
+        <section className="flex items-center justify-center  gap-2 md:gap-4 lg:gap-6 xl:gap-8 2xl:gap-10 border border-yellow-500">
           {/* Navbar For Larger Displays */}
           {navitems.map((item, index) => (
             <Link
               key={index}
               to={item.path}
-              className="hover:text-[#456C2F] hidden lg:inline-block font-montserrat font-bold text-center text-sm md:text-base"
+              className="hover:text-[#456C2F] hidden lg:inline-block font-montserrat font-bold text-center text-sm md:text-base border border-red-500"
             >
               {item.title}
             </Link>

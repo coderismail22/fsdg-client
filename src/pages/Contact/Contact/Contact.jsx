@@ -12,7 +12,7 @@ const Contact = () => {
       />
       <ContactCards />
       <Map />
-      <Form />
+      {/* <Form /> */}
     </div>
   );
 };

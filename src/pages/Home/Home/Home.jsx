@@ -11,8 +11,8 @@ const Home = () => {
   return (
     <>
       <HeroSection />
-      <ExecutiveDirector />
-      <div className="w-[90%] xs:w-[100%] md:9/12 mx-auto">
+      {/* <ExecutiveDirector /> */}
+      <div>
         <HomeCards />
         {/* <Documentaries /> */}
       </div>
