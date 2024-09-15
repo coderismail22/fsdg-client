@@ -1,7 +1,6 @@
-
 const AppealForSupport = () => {
     return (
-        <div>AppealForSupport</div>
+        <div>1. Add Title,Banner,Message (Dashboard Work)</div>
     )
 }
 

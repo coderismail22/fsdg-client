@@ -8,7 +8,10 @@ const navitems = [
   { title: "Profile", path: "admin-profile" },
   { title: "Editor", path: "admin-rich-text-editor" },
   { title: "Posts", path: "admin-blog-list" },
-  { title: "Go to Home", path: "/" }
+  { title: "Our Info", path: "admin-our-info" }, // make protected
+  { title: "Appeal", path: "admin-appeal-for-support" }, // make protected
+  { title: "Donation", path: "admin-donation" },//make protected
+  { title: "Home", path: "/" }
 ];
 
 const AdminDashboardNavbar = () => {
@@ -52,7 +55,7 @@ const AdminDashboardNavbar = () => {
             <Link
               key={index}
               to={item.path}
-              className="hover:text-[#456C2F] hidden lg:inline-block font-montserrat font-bold text-center text-sm md:text-base w-[100px]"
+              className="hover:text-[#456C2F] hidden lg:inline-block font-montserrat font-bold text-center text-sm md:text-base w-[80px]"
             >
               {item.title}
             </Link>

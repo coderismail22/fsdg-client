@@ -1,7 +1,10 @@
 
 const WhoAreWe = () => {
     return (
-        <div>WhoAreWe</div>
+        <div>
+            TODO:
+            1. Add Table (Dashboard Work Needed)
+        </div>
     )
 }
 

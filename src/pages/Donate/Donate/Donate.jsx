@@ -1,7 +1,7 @@
 
 const Donate = () => {
     return (
-        <div>Donate</div>
+        <div>1. Add Bank Details (Dashboard Work)</div>
     )
 }
 

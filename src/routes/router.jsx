@@ -25,6 +25,9 @@ import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute";
 import WhoAreWe from "../pages/WhoAreWe/WhoAreWe/WhoAreWe";
 import AppealForSupport from "../pages/AppealForSupport/AppealForSupport/AppealForSupport";
 import Donate from "../pages/Donate/Donate/Donate";
+import AdminDonate from "../pages/AdminDashboard/AdminDonate/AdminDonate";
+import AdminAppealForSupport from "../pages/AdminDashboard/AdminAppealForSupport/AdminAppealForSupport";
+import AdminWhoAreWe from "../pages/AdminDashboard/AdminWhoAreWe/AdminWhoAreWe";
 // import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute";
 
 export const router = createBrowserRouter([
@@ -120,6 +123,18 @@ export const router = createBrowserRouter([
       {
         path: "admin-blog-list",
         element: <AdminBlogList />
+      },
+      {
+        path: "admin-donation",
+        element: <AdminDonate />
+      },
+      {
+        path: "admin-appeal-for-support",
+        element: <AdminAppealForSupport />
+      },
+      {
+        path: "admin-our-info",
+        element: <AdminWhoAreWe />
       },
     ]
   },

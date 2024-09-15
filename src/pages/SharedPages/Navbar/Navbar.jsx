@@ -69,7 +69,7 @@ const Navbar = () => {
             <Link
               key={index}
               to={item.path}
-              className="hover:text-[#456C2F] hidden lg:inline-block font-montserrat font-bold text-center text-sm md:text-base border border-red-500"
+              className="hover:text-[#456C2F] hidden lg:inline-block font-montserrat font-bold text-center text-sm md:text-base border border-red-500 w-[50px]"
             >
               {item.title}
             </Link>
