@@ -1,23 +1,17 @@
+import { useState, useEffect } from "react";
 import JobCircularCard from "../../../components/JobCircularCard/JobCircularCard";
 
 const JobCircular = () => {
-  const circulars = [
-    {
-      id: 1,
-      title: "Job Circular 1",
-      description: "Exciting opportunity to join our team. Apply now!",
-    },
-    {
-      id: 2,
-      title: "Job Circular 2",
-      description: "Looking for talented individuals to fill this role.",
-    },
-    {
-      id: 3,
-      title: "Job Circular 3",
-      description: "Join us in making a difference. Apply today!",
-    },
-  ];
+  const [circulars, setCirculars] = useState([]);
+
+  useEffect(() => {
+    // Fetch the job circulars data from the JSON file
+    fetch("/assets/jobCirculars.json")
+      .then((response) => response.json())
+      .then((data) => setCirculars(data))
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
+
   return (
     <div className="my-20">
       <h1 className="uppercase font-yeseva font-bold text-xl md:text-3xl my-5 text-center">

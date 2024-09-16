@@ -17,3 +17,15 @@ html {
   list-style-type: decimal;
   list-style-position: inside;
 }
+
+.jodit-wysiwyg table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 2px solid black;
+}
+
+.jodit-wysiwyg td, .jodit-wysiwyg th {
+  border: 2px solid black;
+  padding: 0.5rem;
+  background-color: #ffffff; /* Ensure white background */
+}

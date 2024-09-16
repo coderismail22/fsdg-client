@@ -1,0 +1,26 @@
+[
+  {
+    "name": "John Doe",
+    "occupation": "Software Engineer",
+    "designation": "Team Lead",
+    "photo": "https://via.placeholder.com/150"
+  },
+  {
+    "name": "Jane Smith",
+    "occupation": "Graphic Designer",
+    "designation": "Senior Designer",
+    "photo": "https://via.placeholder.com/150"
+  },
+  {
+    "name": "Michael Johnson",
+    "occupation": "Data Scientist",
+    "designation": "Data Analytics Head",
+    "photo": "https://via.placeholder.com/150"
+  },
+  {
+    "name": "Emily Davis",
+    "occupation": "Marketing Specialist",
+    "designation": "Marketing Manager",
+    "photo": "https://via.placeholder.com/150"
+  }
+]

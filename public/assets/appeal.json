@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "The quick brown fox jumps over the lazy cat",
+    "image": "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80",
+    "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit repellendus ut expedita voluptatum, culpa voluptatem veritatis in minus qui maiores omnis! Suscipit porro quibusdam voluptatem esse est, iusto ipsum aperiam ratione ut excepturi natus laborum. Tenetur fugiat autem rerum eum obcaecati magni.",
+    "buttonText": "Donate Now",
+    "link": "/donate"
+  },
+  {
+    "id": 2,
+    "title": "Another Title Example",
+    "image": "https://i0.wp.com/picjumbo.com/wp-content/uploads/some-other-image.jpg",
+    "message": "This is another message for a different appeal.",
+    "buttonText": "Support Us",
+    "link": "/support"
+  }
+]

@@ -11,7 +11,7 @@ const JoinUs = () => {
         bgImage={"/assets/joinus-bg.jpg"}
       />
       <div className="lg:w-9/12 mx-auto">
-        <UpperCards />
+        {/* <UpperCards /> */}
         <JobCircular />
         {/* <Coordinator /> */}
       </div>

@@ -41,10 +41,10 @@ const Navbar = () => {
   };
 
   return (
-    <main className="mx-auto h-[80px] flex flex-col justify-between z-[9999] px-2 border border-green-500">
-      <nav className="flex justify-between items-center">
+    <main className="mx-auto h-[80px] flex flex-col justify-between z-[9999] px-2 ">
+      <nav className="flex justify-between items-center py-2">
         {/* TODO: Fix this div issue */}
-        <div className="flex items-center justify-between  lg:justify-center w-full border border-green-500">
+        <div className="flex items-center justify-between  lg:justify-center w-full  ">
           <div>
             <Link to="/">
               {/* LOGO */}
@@ -63,13 +63,13 @@ const Navbar = () => {
           </section>
         </div>
 
-        <section className="flex items-center justify-center  gap-2 md:gap-4 lg:gap-6 xl:gap-8 2xl:gap-10 border border-yellow-500 text-center">
+        <section className="flex items-center justify-center  gap-2 md:gap-4 lg:gap-6 xl:gap-8 2xl:gap-10  text-center">
           {/* Navbar For Larger Displays */}
           {navitems.map((item, index) => (
             <Link
               key={index}
               to={item.path}
-              className="hover:text-[#456C2F] hidden lg:inline-block font-montserrat font-bold text-center text-sm md:text-base border border-red-500 w-[50px] lg:w-[60px] 2xl:w-[100px]"
+              className="hover:text-[#456C2F] hidden lg:inline-block font-montserrat font-bold text-center text-sm md:text-base w-[50px] lg:w-[60px] 2xl:w-[100px]"
             >
               {item.title}
             </Link>

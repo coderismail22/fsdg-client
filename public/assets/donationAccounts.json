@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "bankAccount": "123456789",
+    "accountName": "Charity A",
+    "branch": "Main Branch",
+    "contact": "+1234567890",
+    "routingNumber": "111222333"
+  },
+  {
+    "id": 2,
+    "bankAccount": "987654321",
+    "accountName": "Charity B",
+    "branch": "Second Branch",
+    "contact": "+0987654321",
+    "routingNumber": "444555666"
+  },
+  {
+    "id": 3,
+    "bankAccount": "112233445",
+    "accountName": "Charity C",
+    "branch": "Third Branch",
+    "contact": "+1122334455",
+    "routingNumber": "777888999"
+  },
+  {
+    "id": 3,
+    "bankAccount": "112233445",
+    "accountName": "Charity D",
+    "branch": "Third Branch",
+    "contact": "+1122334455",
+    "routingNumber": "777888999"
+  }
+]

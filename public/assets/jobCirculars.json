@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "Job Circular 1",
+    "description": "Exciting opportunity to join our team. Apply now!"
+  },
+  {
+    "id": 2,
+    "title": "Job Circular 2",
+    "description": "Looking for talented individuals to fill this role."
+  },
+  {
+    "id": 3,
+    "title": "Job Circular 3",
+    "description": "Join us in making a difference. Apply today!"
+  }
+]
