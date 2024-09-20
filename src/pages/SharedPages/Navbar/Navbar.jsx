@@ -7,7 +7,8 @@ import { TbLayoutSidebarLeftCollapse } from "react-icons/tb";
 const navitems = [
   { title: "Home", path: "/" },
   { title: "About", path: "/about" },
-  { title: "Work", path: "/what-we-do" }, // 'What We Do' replaced with 'Work'
+  { title: "Projects", path: "/projects" },
+  // { title: "Work", path: "/what-we-do" }, // 'What We Do' replaced with 'Work'
   // TODO: Make these functional
   { title: "Who Are We", path: "/who-are-we" }, // 'What We Do' replaced with 'Work'
   { title: "Appeal For Support", path: "/appeal-for-support" }, // 'What We Do' replaced with 'Work'
@@ -15,7 +16,6 @@ const navitems = [
   { title: "Donate", path: "/donate" }, // 'What We Do' replaced with 'Work'
   // TODO: Make these functional
   // { title: "Services", path: "/services" }, // 'Our Services' replaced with 'Services'
-  { title: "Projects", path: "/projects" },
   // { title: "Blogs", path: "/viewer-blogs" },
   // { title: "Blog Editor", path: "/blog" },
   { title: "Stories", path: "/stories" },
