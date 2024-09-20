@@ -9,8 +9,8 @@ const Counter = () => {
   });
 
   // const staff = 50;
-  const offices = 5;
-  const projects = 60;
+  const offices = 3;
+  const projects = 45;
   const workingDistricts = 4;
 
   return (
