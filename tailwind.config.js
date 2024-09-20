@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       screens: {
-        'xs':'450px'
+        xs: "450px",
       },
       fontFamily: {
         blinker: ["Blinker", "sans-serif"],
@@ -15,6 +15,7 @@ export default {
         yeseva: ["Yeseva One", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
         fira: ["Fira Sans", "sans-serif"],
+        notoserifbangla: ["Noto Serif Bengali", "sans-serif"],
       },
     },
   },

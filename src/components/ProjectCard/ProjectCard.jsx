@@ -8,7 +8,7 @@ const ProjectCard = ({ post }) => {
   const [imgError, setImgError] = useState(false);
 
   return (
-    <div className="w-full h-full mx-auto max-w-[400px] flex flex-col items-center justify-between p-3 bg-blue-50 overflow-hidden rounded rounded-md">
+    <div className="font-notoserifbangla w-full h-full mx-auto max-w-[400px] flex flex-col items-center justify-between p-3 bg-blue-50 overflow-hidden rounded rounded-md">
       {/* Card Image */}
       <div className="h-[200px]">
         {imgError ? (
@@ -30,7 +30,7 @@ const ProjectCard = ({ post }) => {
       {/* Card Details */}
       <div className="w-full mt-3 flex flex-col items-center">
         {/* Title */}
-        <h1 className="font-montserrat font-bold text-[20px] md:text-[18px] text-center my-2 ">
+        <h1 className=" font-bold text-[20px] md:text-[18px] text-center my-2 ">
           {title}
         </h1>
       </div>
@@ -55,7 +55,7 @@ const ProjectCard = ({ post }) => {
       </div>
       <Link
         to={`/blogs/${_id}`}
-        className="font-montserrat  flex gap-5 items-center justify-center text-xl bg-[#FFCD05]  w-[300px] h-[50px] p-2 mt-5"
+        className=" flex gap-5 items-center justify-center text-xl bg-[#FFCD05]  w-[300px] h-[50px] p-2 mt-5"
       >
         Details
       </Link>

@@ -44,7 +44,7 @@ const BlogDetail = () => {
     return (
         <div className="container mx-auto px-4 py-8">
             {blog ? (
-                <div className="mx-auto max-w-3xl">
+                <div className=" font-notoserifbangla mx-auto max-w-3xl">
                     <h1 className="text-4xl font-bold mb-4">{blog.title}</h1>
                     <img src={blog.imgUrl} alt={blog.title} className="w-full h-80 object-cover mb-4 rounded-md" />
                     <p dangerouslySetInnerHTML={{ __html: blog.content }}></p>

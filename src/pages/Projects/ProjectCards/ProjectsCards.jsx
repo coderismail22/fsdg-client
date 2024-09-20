@@ -3,7 +3,6 @@ import ProjectCard from "../../../components/ProjectCard/ProjectCard";
 import { RotatingLines } from "react-loader-spinner";
 import axios from "axios";
 import DatePicker from "react-datepicker";
-import { BsCalendar } from "react-icons/bs";
 import { FaSearch } from "react-icons/fa";
 import moment from "moment";
 
@@ -126,9 +125,9 @@ const ProjectsCards = () => {
       {/* Posts Display */}
       <div>
         {filteredPosts.length === 0 ? (
-          <p className="text-center text-red-600 text-xl font-semibold mt-6 border p-10 mx-2">There's nothing to show</p>
+          <p className="text-center text-red-600 text-xl font-semibold mt-6 border p-10 mx-2">There is nothing to show</p>
         ) : (
-          <div className="grid grid-cols-1 items-center justify-center md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 py-10">
+          <div className=" grid grid-cols-1 items-center justify-center md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 py-10">
             {filteredPosts.slice(0, visiblePosts).map((post, index) => (
               <ProjectCard key={index} post={post} />
             ))}

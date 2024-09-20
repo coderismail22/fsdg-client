@@ -19,9 +19,9 @@ const AppealForSupport = () => {
     }
 
     return (
-        <div className="flex flex-col justify-center items-center min-h-screen bg-gray-100 p-4">
+        <div className="font-notoserifbangla flex flex-col justify-center items-center min-h-screen bg-gray-100 p-4">
             {/* Title */}
-            <h1 className="text-4xl md:text-6xl font-bold text-center text-gray-800 mb-6 w-9/12 ">
+            <h1 className=" text-4xl md:text-6xl font-bold text-center text-gray-800 mb-6 w-9/12 ">
                 {appealData.title}
             </h1>
 

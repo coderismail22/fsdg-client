@@ -54,13 +54,13 @@ const StoryCard = ({ post }) => {
   }, []);
   return (
     <motion.div
-      className="w-full h-full mx-auto max-w-[400px] flex flex-col items-center justify-between p-5 bg-blue-50 "
+      className="font-notoserifbangla w-full h-full mx-auto max-w-[400px] flex flex-col items-center justify-between p-5 bg-blue-50 "
       ref={ref}
       variants={cardVariants}
       initial="hidden"
       animate={isVisible ? "visible" : "hidden"}
     >
-      <div className="uppercase bg-[#F7B500] hover:bg-[#B88E19] p-1 rounded-md text-[11px] md:text-[10px] text-center font-bold font-montserrat">
+      <div className="uppercase bg-[#F7B500] hover:bg-[#B88E19] p-1 rounded-md text-[11px] md:text-[10px] text-center font-bold ">
         <p>{label}</p>
       </div>
       {/* Card Details */}
@@ -69,7 +69,7 @@ const StoryCard = ({ post }) => {
         className="w-full mt-3 flex flex-col items-center hover:text-[#80ba7f]"
       >
         {/* Title */}
-        <h1 className="font-montserrat font-bold text-[20px] md:text-[18px] text-center my-2 ">
+        <h1 className=" font-bold text-[20px] md:text-[18px] text-center my-2 ">
           {title}
         </h1>
       </Link>
