@@ -180,7 +180,7 @@ const AdminBlogList = () => {
                     {filteredBlogs.slice(0, visibleBlogs).map((blog) => (
                         <div
                             key={blog._id}
-                            className="p-4 border border-gray-200 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg hover:border-gray-300 bg-white"
+                            className="font-notoserifbangla p-4 border border-gray-200 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg hover:border-gray-300 bg-white"
                         >
                             {/* Title */}
                             <div className="text-lg md:text-xl font-semibold text-gray-800 mb-3">
