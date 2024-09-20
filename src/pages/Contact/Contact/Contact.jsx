@@ -1,6 +1,6 @@
 import PageTitleWithImage from "../../../components/PageTitleWithImage/PageTitleWithImage";
 import ContactCards from "../ContactCards/ContactCards";
-import Form from "../Form/Form";
+// import Form from "../Form/Form";
 import Map from "../Map/Map";
 
 const Contact = () => {
