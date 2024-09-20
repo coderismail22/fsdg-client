@@ -15,14 +15,14 @@ const Footer = () => {
               />
             </p>
             <p className="text-[#687279]">
-              FSDG (Foundation for Supporting Development Goals) is a Non-government Organization (NGO) registered under Joint Stock Company, Bangladesh in 2016. FSDG has been working to support the most marginalized population in Mymensingh, Barisal, Jhalkati and Panchagarh with safe water, shelter and agriculture.
+              FSDG is a non-profit and non-political organization which has been working informally with small scale farmers since 2007. A group of people who are committed to taking care of environment had been engaging themselves for health and wellbeing of vulnerable population and sustainable development in a Northern and a Southern district of the country. Later, they formed the organization having approval of the proper authority of the Peoples Republic of Bangladesh.
             </p>
           </div>
         </div>
         <div className="min-w-56 text-[#687279]">
           <h1 className="font-bold">Our Office Address:</h1>
           <p>
-            Dhaka, Bangladesh <br />
+            2/12 Humayun Road, Mohammadpur, Dhaka-1207<br />
           </p>
           <p className="mt-10">Tel: +880 1714-006476</p>
         </div>
