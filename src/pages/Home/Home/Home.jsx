@@ -4,7 +4,7 @@ import HomeCards from "../HomeCards/HomeCards";
 import Counter from "../../../components/Counter/Counter";
 import Articles from "../Articles/Articles";
 import BottomCards from "../BottomCards/BottomCards";
-import ExecutiveDirector from "../ExecutiveDirector/ExecutiveDirector";
+// import ExecutiveDirector from "../ExecutiveDirector/ExecutiveDirector";
 import MiniCaseStoryCards from "../../../components/MiniCaseStoryCards/MiniCaseStoryCards";
 
 const Home = () => {

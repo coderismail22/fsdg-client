@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const PersonTable = () => {
+const WhoAreWe = () => {
     const [peopleData, setPeopleData] = useState([]);
 
     useEffect(() => {
@@ -11,31 +11,39 @@ const PersonTable = () => {
     }, []);
 
     return (
-        <div className="overflow-x-auto bg-white dark:bg-neutral-700">
-            <table className="min-w-full text-left text-sm whitespace-nowrap">
-                <thead className="uppercase tracking-wider border-b-2 dark:border-neutral-600 border-t">
-                    <tr>
-                        <th scope="col" className="px-6 py-4 border-x dark:border-neutral-600">Name</th>
-                        <th scope="col" className="px-6 py-4 border-x dark:border-neutral-600">Occupation</th>
-                        <th scope="col" className="px-6 py-4 border-x dark:border-neutral-600">Designation</th>
-                        <th scope="col" className="px-6 py-4 border-x dark:border-neutral-600">Photo</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {peopleData.map((person, index) => (
-                        <tr key={index} className="border-b dark:border-neutral-600 hover:bg-neutral-100 dark:hover:bg-neutral-600">
-                            <th scope="row" className="px-6 py-4 border-x dark:border-neutral-600">{person.name}</th>
-                            <td className="px-6 py-4 border-x dark:border-neutral-600">{person.occupation}</td>
-                            <td className="px-6 py-4 border-x dark:border-neutral-600">{person.designation}</td>
-                            <td className="px-6 py-4 border-x dark:border-neutral-600">
-                                <img src={person.photo} alt={person.name} className="w-16 h-16 object-cover rounded-full" />
-                            </td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
+        <div className="container mx-auto px-4 py-8">
+            <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                {peopleData.map((person, index) => (
+                    <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden dark:bg-neutral-600">
+                        <div className="p-6 flex flex-col items-center justify-center hover:bg-neutral-700 transition-all duration-1000">
+                            <img
+                                src={person.photo}
+                                alt={person.name}
+                                className="w-32 h-32 object-cover rounded-full mb-4"
+                            />
+                            <h2 className="text-xl md:text-2xl font-semibold mb-2 text-gray-900 dark:text-white">
+                                {person.name}
+                            </h2>
+                            <p className="text-[15px] text-gray-600 dark:text-gray-400 mb-2">
+                                <span className='font-bold'>Occupation:</span> {person.occupation}
+                            </p>
+                            <p className="text-[15px] text-gray-600 dark:text-gray-400 mb-4">
+                                <span className='font-bold'>Designation:</span> {person.designation}
+                            </p>
+                            <a
+                                href={person.cvUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition-colors duration-300"
+                            >
+                                Download CV
+                            </a>
+                        </div>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };
 
-export default PersonTable;
+export default WhoAreWe;

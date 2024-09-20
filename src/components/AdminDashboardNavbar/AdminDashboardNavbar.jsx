@@ -8,9 +8,9 @@ const navitems = [
   { title: "Profile", path: "admin-profile" },
   { title: "Editor", path: "admin-rich-text-editor" },
   { title: "Posts", path: "admin-blog-list" },
-  { title: "Our Info", path: "admin-our-info" }, // make protected
-  { title: "Appeal", path: "admin-appeal-for-support" }, // make protected
-  { title: "Donation", path: "admin-donation" },//make protected
+  // { title: "Our Info", path: "admin-our-info" }, // make protected
+  // { title: "Appeal", path: "admin-appeal-for-support" }, // make protected
+  // { title: "Donation", path: "admin-donation" },//make protected
   { title: "Home", path: "/" }
 ];
 

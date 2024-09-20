@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 const AppealForSupport = () => {
     const [appealData, setAppealData] = useState(null);
-
     useEffect(() => {
         // Fetch the JSON data (You can replace the URL with the correct path)
         fetch("/assets/appeal.json")
@@ -22,7 +21,7 @@ const AppealForSupport = () => {
     return (
         <div className="flex flex-col justify-center items-center min-h-screen bg-gray-100 p-4">
             {/* Title */}
-            <h1 className="text-4xl md:text-6xl font-bold text-center text-gray-800 mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-center text-gray-800 mb-6 w-9/12 ">
                 {appealData.title}
             </h1>
 

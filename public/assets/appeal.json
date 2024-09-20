@@ -1,18 +1,10 @@
 [
   {
     "id": 1,
-    "title": "The quick brown fox jumps over the lazy cat",
+    "title": "২০২৪ সালের বন্যা দুর্গতদের জন্য সাহায্যের আবেদন",
     "image": "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg?w=600&quality=80",
-    "message": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit repellendus ut expedita voluptatum, culpa voluptatem veritatis in minus qui maiores omnis! Suscipit porro quibusdam voluptatem esse est, iusto ipsum aperiam ratione ut excepturi natus laborum. Tenetur fugiat autem rerum eum obcaecati magni.",
+    "message": "FSDG (Foundation for Supporting Development Goal) is a Non-government Organization (NGO) registered under Joint Stock Company, Bangladesh in 2016. FSDG has been working to support the most marginalized population in Mymensingh, Barisal, Jhalkati and Panchagarh with safe water, shelter and agriculture.",
     "buttonText": "Donate Now",
     "link": "/donate"
-  },
-  {
-    "id": 2,
-    "title": "Another Title Example",
-    "image": "https://i0.wp.com/picjumbo.com/wp-content/uploads/some-other-image.jpg",
-    "message": "This is another message for a different appeal.",
-    "buttonText": "Support Us",
-    "link": "/support"
   }
 ]

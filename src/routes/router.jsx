@@ -124,18 +124,18 @@ export const router = createBrowserRouter([
         path: "admin-blog-list",
         element: <AdminBlogList />
       },
-      {
-        path: "admin-donation",
-        element: <AdminDonate />
-      },
-      {
-        path: "admin-appeal-for-support",
-        element: <AdminAppealForSupport />
-      },
-      {
-        path: "admin-our-info",
-        element: <AdminWhoAreWe />
-      },
+      // {
+      //   path: "admin-donation",
+      //   element: <AdminDonate />
+      // },
+      // {
+      //   path: "admin-appeal-for-support",
+      //   element: <AdminAppealForSupport />
+      // },
+      // {
+      //   path: "admin-our-info",
+      //   element: <AdminWhoAreWe />
+      // },
     ]
   },
   {
