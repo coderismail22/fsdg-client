@@ -40,5 +40,12 @@
     "designation": "Marketing Manager",
     "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4n67KBITgUA2AjPYnlV06djWNn5Nrl2PYpQ&s",
     "cvUrl": "https://example.com/emilydavis-cv.pdf"
+  },
+  {
+    "name": "Emily Davis",
+    "occupation": "Freelance Consultancy",
+    "designation": "Marketing Manager",
+    "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4n67KBITgUA2AjPYnlV06djWNn5Nrl2PYpQ&s",
+    "cvUrl": "https://example.com/emilydavis-cv.pdf"
   }
 ]
