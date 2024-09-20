@@ -11,7 +11,7 @@ const WhoAreWe = () => {
     }, []);
 
     return (
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mx-auto px-4 py-8 bg-slate-100">
             <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 {peopleData.map((person, index) => (
                     <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden dark:bg-neutral-600">
