@@ -29,7 +29,7 @@ const AppealForSupport = () => {
             <img
                 src={appealData.image}
                 alt="Appeal Image"
-                className="w-full max-w-3xl h-auto object-cover mb-6 rounded-md"
+                className="w-full max-w-3xl h-[300px] object-cover mb-6 rounded-md"
             />
 
             {/* Message */}
