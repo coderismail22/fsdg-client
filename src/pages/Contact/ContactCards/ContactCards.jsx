@@ -25,7 +25,7 @@ const ContactCards = () => {
         <ContactCard
           icon={"mail"}
           title={"Email us at"}
-          description={"alam.mdfiroj@gmail.com"}
+          description={"info@fsdgbd.org"}
         />
       </div>
     </div>
