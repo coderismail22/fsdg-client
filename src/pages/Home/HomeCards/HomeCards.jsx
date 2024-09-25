@@ -8,9 +8,6 @@ const HomeCards = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [visiblePosts, setVisiblePosts] = useState(2);
-  // Initial 2 visible blogs
-  // use "setVisibleBlogs" if you want to implement "More Posts" button handler
-
 
   const fetchPosts = async () => {
     setLoading(true);
