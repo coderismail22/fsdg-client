@@ -1,51 +1,44 @@
 [
   {
-    "name": "John Doe",
-    "occupation": "Software Engineer",
-    "designation": "Team Lead",
-    "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4n67KBITgUA2AjPYnlV06djWNn5Nrl2PYpQ&s",
-    "cvUrl": "https://example.com/johndoe-cv.pdf"
+    "name": "Md. Firoj Alam",
+    "info": "Chairperson",
+    "photo": "https://i.ibb.co.com/Fxzn8FJ/firoj.jpg",
+    "cvUrl": "#"
   },
   {
-    "name": "Jane Smith",
-    "occupation": "Graphic Designer",
-    "designation": "Senior Designer",
-    "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4n67KBITgUA2AjPYnlV06djWNn5Nrl2PYpQ&s",
-    "cvUrl": "https://example.com/janesmith-cv.pdf"
+    "name": "Md. Kabir Hossain",
+    "info": "Vice Chairperson",
+    "photo": "https://i.ibb.co.com/kxLCd6G/kabir.jpg",
+    "cvUrl": "#"
   },
   {
-    "name": "Michael Johnson",
-    "occupation": "Data Scientist",
-    "designation": "Data Analytics Head",
-    "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4n67KBITgUA2AjPYnlV06djWNn5Nrl2PYpQ&s",
-    "cvUrl": "https://example.com/michaeljohnson-cv.pdf"
+    "name": "Hasina Shipra",
+    "info": "General Secretary",
+    "photo": "https://i.ibb.co.com/2tWXY40/hasina-bg.jpg",
+    "cvUrl": "#"
   },
   {
-    "name": "Emily Davis",
-    "occupation": "Marketing Specialist",
-    "designation": "Marketing Manager",
-    "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4n67KBITgUA2AjPYnlV06djWNn5Nrl2PYpQ&s",
-    "cvUrl": "https://example.com/emilydavis-cv.pdf"
+    "name": "Muhammad Mushfiqur Rahman",
+    "info": "Treasurer/Finance Secretary",
+    "photo": "https://i.ibb.co.com/m5zzkvT/mushfiqur.jpg",
+    "cvUrl": "#"
   },
   {
-    "name": "Emily Davis",
-    "occupation": "Marketing Specialist",
-    "designation": "Marketing Manager",
-    "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4n67KBITgUA2AjPYnlV06djWNn5Nrl2PYpQ&s",
-    "cvUrl": "https://example.com/emilydavis-cv.pdf"
+    "name": "Kazi Mumaun-ur Rashid",
+    "info": "Member",
+    "photo": "https://i.ibb.co.com/WxqPbkH/kazi-jhamela.jpg",
+    "cvUrl": "#"
   },
   {
-    "name": "Emily Davis",
-    "occupation": "Freelance Consultancy",
-    "designation": "Marketing Manager",
-    "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4n67KBITgUA2AjPYnlV06djWNn5Nrl2PYpQ&s",
-    "cvUrl": "https://example.com/emilydavis-cv.pdf"
+    "name": "Md Sazzad Hossain",
+    "info": "Member",
+    "photo": "https://i.ibb.co.com/C8GPhgs/sazzad.jpg",
+    "cvUrl": "#"
   },
   {
-    "name": "Emily Davis",
-    "occupation": "Freelance Consultancy",
-    "designation": "Marketing Manager",
-    "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4n67KBITgUA2AjPYnlV06djWNn5Nrl2PYpQ&s",
-    "cvUrl": "https://example.com/emilydavis-cv.pdf"
+    "name": "Nyhola Moung",
+    "info": "Member",
+    "photo": "https://i.ibb.co.com/Ybny3SM/nyhola-bg.jpg",
+    "cvUrl": "#"
   }
 ]

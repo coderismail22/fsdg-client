@@ -33,8 +33,28 @@ const AppealForSupport = () => {
             />
 
             {/* Message */}
-            <p className="text-lg md:text-2xl text-center text-gray-600 w-9/12">
+            <p className="text-lg md:text-2xl text-justify text-gray-600 w-9/12 mb-3">
                 {appealData.message}
+            </p>
+            {/* Bullet Point */}
+            <p className="text-lg md:text-2xl text-justify text-gray-600 w-9/12 mb-3">
+                {appealData.bulletPoint1}
+            </p>
+            {/* Bullet Point */}
+            <p className="text-lg md:text-2xl text-justify text-gray-600 w-9/12">
+                {appealData.bulletPoint2}
+            </p>
+            {/* Bullet Point */}
+            <p className="text-lg md:text-2xl text-justify text-gray-600 w-9/12">
+                {appealData.bulletPoint3}
+            </p>
+            {/* Bullet Point */}
+            <p className="text-lg md:text-2xl text-justify text-gray-600 w-9/12">
+                {appealData.bulletPoint4}
+            </p>
+            {/* Bullet Point */}
+            <p className="text-lg md:text-2xl text-justify text-gray-600 w-9/12">
+                {appealData.bulletPoint5}
             </p>
 
             {/* Button */}

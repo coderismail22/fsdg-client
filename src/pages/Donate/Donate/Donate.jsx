@@ -15,9 +15,9 @@ const Donate = () => {
     return (
         <div className="my-20">
             <h1 className="font-bold text-xl md:text-3xl my-5 text-center">
-                Donate to These Accounts
+                Donate to these Accounts
             </h1>
-            <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 p-5">
+            <div className="grid gap-10 md:grid-cols-2 p-5">
                 {donationAccounts.map((account) => (
                     <DonateCard
                         key={account.id}

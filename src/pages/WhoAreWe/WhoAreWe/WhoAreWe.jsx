@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const WhoAreWe = () => {
     const [peopleData, setPeopleData] = useState([]);
@@ -25,19 +26,15 @@ const WhoAreWe = () => {
                                 {person.name}
                             </h2>
                             <p className="text-[15px] text-gray-600 dark:text-gray-400 mb-2">
-                                <span className='font-bold'>Occupation:</span> {person.occupation}
+                                <span className='font-bold'></span> {person.info}
                             </p>
-                            <p className="text-[15px] text-gray-600 dark:text-gray-400 mb-4">
-                                <span className='font-bold'>Designation:</span> {person.designation}
-                            </p>
-                            <a
-                                href={person.cvUrl}
-                                target="_blank"
+                            <Link
+                                to={person.cvUrl}
                                 rel="noopener noreferrer"
                                 className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition-colors duration-300"
                             >
                                 Download CV
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 ))}

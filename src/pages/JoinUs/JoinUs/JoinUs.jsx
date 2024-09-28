@@ -13,7 +13,7 @@ const JoinUs = () => {
       />
       <div className="lg:w-9/12 mx-auto flex flex-col  justify-center items-center">
         {/* <UpperCards /> */}
-        <JobCircular />
+        {/* <JobCircular /> */}
         <Form />
         {/* <Coordinator /> */}
       </div>
