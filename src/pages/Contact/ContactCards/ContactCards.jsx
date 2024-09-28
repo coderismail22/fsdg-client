@@ -20,7 +20,7 @@ const ContactCards = () => {
         <ContactCard
           icon={"phone"}
           title={"Phone Number"}
-          description={"01845-681371"}
+          description={"01714-006476"}
         />
         <ContactCard
           icon={"mail"}

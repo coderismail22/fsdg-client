@@ -20,7 +20,7 @@ const HomeCard1 = () => {
             </h1>
             <p className="font-lato text-[20px] text-grey-800  mb-8">
 
-            FSDG (Foundation for Supporting Development Goal) is a Non-government Organization (NGO) registered under Joint Stock Company, Bangladesh in 2016. FSDG has been working to support the most marginalized population in Mymensingh, Barisal, Jhalkati and Panchagarh with safe water, shelter and agriculture.
+            FSDG (Foundation for Supporting Development Goals) is a Non-government Organization (NGO) registered under Joint Stock Company, Bangladesh in 2016. FSDG has been working to support the most marginalized population in Mymensingh, Barisal, Jhalkati and Panchagarh with safe water, shelter and agriculture.
             </p>
             {/* Link: Find Out More */}
             <p className="flex gap-5 items-center ">

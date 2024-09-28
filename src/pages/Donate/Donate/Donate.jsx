@@ -21,10 +21,10 @@ const Donate = () => {
                 {donationAccounts.map((account) => (
                     <DonateCard
                         key={account.id}
-                        bankAccount={account.bankAccount}
-                        accountName={account.accountName}
+                        bankAccountNo={account.bankAccountNo}
+                        accountHolderName={account.accountHolderName}
+                        bankName={account.bankName}
                         branch={account.branch}
-                        contact={account.contact}
                         routingNumber={account.routingNumber}
                     />
                 ))}

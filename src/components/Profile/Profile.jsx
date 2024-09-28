@@ -4,11 +4,9 @@ const Profile = () => {
       <div className="md:p-5">
         {/* Title and Description */}
         <div className=" mb-5">
-          <h1 className="font-palanquin text-[30px] font-bold text-center mb-2 underline">
-            Profile
-          </h1>
+
           <h1 className="font-palanquin text-[30px] font-bold text-center mb-2">
-            <br /> Foundation for Supporting Development Goal (FSDG)
+            <br /> Foundation for Supporting Development Goals (FSDG)
 
           </h1>
           <p className="font-lato text-[17px] text-justify  ">
@@ -18,13 +16,13 @@ const Profile = () => {
         {/* Infos */}
         <div className="px-5">
           {/* Bunch 1 */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-2">
             {/* 1 */}
             <p className="col-span-1 font-yeseva font-bold text-[#001848] md:text-right">
               Governing Body:
             </p>
             <p className="col-span-2 font-lato">
-              The Governing Body of FSDG comprises 7 members who are engaged in different development actions in Bangladesh.
+              The governing body of FSDG comprises of seven members who are engaged in different development actions in Bangladesh.
             </p>
             {/* 2 */}
             <p className="col-span-1 font-yeseva font-bold text-[#001848] md:text-right">
@@ -53,7 +51,7 @@ const Profile = () => {
             {/* 2 */}
             <p className="col-span-1 font-yeseva font-bold md:text-right text-[#001848]">
               Strategy:            </p>
-            <p className="col-span-2 font-lato text-[#001848] mb-3">
+            <p className="col-span-2 font-lato text-[#001848] mb-2">
               <div>
                 <ul className="ml-2 list-disc list-outside text-gray-700 dark:text-gray-300 ">
                   <li>To contribute the targets of the Sustainable Development Goals set by United Nations in 2015</li>
@@ -68,7 +66,7 @@ const Profile = () => {
             {/* 3 */}
             <p className="col-span-1 font-yeseva font-bold md:text-right text-[#001848]">
               Values:            </p>
-            <p className="col-span-2 font-lato text-[#001848] mb-3">
+            <p className="col-span-2 font-lato text-[#001848] mb-2">
               <div>
                 <ul className="list-disc list-outside text-gray-700 dark:text-gray-300 space-y-2">
                   <li>FSDG respects and recognizes the human rights of the people of the whole world</li>
@@ -81,14 +79,25 @@ const Profile = () => {
           </div>
 
           {/* Bunch 3 */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5  mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5  mt-2">
             {/* 1 */}
             <p className="col-span-1 font-yeseva font-bold md:text-right">
               Activities of FSDG
             </p>
             <p className="col-span-2 font-lato">
-              FSDG has been working in the North and Southern part of the country till now with personal contribution of Board Members. In the Northern districts, the organization has been promoting water saving agriculture through encouraging farmers in cultivating tea, wheat, tomato, potato, etc (that consumes less water) minimizing the production of rice that needs a lot of water and in the dry season it is extracted from the ground. Women from the village community are being trained and employed in the farms from which they have got the opportunity of contributing in their family income. Also, FSDG has been promoting organic farming both in the North and Southern district of Barisal with the aim of having a sustainable ecology in the country.
-              In Barisal, FSDG has been raising awareness on menstrual hygiene for adolescent girls and general hygiene for men, women and children. Imparting knowledge on using sanitary latrine and safe water is one of its activities being carried out. It safeguards sexual and reproductive health rights for adolescents as well as strives for eliminating early marriages and violence against women from the society.
+              <p className="font-lato text-[17px] text-justify  mb-2">
+                FSDG has been active in the northern and southern regions of the country, supported by the personal contributions of its board members. In the northern districts, the organization promotes water-efficient agriculture by encouraging farmers to cultivate crops such as tea, wheat, tomatoes, and potatoes—crops that require less water—while minimizing rice production, which is water-intensive and often extracted from the ground during dry seasons.
+              </p>
+              <p className="font-lato text-[17px] text-justify mb-2 ">
+                Women from local communities are being trained and employed on these farms, providing them with opportunities to contribute to their family income. Additionally, FSDG promotes organic farming in both the northern and southern districts of Barisal to foster a sustainable ecology.
+
+              </p>
+              <p className="font-lato text-[17px] text-justify mb-2 ">
+                In Barisal, FSDG raises awareness about menstrual hygiene for adolescent girls and general hygiene for all community members. Activities include educating people about the use of sanitary latrines and safe water. The organization also advocates for sexual and reproductive health rights for adolescents and works to eliminate early marriages and violence against women in society.
+              </p>
+              <p className="font-lato text-[17px] text-justify  mb-2">
+                FSDG is also currently working to provide shelter for the homeless and water and sanitation support for the disabled in some disadvantaged communities in Barisal and Mymensingh. In Barisal, FSDG has established a partnership with a regional NGO, the Village and City Development Society, to train and raise awareness about climate change adaptation for its 25,000 microcreditgroup members.
+              </p>
             </p>
           </div>
         </div>
