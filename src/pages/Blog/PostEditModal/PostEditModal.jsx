@@ -12,6 +12,8 @@ const PostEditModal = ({ isOpen, onClose, post, onPostUpdate }) => {
     const [content, setContent] = useState(post.content || '');
     const [uploadedImageUrl, setUploadedImageUrl] = useState(post.imgUrl || '');
 
+    { 'post test', post }
+
     //child to parent state lifting
     const handleContentChange = (newContent) => {
         setContent(newContent); // Update the state in the parent
@@ -23,7 +25,7 @@ const PostEditModal = ({ isOpen, onClose, post, onPostUpdate }) => {
         setTitle(post.title || '');
         setLabel(post.label || '');
         setContent(post.content || '');
-        setContent(post.author || '');
+        setAuthor(post.author || '');
         // setImgUrl(post.imgUrl || '');
         setUploadedImageUrl(post.imgUrl || '');
     }, [post]);
@@ -32,12 +34,13 @@ const PostEditModal = ({ isOpen, onClose, post, onPostUpdate }) => {
         console.log('title', title) // Getting Latest
         console.log('label', label) // Getting Latest
         console.log('author', author) // Getting Latest
-        console.log('content', content) // Getting Latest
+        console.log('content check check', content) // Getting Latest
         console.log('updated imgUrl', uploadedImageUrl) // Getting Latest
 
         const updatedPost = {
             author, title, label, content, imgUrl: uploadedImageUrl
         }
+        console.log('updatedPost', updatedPost)
         try {
             const response = await axios.patch(`https://fsdg-blog-login-server.vercel.app/api/posts/${post._id}`, updatedPost);
             console.log("🚀 ~ handleUpdate ~ response:", response)
@@ -56,6 +59,7 @@ const PostEditModal = ({ isOpen, onClose, post, onPostUpdate }) => {
         <div className="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center overflow-auto">
             <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-2xl max-h-screen overflow-y-auto">
                 <h2 className="text-2xl font-semibold mb-4">Edit Post</h2>
+                {console.log('post', post)}
 
                 {/* Title */}
                 <div className="mb-4">
@@ -101,6 +105,7 @@ const PostEditModal = ({ isOpen, onClose, post, onPostUpdate }) => {
                 <div>
                     <label className="block font-medium">Content</label>
                     <RichTextEditor content={content} onChangeContent={handleContentChange} />
+                    {console.log('content', content)}
                 </div>
 
 

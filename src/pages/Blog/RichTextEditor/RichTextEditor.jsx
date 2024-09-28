@@ -5,13 +5,14 @@ const RichTextEditor = ({ content, onChangeContent }) => {
     const editor = useRef(null);
 
     // const config = {
-        // buttons: [
-        //     'bold', 'italic', 'underline', 'strikethrough', 'eraser', 'ul', 'ol',
-        //     'font', 'fontsize', 'paragraph', 'lineHeight', 'superscript',
-        //     'subscript', 'classSpan', 'file', 'image', 'video', 'spellcheck', 'speechRecognize'
-        // ],
-        // height: 400,
+    // buttons: [
+    //     'bold', 'italic', 'underline', 'strikethrough', 'eraser', 'ul', 'ol',
+    //     'font', 'fontsize', 'paragraph', 'lineHeight', 'superscript',
+    //     'subscript', 'classSpan', 'file', 'image', 'video', 'spellcheck', 'speechRecognize'
+    // ],
+    // height: 400,
     // };
+    {console.log('richtexteditor',content)}
 
     return (
         <JoditEditor
