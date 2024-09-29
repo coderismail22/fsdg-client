@@ -1,7 +1,7 @@
 import PageTitleWithImage from "../../../components/PageTitleWithImage/PageTitleWithImage";
 import Form from "../../Contact/Form/Form";
 // import Coordinator from "../Coordinator/Coordinator";
-import JobCircular from "../JobCircular/JobCircular";
+// import JobCircular from "../JobCircular/JobCircular";
 // import UpperCards from "../UpperCards/UpperCards";
 
 const JoinUs = () => {

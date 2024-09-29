@@ -1,6 +1,8 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
+import axios from "axios";
+import Swal from "sweetalert2";
 
 const Form = () => {
   // Initialize useForm hook
@@ -18,9 +20,16 @@ const Form = () => {
     }
   };
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     if (captchaVerified) {
       console.log("Form Data:", data);
+      try {
+        const res = await axios.post('http://localhost:5000/api/sendmail/want-to-join-email', data, { headers: { 'Content-Type': 'application/json' } });
+        Swal.fire('Success!', 'Email sent successfully.', 'success');
+      } catch (err) {
+        Swal.fire('Error!', 'Could not send email.', 'error');
+        console.error('Error creating post:', err);
+      }
     } else {
       alert("Please complete the CAPTCHA verification.");
     }
