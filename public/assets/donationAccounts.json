@@ -1,34 +1,11 @@
 [
   {
     "id": 1,
-    "bankAccountNo": "123456789",
-    "accountHolderName": "RandomName",
-    "bankName": "Charity A",
-    "branch": "Main Branch",
-    "routingNumber": "111222333"
-  },
-  {
-    "id": 2,
-    "bankAccountNo": "987654321",
-    "accountHolderName": "RandomName",
-    "bankName": "Charity B",
-    "branch": "Second Branch",
-    "routingNumber": "444555666"
-  },
-  {
-    "id": 3,
-    "bankAccountNo": "112233445",
-    "accountHolderName": "RandomName",
-    "bankName": "Charity C",
-    "branch": "Third Branch",
-    "routingNumber": "777888999"
-  },
-  {
-    "id": 4,
-    "bankAccountNo": "112233445",
-    "accountHolderName": "RandomName",
-    "bankName": "Charity D",
-    "branch": "Third Branch",
-    "routingNumber": "777888999"
+    "bankAccountNo": "1481200006878",
+    "accountHolderName": "Foundation For Supporting Development Goal",
+    "bankName": "Dutch-Bangla Bank PLC",
+    "branch": "Shyamoli Branch",
+    "routingNumber": "090263978",
+    "swift": "DBBLBDDH"
   }
 ]

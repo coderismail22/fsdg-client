@@ -10,7 +10,7 @@ const Counter = () => {
 
   // const staff = 50;
   const offices = 3;
-  const projects = 45;
+  const projects = 23;
   const workingDistricts = 4;
 
   return (

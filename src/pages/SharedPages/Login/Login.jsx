@@ -13,15 +13,16 @@ const Login = () => {
     const [loading, setLoading] = useState(false);  // State to manage loading
     const navigate = useNavigate();
 
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm({defaultValues:{email:'test@test.org',password:"12345678"}});
 
     const loginHandler = async (formData) => {
         setLoading(true);  // Start loading spinner
         try {
             const response = await axios.post(
-                "https://fsdg-blog-login-server.vercel.app/api/admin/login",
+                // "https://fsdg-blog-login-server.vercel.app/api/admin/login",
+                "http://localhost:5000/api/admin/login",
                 formData,
-                { withCredentials: true }  // Include cookies in the request
+                { withCredentials: true },  // Include cookies in the request
             );
 
             const result = response.data;
