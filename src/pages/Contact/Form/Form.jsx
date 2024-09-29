@@ -1,11 +1,29 @@
 import { useForm } from "react-hook-form";
+import { useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Form = () => {
   // Initialize useForm hook
   const { register, handleSubmit, formState: { errors } } = useForm();
 
+  // State for reCAPTCHA
+  const [captchaVerified, setCaptchaVerified] = useState(false);
+
+  // Handle CAPTCHA verification
+  const onCaptchaChange = (value) => {
+    if (value) {
+      setCaptchaVerified(true);  // Enable submit if verified
+    } else {
+      setCaptchaVerified(false); // Disable submit if not verified
+    }
+  };
+
   const onSubmit = (data) => {
-    console.log(data);
+    if (captchaVerified) {
+      console.log("Form Data:", data);
+    } else {
+      alert("Please complete the CAPTCHA verification.");
+    }
   };
 
   return (
@@ -16,9 +34,7 @@ const Form = () => {
       <form onSubmit={handleSubmit(onSubmit)} className="font-lato text-sm w-[300px] xs:w-[400px] sm:w-[500px] md:w-[600px]">
         {/* Full Name */}
         <div className="mb-4 w-full">
-          <label className="text-[#687279]" htmlFor="name">
-            Name
-          </label>
+          <label className="text-[#687279]" htmlFor="name">Name</label>
           <input
             type="text"
             id="name"
@@ -30,9 +46,7 @@ const Form = () => {
 
         {/* Country */}
         <div className="mb-4 w-full">
-          <label className="text-[#687279]" htmlFor="country">
-            Country
-          </label>
+          <label className="text-[#687279]" htmlFor="country">Country</label>
           <input
             type="text"
             id="country"
@@ -44,9 +58,7 @@ const Form = () => {
 
         {/* Occupation */}
         <div className="mb-4 w-full">
-          <label className="text-[#687279]" htmlFor="occupation">
-            Occupation
-          </label>
+          <label className="text-[#687279]" htmlFor="occupation">Occupation</label>
           <input
             type="text"
             id="occupation"
@@ -58,9 +70,7 @@ const Form = () => {
 
         {/* Email */}
         <div className="mb-4 w-full">
-          <label className="text-[#687279]" htmlFor="email">
-            Email Address
-          </label>
+          <label className="text-[#687279]" htmlFor="email">Email Address</label>
           <input
             type="email"
             id="email"
@@ -78,9 +88,7 @@ const Form = () => {
 
         {/* Contact Number */}
         <div className="mb-4 w-full">
-          <label className="text-[#687279]" htmlFor="contact">
-            Contact Number
-          </label>
+          <label className="text-[#687279]" htmlFor="contact">Contact Number</label>
           <input
             type="text"
             id="contact"
@@ -96,8 +104,21 @@ const Form = () => {
           {errors.contact && <p className="text-red-500">{errors.contact.message}</p>}
         </div>
 
+        {/* reCAPTCHA */}
+        <div className="mb-4 w-full flex justify-center">
+          <ReCAPTCHA
+            sitekey="6LfmdFIqAAAAANBVvLSt6TxI8FD4Dm3_o48zsHnB" // Replace with your actual site key from Google reCAPTCHA
+            onChange={onCaptchaChange}
+          />
+        </div>
+
         {/* Submit Button */}
-        <button type="submit" className="font-montserrat flex gap-2 items-center justify-center text-xl bg-[#FFCD05] w-full h-[50px] p-2 mt-5">
+        <button
+          type="submit"
+          className={`font-montserrat flex gap-2 items-center justify-center text-xl w-full h-[50px] p-2 mt-5
+            ${captchaVerified ? 'bg-[#FFCD05]' : 'bg-gray-400 cursor-not-allowed'}`}
+          disabled={!captchaVerified}  // Disable the button if CAPTCHA is not verified
+        >
           Submit
         </button>
       </form>
