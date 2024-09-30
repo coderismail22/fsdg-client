@@ -21,7 +21,8 @@ const PublishNewPost = () => {
         const postData = { ...data, content, imgUrl: uploadedImageUrl }; // Combine form data with content and image URL
         console.log(postData);
         try {
-            const res = await axios.post('https://fsdg-blog-login-server.vercel.app/api/posts', postData, { headers: { 'Content-Type': 'application/json' } });
+            // TODO: Add Server Url
+            const res = await axios.post('http://localhost:3000/api/posts', postData, { headers: { 'Content-Type': 'application/json' } });
             console.log('Post created:', res.data);
             reset(); // Reset the form after submission
             setContent(''); // Clear the content editor

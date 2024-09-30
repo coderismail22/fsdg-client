@@ -12,7 +12,8 @@ const HomeCards = () => {
   const fetchPosts = async () => {
     setLoading(true);
     try {
-      const { data } = await axios.get("https://fsdg-blog-login-server.vercel.app/api/posts");
+      // TODO: Add Server Url
+      const { data } = await axios.get("http://localhost:3000/api/posts");
       setPosts(data);
     } catch (error) {
       console.error("Error fetching blogs:", error);

@@ -6,38 +6,42 @@ import Swal from "sweetalert2";
 
 const Form = () => {
   // Initialize useForm hook
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
   // State for reCAPTCHA
   const [captchaVerified, setCaptchaVerified] = useState(false);
+  const [loading, setLoading] = useState(false); // State for loading spinner
 
   // Handle CAPTCHA verification
   const onCaptchaChange = (value) => {
-    if (value) {
-      setCaptchaVerified(true);  // Enable submit if verified
-    } else {
-      setCaptchaVerified(false); // Disable submit if not verified
-    }
+    setCaptchaVerified(!!value); // Enable/disable submit based on CAPTCHA verification
   };
 
   const onSubmit = async (data) => {
     if (captchaVerified) {
-      console.log("Form Data:", data);
+      setLoading(true); // Start loading
       try {
-        const res = await axios.post('http://localhost:5000/api/sendmail/want-to-join-email', data, { headers: { 'Content-Type': 'application/json' } });
+        // TODO: Add Server Url
+        const res = await axios.post('http://localhost:3000/api/sendmail/want-to-join-email', data, {
+          headers: { 'Content-Type': 'application/json' },
+        });
         Swal.fire('Success!', 'Email sent successfully.', 'success');
+        reset()
+
       } catch (err) {
         Swal.fire('Error!', 'Could not send email.', 'error');
-        console.error('Error creating post:', err);
+        console.error('Error sending email:', err);
+      } finally {
+        setLoading(false); // Stop loading
       }
     } else {
-      alert("Please complete the CAPTCHA verification.");
+      Swal.fire('Error!', 'Please complete the CAPTCHA verification.', 'error');
     }
   };
 
   return (
-    <div className="max-w-[500px] flex flex-col items-center justify-center h-screen mb-20 mt-16">
-      <h1 className="font-yeseva font-bold text-[28px] text-center uppercase">Want to work with us</h1>
+    <div className="max-w-[500px] flex flex-col items-center justify-center h-screen mb-20 lg:mt-20">
+      <h1 className="font-yeseva font-bold text-[28px] text-center uppercase mt-28">Want to work with us</h1>
       <h1 className="font-yeseva font-bold text-[28px] mb-10 text-center uppercase">Join Now</h1>
 
       <form onSubmit={handleSubmit(onSubmit)} className="font-lato text-sm w-[300px] xs:w-[400px] sm:w-[500px] md:w-[600px]">
@@ -124,11 +128,11 @@ const Form = () => {
         {/* Submit Button */}
         <button
           type="submit"
-          className={`font-montserrat flex gap-2 items-center justify-center text-xl w-full h-[50px] p-2 mt-5
+          className={`font-montserrat flex gap-2 items-center justify-center text-xl w-full h-[50px] p-2 mt-5 mb-16
             ${captchaVerified ? 'bg-[#FFCD05]' : 'bg-gray-400 cursor-not-allowed'}`}
-          disabled={!captchaVerified}  // Disable the button if CAPTCHA is not verified
+          disabled={!captchaVerified || loading}  // Disable the button if CAPTCHA is not verified or email is being sent
         >
-          Submit
+          {loading ? 'Sending...' : 'Submit'}
         </button>
       </form>
     </div>

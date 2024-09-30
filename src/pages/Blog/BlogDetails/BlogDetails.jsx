@@ -11,7 +11,8 @@ const BlogDetail = () => {
 
     const fetchBlogDetail = async () => {
         try {
-            const response = await axios.get(`https://fsdg-blog-login-server.vercel.app/api/posts/${id}`); // Fetch blog by ID
+            // TODO: Add Server Url
+            const response = await axios.get(`http://localhost:3000/api/posts/${id}`); // Fetch blog by ID
             setBlog(response.data);
             setLoading(false);
         } catch (error) {

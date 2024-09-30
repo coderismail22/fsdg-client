@@ -8,13 +8,13 @@ const ProtectedRoute = ({ children }) => {
     useEffect(() => {
         const checkAuthStatus = async () => {
             try {
-                // const response = await fetch("https://fsdg-blog-login-server.vercel.app/api/admin/auth-check", {
-                const response = await fetch("http://localhost:5000/api/admin/auth-check", {
+                // TODO: Add Server Url
+                const response = await fetch("http://localhost:3000/api/admin/auth-check", {
                     method: "GET",
                     credentials: "include",  // Include cookies with the request
                 });
 
-                
+
                 if (response.ok) {
                     setIsAuthenticated(true);
                 } else {
