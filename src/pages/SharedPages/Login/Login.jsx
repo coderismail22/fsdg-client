@@ -20,7 +20,7 @@ const Login = () => {
         try {
             // TODO: Add Server Url
             const response = await axios.post(
-                "http://localhost:3000/api/admin/login",
+                "https://fsdg-latest-v2.vercel.app/api/admin/login",
                 formData,
                 { withCredentials: true },  // Include cookies in the request
             );

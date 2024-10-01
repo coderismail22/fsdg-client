@@ -4,6 +4,7 @@ import PageTitleWithImage from "../../../components/PageTitleWithImage/PageTitle
 const Projects = () => {
   return (
     <div>
+      {/* Page Title and Image */}
       <PageTitleWithImage
         pageName={"Projects"}
         bgImage={"/assets/projects-bg.jpg"}

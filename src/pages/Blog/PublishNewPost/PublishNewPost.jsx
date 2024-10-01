@@ -22,7 +22,7 @@ const PublishNewPost = () => {
         console.log(postData);
         try {
             // TODO: Add Server Url
-            const res = await axios.post('http://localhost:3000/api/posts', postData, { headers: { 'Content-Type': 'application/json' } });
+            const res = await axios.post('https://fsdg-latest-v2.vercel.app/api/posts', postData, { headers: { 'Content-Type': 'application/json' } });
             console.log('Post created:', res.data);
             reset(); // Reset the form after submission
             setContent(''); // Clear the content editor

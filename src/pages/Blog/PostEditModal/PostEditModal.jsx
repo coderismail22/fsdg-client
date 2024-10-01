@@ -43,7 +43,7 @@ const PostEditModal = ({ isOpen, onClose, post, onPostUpdate }) => {
         console.log('updatedPost', updatedPost)
         try {
             // TODO: Add Server Url
-            const response = await axios.patch(`http://localhost:3000/api/posts/${post._id}`, updatedPost);
+            const response = await axios.patch(`https://fsdg-latest-v2.vercel.app/api/posts/${post._id}`, updatedPost);
             Swal.fire('Success!', 'Post updated successfully.', 'success');
             onPostUpdate()
             onClose(); // Close the modal

@@ -9,7 +9,7 @@ const ProtectedRoute = ({ children }) => {
         const checkAuthStatus = async () => {
             try {
                 // TODO: Add Server Url
-                const response = await fetch("http://localhost:3000/api/admin/auth-check", {
+                const response = await fetch("https://fsdg-latest-v2.vercel.app/api/admin/auth-check", {
                     method: "GET",
                     credentials: "include",  // Include cookies with the request
                 });

@@ -16,7 +16,7 @@ const Articles = () => {
     setLoading(true);
     try {
       // TODO: Add Server Url
-      const { data } = await axios.get("http://localhost:3000/api/posts");
+      const { data } = await axios.get("https://fsdg-latest-v2.vercel.app/api/posts");
       console.log('from articles', data)
       setPosts(data);
     } catch (error) {

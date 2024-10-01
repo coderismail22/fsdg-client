@@ -22,7 +22,7 @@ const Form = () => {
       setLoading(true); // Start loading
       try {
         // TODO: Add Server Url
-        const res = await axios.post('http://localhost:3000/api/sendmail/want-to-join-email', data, {
+        const res = await axios.post('https://fsdg-latest-v2.vercel.app/api/sendmail/want-to-join-email', data, {
           headers: { 'Content-Type': 'application/json' },
         });
         Swal.fire('Success!', 'Email sent successfully.', 'success');

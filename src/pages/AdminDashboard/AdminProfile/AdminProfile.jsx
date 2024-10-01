@@ -13,7 +13,7 @@ const AdminProfile = () => {
         const checkAuthStatus = async () => {
             try {
                 // TODO: Add Server Url
-                const response = await fetch("http://localhost:3000/api/admin/auth-check", {
+                const response = await fetch("https://fsdg-latest-v2.vercel.app/api/admin/auth-check", {
                     method: "GET",
                     credentials: "include",
                 });
@@ -44,7 +44,7 @@ const AdminProfile = () => {
         try {
             // Fetch request
             // TODO: Add Server Url
-            const response = await fetch('http://localhost:3000/api/admin/change-password', {
+            const response = await fetch('https://fsdg-latest-v2.vercel.app/api/admin/change-password', {
                 method: 'POST',
                 credentials: 'include',  // Ensure cookies are included
                 headers: { 'Content-Type': 'application/json' },

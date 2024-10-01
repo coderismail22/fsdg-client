@@ -12,7 +12,7 @@ const BlogDetail = () => {
     const fetchBlogDetail = async () => {
         try {
             // TODO: Add Server Url
-            const response = await axios.get(`http://localhost:3000/api/posts/${id}`); // Fetch blog by ID
+            const response = await axios.get(`https://fsdg-latest-v2.vercel.app/api/posts/${id}`); // Fetch blog by ID
             setBlog(response.data);
             setLoading(false);
         } catch (error) {
