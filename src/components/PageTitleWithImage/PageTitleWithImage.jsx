@@ -6,7 +6,7 @@ const PageTitleWithImage = ({ bgImage, pageName }) => {
     <section
       className="relative w-full h-[60vh] bg-cover bg-center flex items-center justify-center"
       style={{
-        backgroundImage: `url(${bgImage})`, // Replace with your image path
+        backgroundImage: `url(${bgImage})`, 
       }}
     >
       {/* Overlay */}

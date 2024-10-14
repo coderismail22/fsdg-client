@@ -62,7 +62,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/donate",
-        element: <Donate />,
+        element: <Donate />, 
       },
       // TODO: Make these functional
       // {
